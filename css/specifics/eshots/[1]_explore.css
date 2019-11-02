@@ -1,0 +1,26 @@
+#branding,
+#branding h1 {
+	position: absolute; top: 0; left: 0; z-index: 50;
+	width: 600px;
+	padding: 0;
+	background-image: none;
+}
+body.eshot #branding h1 a {
+	position: absolute; top: 60px; right: 49px; z-index: 50;
+	width: 137px; height: 33px;
+	background-image: url(/css/specifics/eshots/images/[1]_creation-logo.gif);
+}
+#content {
+	position: relative;
+	padding-top: 30px;
+	background: url(/css/specifics/eshots/images/[1]_visual.jpg) no-repeat 0 30px;
+}
+#content h3.entry-title, #content h3.entry-title span.gl-ir {
+	position: absolute; top: 38px; left: 20px;
+	height: 69px; width: 185px;
+	line-height: 69px; color: #fff;
+	background: url(/css/specifics/eshots/images/[1]_title.gif) no-repeat 0 0;
+}
+#content .entry-content {
+	padding-top: 200px;
+}

@@ -1,0 +1,23 @@
+#eshots-preview ul li {
+	position: relative;
+	padding: 0;
+	background-image: none;
+}
+#eshots-preview ul li img {}
+
+#eshot-cant-view {
+	position: absolute; top: 0; left: 0; z-index: 500;
+	width: 560px; padding: 0 20px;
+	font-size: 0.85em;
+}
+#eshot-cant-view p {
+	margin: 0;
+}
+#eshot-cant-view a {
+	color: #999;
+	line-height: 3em; font-weight: normal;
+	border-bottom: 0;
+}
+#eshot-cant-view a:hover {
+	text-decoration: underline;
+}

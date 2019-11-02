@@ -1,0 +1,191 @@
+/*
+* Author: 		Trevor Morris, Creation Design & Marketing
+* Contact:		trevor@creation.uk.com, leigh@creation.uk.com
+* Version:		1.0
+* Created:		24/04/2007
+* Updated:		16/05/2007
+* Notes:		News section specific styles.
+*
+* CONTENTS
+* -------------------------
+* =nav - Section Navigation
+* =comm - Comments Section
+*
+*/
+
+/* =nav - Section Navigation
+--------------------------------------------------------------------------------------------------*/
+#content-navigation,
+#image-navigation {
+	min-height: 372px;
+}
+#image-navigation ul {
+	margin-bottom: -16px;
+}
+#content-navigation ul li.active a,
+#content-navigation ul li.active a:hover,
+#content-navigation ul li.active a:focus,
+#content-navigation ul li a:hover,
+#content-navigation ul li a:focus {
+	background-position: 0 0;
+}
+
+/* related images */
+#entry-meta-related-photos .prev,
+#entry-meta-related-photos .next {
+	display: none !important;
+}
+#entry-meta-related-photos div.jcarousel-clip,
+#entry-meta-related-photos ul.jcarousel-list {
+	width: 168px; height: 75px;
+	overflow: hidden;
+}
+#entry-meta-related-photos ul li {
+	float: left;
+	padding: 0;
+	background-image: none;
+}
+#entry-meta-related-photos ul li a {
+	border: 0;
+}
+#entry-meta-related-photos ul li a img {
+	display: block;
+}
+
+body.permalink div.permalink h3.entry-title {
+	margin-top: 0;
+}
+body.permalink .entry-content ol {
+	margin-left: 20px;
+	list-style: decimal;
+}
+body.permalink div.permalink div.entry-content blockquote {
+	font-style: normal;
+}
+body.permalink div.permalink div.entry-content blockquote p {
+	font-style: italic;
+}
+
+
+/* =comm - Comments Section
+--------------------------------------------------------------------------------------------------*/
+#comments-view,
+#comments-form {
+	position: relative; clear: left;
+	width: 760px;
+	margin: 0 -20px; padding: 6px 0 0;
+	background: #fff url(../images/general/divider_repeat.gif) repeat-x 0 0;
+}
+#comments-view {
+	padding: 26px 20px;
+	width: 720px;
+}
+#comments-view .hentry {
+	padding-top: 20px; margin-bottom: 15px;
+	border-top: 1px solid #777;
+}
+div.permalink .entry-content {
+	clear: left;
+	padding: 0 0 20px;
+}
+#comments-view .hentry .vcard {
+	background: #fff url(../images/general_avatar.gif) no-repeat 0 0;
+}
+#comments-view .hentry .vcard .gravatar {
+	float: left;
+	width: 48px;
+	background-color: #fff;
+}
+#comments-view .hentry .vcard .fn,
+#comments-view .hentry .vcard .timestamp {
+	float: none;
+	width: 100px;
+	margin: 0 0 5px 64px;
+}
+#comments-view .hentry .author a {
+	padding: 0;
+	background-image: none;
+}
+#comments-view .hentry .timestamp a:hover abbr {
+	cursor: pointer;
+}
+#comments-view .hentry .timestamp abbr span {
+	display: block;
+}
+
+#comments-view .hentry img.logo,
+#entry-meta-author-posts img.logo {
+	margin-top: 0;
+}
+#entry-meta-summary {
+	margin-bottom: -1em;
+}
+#news-subscribe p.feed a {
+	height: 14px; width: 14px;
+	background-image: url(../images/icons/feeds.gif);
+}
+
+
+/* reset comment styles */
+#comments-view .hentry h1,
+#comments-view .hentry h2,
+#comments-view .hentry h3,
+#comments-view .hentry h4,
+#comments-view .hentry h5,
+#comments-view .hentry h6 {
+	position: static; top: 0; left: 0; overflow: auto;
+	height: auto; width: auto;
+	margin: 0 0 0.333em;
+	font-weight: bold; font-size: 1em; line-height: 1.5; color: #000; text-transform: none;
+}	
+#comments-view .hentry em {
+	display: inline;
+	font-style: italic;
+}
+body.permalink div.permalink .entry-content blockquote,
+#comments-view .hentry blockquote {
+	padding-left: 10px;
+	border-left: 3px solid #900; font-size: 1em; color: #333;
+}
+body.permalink #comments-view .leigh-scott a {
+	color: #c90;
+}
+body.permalink #comments-view .tim-webley a {
+	color: #de8000;
+}
+body.permalink #comments-view .trev-morris a,
+body.permalink #comments-view .trevor-morris a {
+	color: #06c;
+}
+body.permalink #comments-view .rich-rees a,
+body.permalink #comments-view .richard-rees a {
+	color: #90b630;
+}
+body.permalink #comments-view .louise-scott a {
+	color: #903;
+}
+
+body.permalink #comments-view .leigh-scott a:hover,
+body.permalink #comments-view .leigh-scott a:focus {
+	border-bottom-color: #c90;
+}
+body.permalink #comments-view .tim-webley a:hover,
+body.permalink #comments-view .tim-webley a:focus {
+	border-bottom-color: #de8000;
+}
+body.permalink #comments-view .trev-morris a:hover,
+body.permalink #comments-view .trevor-morris a:hover,
+body.permalink #comments-view .trev-morris a:focus,
+body.permalink #comments-view .trevor-morris a:focus {
+	border-bottom-color: #06c;
+}
+body.permalink #comments-view .rich-rees a:hover,
+body.permalink #comments-view .richard-rees a:hover,
+body.permalink #comments-view .rich-rees a:focus,
+body.permalink #comments-view .richard-rees a:focus {
+	border-bottom-color: #90b630;
+}
+body.permalink #comments-view .louise-scott a:hover,
+body.permalink #comments-view .louise-scott a:focus {
+	border-bottom-color: #903;
+}

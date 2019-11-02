@@ -1,0 +1,19 @@
+/*
+* Author: 		Trevor Morris, Creation Design & Marketing
+* Contact:		trevor@creation.uk.com, leigh@creation.uk.com
+* Version:		1.0
+* Created:		24/04/2007
+* Updated:		15/05/2007
+* Notes:		Portfolio section specific styles.
+*
+* CONTENTS
+* -------------------------
+* =nav - Section Navigation
+*
+*/
+
+/* =nav - Section Navigation
+--------------------------------------------------------------------------------------------------*/
+body.portfolio .project {
+	min-height: 500px;
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<title type="text">Comments on Creation article &#8220;Running for Charity&#8221; (Atom)</title>
+<link rel="alternate" type="text/html" href="http://www.creation.uk.com/news/2007/05/08/running-for-charity/" />
+<link rel="self" type="application/atom+xml" href="http://www.creation.uk.com/news/2007/05/08/running-for-charity/atom/" />
+<updated>2007-06-15T16:22:26+00:00</updated>
+<author>
+	<name>Creation</name>
+	<email>info@creation.uk.com</email>
+	<uri>http://www.creation.uk.com/</uri>
+</author>
+<id>http://www.creation.uk.com</id>
+<icon>http://www.creation.uk.com/favicon.ico</icon>
+	<entry>
+		<title type="text">Comment #11 on Running for Charity by Tim Webley</title>
+		<html:title type="text">Running for Charity</html:title>
+		<content type="html"><![CDATA[<p>I would like to add that you will see PRATS training for the event every Tuesday around Penkridge between the hours of
+6p.m. and 7p.m.</p>
+
+<p>You are welcome to join &#8216;Penkridge Running And Training Squad&#8217;. It&#8217;s a great opportunity to get fit and
+the more the merrier. Besides, we need all the help we can get to carry Leigh home after we stop off at The Boat for a
+&#8216;quick half&#8217;.</p>]]></content>
+		<link rel="alternate" href="http://www.creation.uk.com/news/2007/05/08/running-for-charity/#c_11" type="text/html" hreflang="en" />
+		<id>tag:creation.uk.com,2007-06-12:/news/2007/05/08/running-for-charity/#c_11</id>
+		<updated>2007-06-12T11:31:22+00:00</updated>
+		<published>2007-06-12T11:31:22+00:00</published>
+		<html:abbr class="published updated" title="2007-06-12">Tue 12th Jun 2007 at 11:31</html:abbr>
+		<author>
+			<name>Tim Webley</name>
+			<html:img><![CDATA[<img src="http://www.creation.uk.com/images/icons/tim-webley.gif" height="48" width="48" alt="Gravatar for Tim Webley" class="gravatar logo" />]]></html:img>
+			<uri>http://www.creation.uk.com/company/tim-webley/</uri>
+		</author>
+	</entry>
+</feed>

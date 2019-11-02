@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<title type="text">Creation: Latest Articles with the Tag "Xerox" (Atom)</title>
+<link rel="alternate" type="text/html" href="http://www.creation.uk.com/" />
+<link rel="self" type="application/atom+xml" href="http://www.creation.uk.com/archives/xerox/atom/" />
+<updated>2007-06-20T16:51:55+01:00</updated>
+<author>
+	<name>Creation</name>
+	<email>info@creation.uk.com</email>
+	<uri>http://www.creation.uk.com/</uri>
+</author>
+<id>http://www.creation.uk.com</id>
+<icon>http://www.creation.uk.com/favicon.ico</icon>
+	<entry>
+		<title type="text">In Partnership with Xerox Global Services</title>
+		<content type="html"><![CDATA[<p>Last year we were chosen as a new design partner for Xerox Global Services, the division of Xerox responsible for offering
+on-site services for a large number of big companies and organisations nationwide.</p>
+
+<p>Since our introduction to the various sites we have completed a number of projects with successful results. All our
+services, including the fixed price packages and solutions listed in our services section, are available to all sites and
+all Xerox customers. There are some services available you may not be aware of, in fact, we may not be aware of them yet!
+Remember, if you have a design, web or print problem to solve just ask. We&#8217;ve been able to help already on a number of
+occasions with excellent results.</p>
+
+<p>We look forward to building a stronger relationship with Xerox and their customers and providing the very best in design
+for print and web.</p>
+
+<p>If you need any further help or advice on our partnership and what we can do for you, contact me <a
+href="mailto:leigh@creation.uk.com">leigh@creation.uk.com</a>, your print room manager or Xerox representative.</p>]]></content>
+		<link rel="alternate" href="http://www.creation.uk.com/news/2007/05/28/in-partnership-with-xerox-global-services/" type="text/html" hreflang="en" />
+		<id>tag:creation.uk.com,2007-05-28:/news/2007/05/28/in-partnership-with-xerox-global-services/</id>
+		<updated>2007-05-28T15:40:09+01:00</updated>
+		<published>2007-05-28T15:40:09+01:00</published>
+		<html:abbr class="published updated" title="2007-05-28">Mon 28th May 2007 at 15:40</html:abbr>
+		<author>
+			<name>Leigh Scott</name>
+			<html:img><![CDATA[<img src="http://www.creation.uk.com/images/icons/large/leigh-scott.gif" height="108" width="108" alt="Photo of Leigh Scott" class="photo" />]]></html:img>
+			<uri>http://www.creation.uk.com/company/leigh-scott/</uri>
+		</author>
+		<category term="xerox" label="Xerox" scheme="http://www.creation.uk.com/news/tags/xerox/" />
+	</entry>
+</feed>

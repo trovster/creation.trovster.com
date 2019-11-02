@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en" dir="ltr">
+<head>
+	<meta name="author" lang="en" content="Creation Design and Marketing Limited, Penkridge, Staffordshire, UK.">
+	<meta name="copyright" content="Creation">
+	<meta name="robots" content="index,follow">
+
+	<meta name="language" content="en">	
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="imagetoolbar" content="no">
+	
+	<!-- title... -->
+	<title>Image Movement experiment</title>
+	
+	<script type="text/javascript" src="../dom/jquery-1.2.2.min.js"></script>
+	
+	<!-- the plugin script -->
+	<script type="text/javascript" src="image_window_viewer.js"></script>
+	
+	<!-- page specific experiments, run the plugins developed above -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#city-scape').image_window_viewer({'height' : '364px', 'width' : '400px'});
+			$('.viewer img').image_window_viewer({'height' : '171px'});
+			$('#auto img').image_window_viewer({'height' : 'auto'});
+			$('#creation-long').image_window_viewer({'width' : 'auto', 'height' : '384px'});
+			$('#large').image_window_viewer({'width' : '522px', 'height' : '384px'});
+		});
+	</script>
+	
+	<style type="text/css">
+		* {margin: 0; padding: 0;}
+		html {height: 100%;}
+		body {
+			min-height: 100%;
+			background-color: #fff;
+			padding: 20px;
+		}
+		ul {
+			overflow: hidden;
+			padding: 20px;
+			list-style: none;
+		}
+		ul li {
+			float: left;
+			margin: 10px; 
+		}
+		.image_window_viewer {
+			border: 1px solid #000;
+		}
+		.image_window_viewer_thumb {
+			border: 1px solid #f00;
+		}
+		.image_window_viewer_thumb img {
+			height: 100%; width: 100%;
+		}
+	</style>
+	
+</head>
+
+<body>
+
+	<h1>Image Movement experiment</h1>
+
+	<ul>
+		<li><img src="images/city-scape.jpg" alt="" height="1024" width="2560" id="city-scape"></li>
+		<li class="viewer"><img src="images/vector.png" alt="" height="171" width="1600"></li>
+		<li class="viewer"><img src="images/vector.png" alt="" height="171" width="1600"></li>
+		<li id="auto"><img src="images/vector.png" alt="" height="171" width="1600"></li>
+		<li class="viewer"><img src="images/city-scape.jpg" alt="" height="1024" width="2560"></li>
+		<li><img src="images/creation.gif" alt="" height="1296" width="400" id="creation-long"></li>
+		<li><img src="images/green.jpg" alt="" height="1200" width="1600" id="large"></li>
+	</ul>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /admin
+Disallow: /_admin/
+Disallow: /_admin
+Disallow: /_includes/
+Disallow: /_includes
+Disallow: /_compile/
+Disallow: /_compile
+Disallow: /_resources/
+Disallow: /_resources

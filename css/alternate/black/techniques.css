@@ -1,0 +1,79 @@
+/*
+* Author: 		Trevor Morris, Creation Design & Marketing
+* Contact:		trevor@creation.uk.com, leigh@creation.uk.com
+* Version:		1.0
+* Created:		08/06/2007
+* Updated:		08/06/2007
+* Notes:		Below is the core code for resuing in common
+				techniques such as image replacement, easy clearing and
+				a method of hiding elements without display: none;
+*
+* CONTENTS
+* -------------------------
+* Accessible Hiding
+* Image Replacement
+* Easy Clearing
+*
+*/
+
+/* Accessible Hiding
+-------------------------------------------------------------------------------------------------- */
+.access,
+legend,
+#skiplinks,
+.vcard_geo,
+.geo,
+h2,
+#branding-strapline,
+.hentry p.more a.bookmark strong,
+.hcard a.include,
+#content-navigation h3,
+#image-navigation h3,
+#footer-extra-vision h3,
+#footer-extra-vision blockquote,
+#content-primary .mini-container p.author,
+#contact-address dt,
+table caption,
+#contact-address h3,
+.flash-replaced .alt,
+body.colophon #colophon * {
+	position: absolute; top: -9999px; left: -9999px;
+	overflow: hidden;
+	height: 0.0; width: 0.0;
+	font-size: 0.0; line-height: 0.0;
+}
+
+
+/* Image Replacement (Phark) http://phark.typepad.com/phark/2003/08/accessible_imag.html
+-------------------------------------------------------------------------------------------------- */
+.phark,
+#xhr_loading,
+table#updates td.edit a,
+#subscribe-icons li a,
+#branding h1 a,
+#navigation-primary ul li a,
+#content-navigation ul li a,
+#content-primary div.image ul.pagination li a,
+#content-primary div.image a,
+#hello {
+	display: block;	overflow: hidden;
+	font-size: 0.0;	line-height: 0.0;
+	text-decoration: none; text-indent: -9999px;
+	background: transparent no-repeat 0 0;
+	border: 0;
+}
+
+
+/* Easy Clearing - http://www.positioniseverything.net/easyclearing.html
+-------------------------------------------------------------------------------------------------- */
+.clearfix::after,
+#content::after,
+#content-primary::after,
+#footer::after,
+form::after {
+	content: '.';
+	clear: both;
+	display: block; visibility: hidden;
+	height: 0.0; width: 0.0;
+	font-size: 0.0;	line-height: 0.0;
+}

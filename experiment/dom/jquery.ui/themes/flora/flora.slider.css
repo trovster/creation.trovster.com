@@ -1,0 +1,26 @@
+/* This file skins sliders */
+
+.ui-slider-handle { position: absolute; height: 23px; width: 12px; top: 0px; left: 0px; background-image: url(i/slider-handle.gif);  }
+.ui-slider-disabled .ui-slider-handle { opacity: 0.5; filter: alpha(opacity=50); }
+
+/* Default slider backgrounds */
+.ui-slider-1 { width: 200px; height: 23px; position: relative; background-image: url(i/slider-bg-1.png); background-repeat: no-repeat; background-position: center center; }
+.ui-slider-2 { width: 200px; height: 23px; position: relative; background-image: url(i/slider-bg-2.png); background-repeat: no-repeat; background-position: center center; }
+
+
+.ui-slider-x,
+.ui-slider-y {
+	position: absolute; top: 0; left: 0;
+}
+.ui-slider-x {
+	background: transparent;
+}
+.ui-slider-y {
+	left: auto; right: 0;
+	width: 23px;
+	background: transparent;
+}
+.ui-slider-handle-y {
+	width: 23px; height: 12px;
+	background-image: url(i/slider-handle-right.gif);
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en" dir="ltr">
+<head>
+	<meta name="author" lang="en" content="Creation Design and Marketing Limited, Penkridge, Staffordshire, UK.">
+	<meta name="copyright" content="Creation">
+	<meta name="robots" content="index,follow">
+
+	<meta name="language" content="en">	
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="imagetoolbar" content="no">
+	
+	<!-- title... -->
+	<title>Markdown Controls &#38; Expanding Textareas experiment</title>
+	
+	<script type="text/javascript" src="../dom/jquery-1.2.2.min.js"></script>
+	<script type="text/javascript" src="../dom/jquery.metadata.pack.js"></script> <!-- metadata is optional -->
+	<script type="text/javascript" src="../dom/jquery.dimensions.js"></script> <!-- dimensions required for expand_me -->
+	
+	<!-- the plugin scripts -->
+	<script type="text/javascript" src="form.expand_me.js"></script>
+	<script type="text/javascript" src="form.markdown_controls.js"></script>
+	
+	<!-- page specific experiments, run the plugins developed above -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('textarea.expand').expand_me({
+				'text' : 'Expand textarea'
+			});
+			$('#textarea-1').markdown_controls(); // default controls
+			$('#textarea-2').markdown_controls({
+				controls: ['Strong','Emphasis','|','Link','|','h1','h2','h3','h4','h5','h6']
+			});
+			$('#textarea-3').markdown_controls({
+				controls: ['Strong','Emphasis','|','Link','|','h3','h4','h5','h6']
+			});
+		});
+	</script>
+	
+	<style type="text/css">
+		body {
+			background-color: #fff;
+			padding: 20px;
+		}
+		fieldset {
+			border: 0;
+		}
+		legend {
+			display: none;
+		}
+		form div.container {
+			float: left;
+			margin: 20px;
+		}
+		label {
+			display: block;
+		}
+		textarea {
+			display: block;
+			height: 250px; width: 350px;
+			border: 1px solid #ccc;
+		}
+		textarea.markdown {}
+		
+		
+		
+		
+		/* plugin specific styles */
+		.markdown-wysiwyg-enabled {
+			overflow: hidden;
+			height: 28px; width: 350px;
+			line-height: 28px;
+			background-color: #eee;
+			border: 1px solid #ccc;
+		}
+
+
+		.markdown-wysiwyg-enabled ul {
+			overflow: hidden;
+			list-style: none;
+			margin: 3px 0 4px 5px; padding: 0;
+		}
+		.markdown-wysiwyg-enabled ul li {
+			float: left;
+			margin-right: 4px;
+			line-height: 20px; 
+		}
+		.markdown-wysiwyg-enabled ul li a {
+			display: block; overflow: hidden;
+			height: 20px; width: 20px;
+			border: 1px solid #eee;
+		}
+		.markdown-wysiwyg-enabled ul li.replaced a {
+			text-indent: -9999px;
+			background: no-repeat 50% 50%;
+		}
+		.markdown-wysiwyg-enabled ul li a:hover {
+			border-color: #0A246A; background-color: #B6BDD2;
+		}
+		.markdown-wysiwyg-enabled ul li.separator {
+			font-weight: bold;
+			color: #aaa;
+			margin: 0 6px 0 2px;
+		}
+		
+		
+		.markdown-wysiwyg-enabled .help {
+			float: right;
+			margin: 3px 10px 0 0;
+			line-height: 20px;
+		}
+		.markdown-wysiwyg-enabled .help a {
+			font-size: 0.75em; color: #666;
+			text-decoration: none; text-transform: lowercase;
+		}
+		.markdown-wysiwyg-enabled .help a:hover {
+			text-decoration: underline;
+		}
+		
+		
+		
+		/* shows ID added to container for individual styling */
+		#markdown-wysiwyg-textarea-3 .help {
+			margin-right: 4px;
+		}
+		#markdown-wysiwyg-textarea-3 .help a {
+			display: block; overflow: hidden;
+			height: 20px; width: 20px;
+			text-indent: -9999px;
+			background: url(images/help.png) no-repeat 50% 50%;
+			border: 1px solid #eee;
+		}
+		#markdown-wysiwyg-textarea-3 .help a:hover {
+			border-color: #0A246A; background-color: #B6BDD2;
+		}
+		#markdown-wysiwyg-textarea-2 .help {
+			display: none;
+		}
+		
+		
+		
+		.markdown-wysiwyg-enabled .markdown-headings {
+			position: relative;
+		}
+		.markdown-wysiwyg-enabled .markdown-headings ul {
+			position: absolute; top: 0; left: 0;
+			background-color: #fff;
+		}
+		.markdown-wysiwyg-enabled .markdown-headings li {
+			float: none;
+		}
+		
+		.markdown-wysiwyg-enabled .markdown-headings .h1 a,
+		.markdown-wysiwyg-enabled ul li.markdown-h1 a {
+			background-image: url(images/text_heading_1.png);
+		}
+		.markdown-wysiwyg-enabled .markdown-headings .h2 a,
+		.markdown-wysiwyg-enabled ul li.markdown-h2 a {
+			background-image: url(images/text_heading_2.png);
+		}
+		.markdown-wysiwyg-enabled .markdown-headings .h3 a,
+		.markdown-wysiwyg-enabled ul li.markdown-h3 a {
+			background-image: url(images/text_heading_3.png);
+		}
+		.markdown-wysiwyg-enabled .markdown-headings .h4 a,
+		.markdown-wysiwyg-enabled ul li.markdown-h4 a {
+			background-image: url(images/text_heading_4.png);
+		}
+		.markdown-wysiwyg-enabled .markdown-headings .h5 a,
+		.markdown-wysiwyg-enabled ul li.markdown-h5 a {
+			background-image: url(images/text_heading_5.png);
+		}
+		.markdown-wysiwyg-enabled .markdown-headings .h6 a,
+		.markdown-wysiwyg-enabled ul li.markdown-h6 a {
+			background-image: url(images/text_heading_6.png);
+		}
+		
+		
+		
+		/* icons */
+		.markdown-wysiwyg-enabled ul li.markdown-strong a {
+			background-image: url(images/text_bold.png);
+		}
+		.markdown-wysiwyg-enabled ul li.markdown-emphasis a {
+			background-image: url(images/text_italic.png);
+		}
+		.markdown-wysiwyg-enabled ul li.markdown-underline a {
+			background-image: url(images/text_underline.png);
+		}
+		.markdown-wysiwyg-enabled ul li.markdown-link a {
+			background-image: url(images/link.png);
+		}
+		.markdown-wysiwyg-enabled ul li.markdown-unordered a {
+			background-image: url(images/text_list_bullets.png);
+		}
+		.markdown-wysiwyg-enabled ul li.markdown-ordered a {
+			background-image: url(images/text_list_numbers.png);
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+
+<h1>Markdown Controls &#38; Expanding Textareas experiment</h1>
+
+<form action="" method="get">
+	<fieldset>
+		<legend>Markdown example</legend>
+		<div class="container">
+			<label for="textarea-1">Textarea #1</label>
+			<textarea name="textarea-1" id="textarea-1" class="markdown expand {increase:50}"></textarea>
+		</div>
+		<div class="container">
+			<label for="textarea-2">Textarea #2</label>
+			<textarea name="textarea-2" id="textarea-2" class="expand {increase:100}"></textarea>
+		</div>
+		<div class="container">
+			<label for="textarea-3">Textarea #3</label>
+			<textarea name="textarea-3" id="textarea-3" class="markdown expand"></textarea>
+		</div>
+	</fieldset>
+</form>
+
+</body>
+</html>

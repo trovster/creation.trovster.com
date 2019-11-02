@@ -1,0 +1,146 @@
+/*
+* Author: 		Trevor Morris, Creation Design & Marketing
+* Contact:		trevor@creation.uk.com, leigh@creation.uk.com
+* Version:		1.0
+* Created:		24/04/2007
+* Updated:		07/06/2007
+* Notes:		
+*
+* CONTENTS
+* -------------------------
+* =gen - General
+* =col - Columns
+* =oth - Other
+*
+*/
+
+/* =gen - General
+-------------------------------------------------------------------------------------------------- */
+html, body {
+	background: #585756 url(/css/images/general/background.gif) repeat 0 0;
+}
+body {
+	position: relative;
+}
+body.welcome {
+	background: url(/css/images/background-full.gif) no-repeat 50% 0;
+}
+#container {
+	position: relative;
+	width: 720px;
+	margin: 0 auto; padding: 0 20px;
+	background-color: #fff;
+	border-top: 4px solid #900;
+}
+
+#branding {
+	height: 144px;
+}
+	#branding h1 {
+		position: absolute; top: 0; left: 20px;
+		padding: 69px 0 0 205px;
+		background: #fff url(/css/images/general/copyright-message.gif) no-repeat 0 16px;
+	}
+	#branding h1 a {
+		border-bottom: 0;
+	}
+	
+#content {
+	min-height: 500px;
+	padding-bottom: 20px;
+}
+	
+#footer {
+	position: relative; z-index: 500;
+	clear: left;
+	margin: 0 -20px; 
+	color: #000;
+}
+	#footer-copyright {
+		position: relative;
+		padding: 26px 20px 33px;
+		background: #7a7a7a url(/css/images/general/divider_repeat.gif) repeat-x 0 0;
+	}
+	#footer-copyright p {
+		margin: 0;
+	}
+	#footer-copyright p.vcard,
+	#footer-copyright p.vcard span.gl-ir {
+		float: left;
+		height: 12px; width: 213px;
+		background-image: url(/css/images/footer/footer_copyright.gif);
+	}
+	#footer-copyright p.vcard {
+		color: #fff; text-transform: none; font-size: 1em;
+	}
+	#footer-copyright p.vcard strong {
+		font-weight: normal; font-style: normal;
+	}
+	#footer-copyright p.top {
+		float: right;
+	}
+
+
+/* =col - Columns
+-------------------------------------------------------------------------------------------------- */
+.column {
+	float: left;
+	width: 168px;
+	margin-right: 16px;
+}
+.double {
+	width: 352px;
+}
+.triple {
+	width: 536px;
+}
+.full {
+	width: 720px;
+}
+.last,
+.full,
+#content-navigation ul li.even {
+	margin-right: 0;
+}
+#content .second,
+#extra .second {
+	margin-top: 3em;
+}
+
+
+
+/* =news - News Layouts
+-------------------------------------------------------------------------------------------------- */
+.hentry p.author {
+	margin-top: -1em;
+}
+.hentry img.logo {
+	float: right;
+	margin-top: 8px;
+}
+#latest-posts h3.section-title,
+#entry-meta-author-posts h3 {
+	float: left;
+	width: 133px;
+}
+#latest-posts p,
+#latest-posts div,
+#entry-meta-author-posts dl {
+	clear: left;
+}
+
+
+/* =oth - Other
+-------------------------------------------------------------------------------------------------- */
+#content-primary .image,
+body.company #vision {
+	margin-bottom: 16px;
+}
+#content-primary div.image img {
+	display: block;
+}
+body.error #content-primary {
+	min-height: 352px;
+	padding-left: 372px;
+	background: url(/css/images/error-bandage.jpg) no-repeat 0 0;
+}

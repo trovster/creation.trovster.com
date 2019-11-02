@@ -1,0 +1,197 @@
+#content-primary .introduction {
+	position: relative; z-index: 500;
+	margin-bottom: 20px;
+}
+body.wide #container,
+body.wide #branding {
+	width: 720px;
+	background: #fff;
+}
+body.feedback div.complete {
+	font-weight: bold;
+}
+#error-message {
+	overflow: hidden;
+	height: 0; width: 0;
+	text-indent: -9999px;  font-size: 0.0; line-height: 0.0;
+}
+html body.feedback-error-message #content {
+	background: url(/css/images/feedback/missing-input-message.jpg) no-repeat 100% 0;
+}
+#error-message * {
+	color: #fff;
+}
+#feedback {
+	position: relative;
+	width: 720px;
+}
+#feedback fieldset {
+	/*
+	margin-bottom: 20px; padding-top: 30px;
+	*/
+}
+#feedback fieldset.submit-fieldset {
+	height: 28px;
+	margin-top: 16px; padding-top: 0;
+	text-align: right;
+	background: #fff url(/css/images/feedback/thank-you.gif) no-repeat 0 5px;
+}
+#feedback fieldset.submit-fieldset ul {
+	float: right;
+}
+#feedback fieldset.submit-fieldset .replaced {
+	width: 176px;
+}
+#feedback dl {
+	background: #ccc url(/css/images/feedback/fs_g_your-details.gif) no-repeat 15px 15px;
+	padding-top: 30px; margin-bottom: 16px
+}
+#feedback dl dt,
+#feedback dl dd {
+	margin: 0;
+}
+#feedback dl dt {
+	clear: left; position: relative; 
+	padding: 10px 15px 5px;
+	color: #900;
+	border-top: 1px solid #fff;
+	font-size: 1.1818em;
+}
+#feedback dl dt.fli {
+	border-top: 0;
+}
+#feedback dl dd {
+	padding: 5px 15px 15px;
+	border-bottom: 1px solid #585858;
+}
+#feedback dl select {
+	width: 168px;
+}
+#feedback dl .text input,
+#feedback dl textarea {
+	border: 1px solid #fff; border-top-color: #848484; border-left-color: #848484;
+}
+#feedback dl textarea {
+	height: 100px; width: 685px;
+}
+#feedback .checkbox-radio {
+	clear: left;
+	padding: 20px 0;
+}
+#feedback .rating dt.radio {}
+#feedback .rating ul {
+	overflow: hidden;
+}
+#feedback .rating ul li {
+	float: left;
+	margin-right: 30px;
+	line-height: 1; color: #000;
+}
+#feedback .rating ul li input {
+	margin-right: 5px;
+}
+
+/* errors */
+#feedback dl dt em.error {
+	font-style: normal; text-transform: uppercase; color: #03f;
+}
+#feedback dl dd.error textarea {
+	border: 1px solid #03f;
+}
+
+/* personal details fieldset styles */
+#feedback fieldset#your-details-fieldset dl {
+	position: relative;
+	height: 6em;
+	border-bottom: 1px solid #585858;
+}
+#feedback fieldset#your-details-fieldset dt,
+#feedback fieldset#your-details-fieldset dd {
+	position: absolute;
+	border: 0;
+	width: 160px;
+}
+#feedback fieldset#your-details-fieldset dt {
+	padding-top: 35px; top: 0;
+}
+#feedback fieldset#your-details-fieldset dd {
+	padding-top: 30px; top: 2.75em;
+}
+#feedback fieldset#your-details-fieldset dt.fli,
+#feedback fieldset#your-details-fieldset dd.fli {
+	left: 0;
+}
+#feedback fieldset#your-details-fieldset dt.even,
+#feedback fieldset#your-details-fieldset dd.even {
+	left: 176px;
+}
+#feedback fieldset#your-details-fieldset dt,
+#feedback fieldset#your-details-fieldset dd {
+	left: 352px;
+}
+#feedback fieldset#your-details-fieldset dt.lli,
+#feedback fieldset#your-details-fieldset dd.lli {
+	left: 528px;
+}
+
+
+/* highlight styles */
+#feedback fieldset dl dt.rating_toggle,
+#feedback fieldset dl dd.rating_toggle {
+	padding-right: 65px;
+}
+div.rating_icon {
+	position: absolute; top: 10px; right: 10px;
+	height: 53px; width: 45px;
+}
+.rating_1 div.rating_icon,
+.rating_2 div.rating_icon,
+.rating_3 div.rating_icon,
+.rating_4 div.rating_icon,
+.rating_5 div.rating_icon {
+	background: url(/css/images/feedback/expressions-x.gif) no-repeat -500px -500px;
+}
+.rating_1 div.rating_icon {
+	background-position: 0 0;
+}
+.rating_2 div.rating_icon {
+	background-position: -50px 0;
+}
+.rating_3 div.rating_icon {
+	background-position: -100px 0;
+}
+.rating_4 div.rating_icon {
+	background-position: -150px 0;
+}
+.rating_5 div.rating_icon {
+	background-position: -200px 0;
+}
+.feedback-your-perspective .q-7.rating_5 div.rating_icon {
+	background-position: -250px 0;
+}
+
+
+
+/* specific feedback*/
+body.feedback-your-perspective #content {
+	background: url(/css/images/feedback/[1]_your-perspective.jpg) no-repeat 100% 0;
+}
+body.feedback-your-perspective-complete #content {
+	background-image: url(/css/images/feedback/[1]_thank-you.jpg);
+}
+body.feedback-your-perspective #feedback fieldset.your-website {
+	clear: left;
+	width: 352px;
+}
+body.feedback-your-perspective #feedback fieldset.your-website dl {
+	background-image: url(/css/images/feedback/fs_1_your-website.gif);
+}
+body.feedback-your-perspective #feedback fieldset.your-website-design dl {
+	background-image: url(/css/images/feedback/fs_2_your-website-design.gif);
+}
+body.your-perspective #feedback fieldset.your-website-functionality dl {
+	background-image: url(/css/images/feedback/fs_3_your-website-functionality.gif);
+}
+body.your-perspective #feedback fieldset.communication-with-creation dl {
+	background-image: url(/css/images/feedback/fs_4_communication.gif);
+}

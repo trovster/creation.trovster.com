@@ -1,0 +1,174 @@
+/*
+* Author: 		Trevor Morris, Creation Design & Marketing
+* Contact:		trevor@creation.uk.com, leigh@creation.uk.com
+* Version:		0.5
+* Created:		08/06/2007
+* Updated:		08/06/2007
+* Notes:		This is an alternate stylesheet mockup
+*
+* CONTENTS
+* -------------------------
+* == includes
+*
+*/
+
+/* == includes
+--------------------------------------------------------------------------------------------------*/
+@import url(/css/reset.css);
+@import url(techniques.css);
+@import url(navigation.css);
+
+
+/* =gen - General
+--------------------------------------------------------------------------------------------------*/
+body {
+	font: normal normal 62.5%/1.5 Helvetica, Arial, sans-serif; /* 62.5% means a default font-size of 10px based upon 16px base-font */
+	line-height: 1.5; /* YEH, this is for Safari - http://www.quirksmode.org/bugreports/archives/2006/09/Line_height_declaration_in_short_hand_form.html */
+	color: #fff;
+}
+#container {
+	font-size: 1.1em; /* sets the page size to 11px based on 16px base-font - EM Calculator from now on - http://riddle.pl/emcalc/ */
+	max-width: 984px; width: 720px;
+	padding-left: 40px;
+}
+p, ul, ol, dl, blockquote, form, pre, table {
+	margin: 0 0 1em;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+
+html, body {
+	background-color: #000;
+}
+
+#branding {
+	position: relative;
+	height: 235px; margin-bottom: 20px;
+	background: url(images/banner-flowers.jpg) no-repeat 235px 100%;
+}
+#branding h1 a {
+	height: 235px; width: 235px;
+	background: url(images/creation-logo-red.png);
+}
+#branding #branding-strapline {
+	position: absolute; left: -40px; top: 118px;
+	width: 40px; height: 117px;
+	background-color: #fff;
+}
+#content {
+	min-width: 740px;
+}
+#footer {
+	padding: 300px 0 20px 320px; margin: 30px 0 0 -40px;
+	background: #fff url(images/footer.png) no-repeat 0 0;
+	color: #000;
+}
+#content-primary div.image {
+	margin-bottom: 1em;
+}
+#content-primary div.image img {
+	display: block;
+}
+#hello {
+	position: relative;
+	height: 232px; width: 720px;
+	background-image: url(/css/images/hello.jpg);
+	background-color: #830A19;
+	margin-bottom: 16px;
+}
+#hello h1.flash-replaced,
+#hello h1.flash-replaced embed {
+	position: absolute; bottom: 0; left: 0;
+	height: 124px; width: 720px;
+}
+
+
+
+/* =head - Headings
+--------------------------------------------------------------------------------------------------*/
+h3,
+h4.subtitle {
+	margin-bottom: 0.333em;
+}
+h3 {
+	line-height: 1.15; font-size: 1.36em; /* 15px */
+}
+h3 em {
+	display: block; font-style: normal; color: #900;
+}
+.my-profile .professional h3.fn,
+body.company #vision {
+	font-size: 2.5em;
+}
+
+
+
+/* =link - Links
+-------------------------------------------------------------------------------------------------- */
+a:link, a:visited, a:hover, a:focus, a:active {
+	color: #900;
+}
+a:hover {
+	text-decoration: none;
+}
+a:visited {
+	color: #400;
+}
+
+
+/* =col - Columns
+-------------------------------------------------------------------------------------------------- */
+.column {
+	float: left;
+	width: 168px;
+	margin-right: 16px;
+}
+.double {
+	width: 352px;
+}
+.triple {
+	width: 536px;
+}
+.last,
+#content-navigation ul li.even {
+	margin-right: 0;
+}
+#content .second {
+	margin-top: 3em;
+}
+
+
+.hentry p.author {
+	margin-top: -1em;
+}
+.hentry img.logo {
+	float: right;
+	margin-top: 8px;
+}
+#latest-posts h3.section-title,
+#entry-meta-author-posts h3 {
+	float: left;
+	width: 133px;
+}
+#latest-posts p,
+#latest-posts div,
+#entry-meta-author-posts dl {
+	clear: left;
+}
+
+
+
+
+
+
+/* =page Specifics
+-------------------------------------------------------------------------------------------------- */
+body.company #vision {
+	margin-bottom: 0.333em;
+	height: auto; width: auto;
+	background-image: none;
+}

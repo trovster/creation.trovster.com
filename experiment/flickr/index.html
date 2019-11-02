@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en" dir="ltr">
+<head>
+	<meta name="author" lang="en" content="Creation Design and Marketing Limited, Penkridge, Staffordshire, UK.">
+	<meta name="copyright" content="Creation">
+	<meta name="robots" content="index,follow">
+
+	<meta name="language" content="en">	
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="imagetoolbar" content="no">
+	
+	<!-- title... -->
+	<title>Flickr People experiment</title>
+	
+	<script type="text/javascript" src="../dom/jquery-1.2.2.min.js"></script>
+	<script type="text/javascript" src="../dom/jquery.metadata.pack.js"></script> <!-- metadata is optional -->
+	<script type="text/javascript" src="../dom/jquery.dimensions.js"></script>
+	
+	<!-- the plugin scripts -->
+	<script type="text/javascript" src="flickr.people.js"></script>
+	
+	<!-- page specific experiments, run the plugins developed above -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#machine_tag_toggle_show').click(function(){
+				$(this).hide(); $('#machine_tag_toggle_hide').show();
+				$('#themachinetags').show();
+			})
+			$('#machine_tag_toggle_hide').click(function(){
+				$(this).hide(); $('#machine_tag_toggle_show').show();
+				$('#themachinetags').hide();
+			});
+			
+			$('.photoImgDiv img').bind('click',function(e){
+				var $img = $(this);
+				var img_offset = $img.offset();
+				var o = {} o.height = 100; o.width = 100; o.name = 'undefined';
+				
+				$('<div></div>').addClass('person').css({
+					'left'		: (e.pageX - img_offset.left - (o.width/2))+'px',
+					'top'		: (e.pageY - img_offset.top - (o.height/2))+'px',
+					'height'	: o.height+'px',
+					'width'		: o.width+'px'
+				}).insertAfter($img);
+			});
+		});
+	</script>
+	
+	<link rel="stylesheet" media="screen,projection" href="css/c_photo.css.v1.55.14.css">
+	<style type="text/css">
+		body {background-color: #fff;padding: 20px;}
+		#photo {width: 760px; padding: 0 10px; font-family: Arial,Helvetica,sans-serif;}
+		#photo h3 { font-size: 18px; color: #FF0084; font-weight: normal; margin-bottom: 10px; }
+		#photo a {text-decoration: none;}
+		body div#photo a:hover, body div#photo a:focus, body div#photo a:active {color: #0259C4;}
+		#photo a.Grey {color: #C9C9C9; text-decoration: none; font-size: 11px;}
+		#photo #button_bar, #photo .photoImgDiv, #photo #About {clear: left; float: left; width: 502px;}
+		#photo .TagList {margin: 0 0 0 520px;}
+		#photo .TagList h4 {padding-top: 26px;}
+		#photo #thetags div a.Plain, #photo #themachinetags a {vertical-align: top;}
+		#photo #themachinetags img {vertical-align: bottom;}
+		
+		.photoImgDiv {
+			position: relative;
+		}
+		.photoImgDiv div.person {
+			position: absolute;
+			border: 1px solid #fff;
+		}
+	</style>
+	
+</head>
+
+<body>
+
+<h1>Flickr People experiment</h1>
+
+<div id="photo">
+	<div id="button_bar">
+		<a href="#addtofaves" onclick="this.blur();return false" id="photo_gne_button_add_to_faves" class="photo_gne_button sprite-add_to_faves_grey" style="width:54px;*width:56px" alt="Add to faves">&nbsp;</a>
+		<a href="#addnote" onclick="this.blur();return false" id="photo_gne_button_add_note" class="photo_gne_button sprite-add_note_grey" style="width:44px;*width:46px" alt="Add note">&nbsp;</a>
+		<a href="#blogthis" onclick="this.blur();return false" id="photo_gne_button_blog_this" class="photo_gne_button sprite-blog_this_grey" style="width:45px;*width:47px" alt="Blog this">&nbsp;</a>
+		<a href="/photos/igtastical/2320225665/sizes/o/" id="photo_gne_button_zoom" class="photo_gne_button sprite-zoom_grey" onclick="this.blur(); return false;" style="width:47px;*width:49px" alt="All sizes">&nbsp;</a>
+	</div>
+	<div id="photoImgDiv2320225665" style="width:502px" class="photoImgDiv">
+		<img src="images/2320225665_60d9c6669b.jpg" alt="" width="500" height="375" class="reflect">
+	</div>
+	
+	<div id="About">
+		<div id="DiscussPhoto">
+			<h3>Add your comment</h3>
+		</div>
+	</div>
+	
+	<div class="TagList">
+		<h4>Tags</h4>
+
+		<div id="thetags">
+
+			<div id="tagdiv2005567-2320225665-4018991">
+				<a href="/photos/tags/owengregory/" title="Click this icon to see other photos tagged with owen gregory" class="globe" onMouseOver="this.childNodes[0].src='images/icon_globe_over.gif';" onMouseOut="this.childNodes[0].src='images/icon_globe.gif';">
+					<img src="images/icon_globe.gif" width="16" height="16" class="icon" alt="Click this icon to see all public photos tagged with owen gregory" />
+				</a>
+				<a href="/photos/igtastical/tags/owengregory/" class="Plain">owen gregory</a>
+			</div>
+			
+			<div id="tagdiv2005567-2320225665-3019815">
+				<a href="/photos/tags/trevormorris/" title="Click this icon to see other photos tagged with trevor morris" class="globe" onMouseOver="this.childNodes[0].src='images/icon_globe_over.gif';" onMouseOut="this.childNodes[0].src='images/icon_globe.gif';">
+					<img src="images/icon_globe.gif" width="16" height="16" class="icon" alt="Click this icon to see all public photos tagged with trevor morris" /></a>
+				<a href="/photos/igtastical/tags/trevormorris/" class="Plain">trevor morris</a>
+			</div>
+			
+			<div id="tagdiv2005567-2320225665-4000169">
+				<a href="/photos/tags/garethbrown/" title="Click this icon to see other photos tagged with gareth brown" class="globe" onMouseOver="this.childNodes[0].src='images/icon_globe_over.gif';" onMouseOut="this.childNodes[0].src='images/icon_globe.gif';">
+					<img src="images/icon_globe.gif" width="16" height="16" class="icon" alt="Click this icon to see all public photos tagged with gareth brown" /></a>
+				<a href="/photos/igtastical/tags/garethbrown/" class="Plain">gareth brown</a>
+			</div>
+			
+			<div id="tagdiv2005567-2320225665-4019123">
+				<a href="/photos/tags/mattmachell/" title="Click this icon to see other photos tagged with matt machell" class="globe" onMouseOver="this.childNodes[0].src='images/icon_globe_over.gif';" onMouseOut="this.childNodes[0].src='images/icon_globe.gif';">
+					<img src="images/icon_globe.gif" width="16" height="16" class="icon" alt="Click this icon to see all public photos tagged with matt machell" /></a>
+				<a href="/photos/igtastical/tags/mattmachell/" class="Plain">matt machell</a>
+			</div>
+			
+			<div id="tagdiv2005567-2320225665-21118009">
+				<a href="/photos/tags/stumaynardkeene/" title="Click this icon to see other photos tagged with stu maynard-keene" class="globe" onMouseOver="this.childNodes[0].src='images/icon_globe_over.gif';" onMouseOut="this.childNodes[0].src='images/icon_globe.gif';">
+					<img src="images/icon_globe.gif" width="16" height="16" class="icon" alt="Click this icon to see all public photos tagged with stu maynard-keene" /></a>
+				<a href="/photos/igtastical/tags/stumaynardkeene/" class="Plain">stu maynard-keene</a>
+			</div>
+			
+			<div id="tagdiv2005567-2320225665-11022419">
+				<a href="/photos/tags/theoldcontemptibles/" title="Click this icon to see other photos tagged with the old contemptibles" class="globe" onMouseOver="this.childNodes[0].src='images/icon_globe_over.gif';" onMouseOut="this.childNodes[0].src='images/icon_globe.gif';">
+					<img src="images/icon_globe.gif" width="16" height="16" class="icon" alt="Click this icon to see all public photos tagged with the old contemptibles" /></a>
+				<a href="/photos/igtastical/tags/theoldcontemptibles/" class="Plain">the old contemptibles</a>
+			</div>
+			
+			<div id="tagdiv2005567-2320225665-2789010">
+				<a href="/photos/tags/oldcontemptibles/" title="Click this icon to see other photos tagged with old contemptibles" class="globe" onMouseOver="this.childNodes[0].src='images/icon_globe_over.gif';" onMouseOut="this.childNodes[0].src='images/icon_globe.gif';">
+					<img src="images/icon_globe.gif" width="16" height="16" class="icon" alt="Click this icon to see all public photos tagged with old contemptibles" /></a>
+				<a href="/photos/igtastical/tags/oldcontemptibles/" class="Plain">old contemptibles</a>
+			</div>
+			
+			<div id="tagdiv2005567-2320225665-2900">
+				<a href="/photos/tags/pub/" title="Click this icon to see other photos tagged with pub" class="globe" onMouseOver="this.childNodes[0].src='images/icon_globe_over.gif';" onMouseOut="this.childNodes[0].src='images/icon_globe.gif';">
+					<img src="images/icon_globe.gif" width="16" height="16" class="icon" alt="Click this icon to see all public photos tagged with pub" /></a>
+				<a href="/photos/igtastical/tags/pub/" class="Plain">pub</a>
+			</div>
+			
+			<div id="tagdiv2005567-2320225665-21007143">
+				<a href="/photos/tags/20080308/" title="Click this icon to see other photos tagged with 20080308" class="globe" onMouseOver="this.childNodes[0].src='images/icon_globe_over.gif';" onMouseOut="this.childNodes[0].src='images/icon_globe.gif';">
+					<img src="images/icon_globe.gif" width="16" height="16" class="icon" alt="Click this icon to see all public photos tagged with 20080308" /></a>
+				<a href="/photos/igtastical/tags/20080308/" class="Plain">20080308</a>
+			</div>
+			
+			<div id="tagdiv2005567-2320225665-2909">
+				<a href="/photos/tags/birmingham/" title="Click this icon to see other photos tagged with birmingham" class="globe" onMouseOver="this.childNodes[0].src='images/icon_globe_over.gif';" onMouseOut="this.childNodes[0].src='images/icon_globe.gif';">
+					<img src="images/icon_globe.gif" width="16" height="16" class="icon" alt="Click this icon to see all public photos tagged with birmingham" /></a>
+				<a href="/photos/igtastical/tags/birmingham/" class="Plain">birmingham</a>
+			</div>
+			
+			<div id="tagdiv2005567-2320225665-1236559">
+				<a href="/photos/tags/multipack/" title="Click this icon to see other photos tagged with multipack" class="globe" onMouseOver="this.childNodes[0].src='images/icon_globe_over.gif';" onMouseOut="this.childNodes[0].src='images/icon_globe.gif';">
+					<img src="images/icon_globe.gif" width="16" height="16" class="icon" alt="Click this icon to see all public photos tagged with multipack" /></a>
+				<a href="/photos/igtastical/tags/multipack/" class="Plain">multipack</a>
+			</div>
+			
+			<div id="tagdiv2005567-2320225665-2430108">
+				<a href="/photos/tags/themultipack/" title="Click this icon to see other photos tagged with the multipack" class="globe" onMouseOver="this.childNodes[0].src='images/icon_globe_over.gif';" onMouseOut="this.childNodes[0].src='images/icon_globe.gif';">
+					<img src="images/icon_globe.gif" width="16" height="16" class="icon" alt="Click this icon to see all public photos tagged with the multipack" /></a>
+				<a href="/photos/igtastical/tags/themultipack/" class="Plain">the multipack</a>
+			</div>
+		</div>
+
+		<div id="machine_tag_toggle" style="width:150px">
+			<a href="#" class="Plain" id="machine_tag_toggle_show" style="display:block">
+				<img src="images/icon_blue_arrow_right.gif" width="9px" height="9px" border="0px" style="border:0px; margin-right:5px" />Show machine tags (<span id="span_machine_tags_show_count">1</span>)
+			</a>
+			<a href="#" class="Plain" id="machine_tag_toggle_hide" style="display:none">
+				<img src="images/icon_blue_arrow_down.gif" width="9px" height="9px" border="0px" style="border:0px; margin-right:5px" />Hide machine tags (<span id="span_machine_tags_hide_count">1</span>)
+			</a>
+		</div>
+
+		<div id="themachinetags" style="margin-top: 9px">
+			<div id="tagdiv2005567-2320225665-21214830">
+				<a href="/photos/tags/upcoming%3Aevent%3D417757/" title="Click this icon to see other photos tagged with upcoming:event=417757"  class="globe" onMouseOver="this.childNodes[0].src='images/icon_globe_over.gif';" onMouseOut="this.childNodes[0].src='images/icon_globe.gif';">
+					<img src="images/icon_globe.gif" width="16" height="16" class="icon" alt="Click this icon to see all public photos tagged with upcoming:event=417757" />
+				</a>
+
+				<a href="/photos/igtastical/tags/upcoming%3Aevent%3D417757/" class="Plain">upcoming:event=417757</a>&nbsp;
+				<a href="/photos/igtastical/2320225665/?deletetag=2005567-2320225665-21214830" title="Delete this tag?" class="Grey" onclick="return tagrs_removeTag('2320225665', '2005567-2320225665-21214830', 'upcoming:event=417757', 'upcoming:event=417757');">[x]</a>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<title type="text">Creation: Latest Articles with the Tag "Health" (Atom)</title>
+<link rel="alternate" type="text/html" href="http://www.creation.uk.com/" />
+<link rel="self" type="application/atom+xml" href="http://www.creation.uk.com/archives/health/atom/" />
+<updated>2007-06-20T16:51:55+01:00</updated>
+<author>
+	<name>Creation</name>
+	<email>info@creation.uk.com</email>
+	<uri>http://www.creation.uk.com/</uri>
+</author>
+<id>http://www.creation.uk.com</id>
+<icon>http://www.creation.uk.com/favicon.ico</icon>
+	<entry>
+		<title type="text">Cycle Scheme</title>
+		<content type="html"><![CDATA[<p>Recently I had a fantastically silly idea — I&#8217;ll start cycling to work. After looking around on a few websites I
+found a bike I was happy with, a Specialized Hardrock. However, I then found out about a government funded <a
+href="http://www.cyclescheme.co.uk">Cycle Scheme</a> which allows you to get a bike tax free.</p>
+
+<p>The <a href="http://www.cyclescheme.co.uk">Cycle Scheme</a> works in saving you money in a few ways. Firstly, your
+company buys the bike VAT-free. Secondly, the bike is paid for over a period of twelve or eighteen months, with the money
+coming directly from your wages. This means two things: you&#8217;re basically getting the bike interest-free for the length
+of the term repayments and you are saving both national insurance and income tax because the payment comes out
+<em>before</em> these are calculated and taken.</p>
+
+<p>Beware, although the repayments may look higher than you expected and total more than you expected to save over the
+course of the year, the <a href="http://www.cyclescheme.co.uk/employee,calculator.htm">savings calculator</a> is actually
+pretty accurate. If you calculate your net pay sacrifice over the term of your repayments, the total is more or less the
+same as on the <a href="http://www.cyclescheme.co.uk/employee,calculator.htm">savings calculator</a> because you&#8217;re
+paying less tax over the year.</p>
+
+<p>Opting in to the <a href="http://www.cyclescheme.co.uk">Cycle Scheme</a> was a fairly easy process (at least for me as
+the employee), although it did feel like it took longer than necessary. Just <a
+href="http://www.cyclescheme.co.uk/employer,register.htm">ask your employer to sign up</a> for the scheme, then find a local
+bike shop (or online retailer) who participate. The Cycle Scheme website has a page to <a
+href="http://www.cyclescheme.co.uk/bikeshop,partner_finder.htm">help you find your nearest participating retailer</a> -
+simply enter your postcode and away you go!</p>
+
+<p>With the savings I was able to enjoy with the scheme I decided to get a Specialized Rockhopper Pro instead. It looks
+amazing, it&#8217;s very lightweight and rides nicely. Unfortunately, it is <em>not immune</em> from <strong>getting
+punctures</strong> which I found out on my first sixteen-mile return trip to work.</p>
+
+<p>Overall, if you&#8217;re planning on cycling to work in the near future, or if you already cycle to work but are looking
+to replace your worn-out ten-year-old bike, definitely persuade your employer to sign on to the <a
+href="http://www.cyclescheme.co.uk">Cycle Scheme</a> which means you will save yourself some money and get a fresh new bike
+— just in time for a glorious summer.</p>]]></content>
+		<link rel="alternate" href="http://www.creation.uk.com/news/2007/06/05/cycle-scheme/" type="text/html" hreflang="en" />
+		<id>tag:creation.uk.com,2007-06-05:/news/2007/06/05/cycle-scheme/</id>
+		<updated>2007-06-05T11:34:14+01:00</updated>
+		<published>2007-06-05T11:34:14+01:00</published>
+		<html:abbr class="published updated" title="2007-06-05">Tue 5th Jun 2007 at 11:34</html:abbr>
+		<author>
+			<name>Trevor Morris</name>
+			<html:img><![CDATA[<img src="http://www.creation.uk.com/images/icons/large/trevor-morris.gif" height="108" width="108" alt="Photo of Trevor Morris" class="photo" />]]></html:img>
+			<uri>http://www.creation.uk.com/company/trevor-morris/</uri>
+		</author>
+		<category term="bike" label="Bike" scheme="http://www.creation.uk.com/news/tags/bike/" />
+		<category term="health" label="Health" scheme="http://www.creation.uk.com/news/tags/health/" />
+		<category term="savings" label="Savings" scheme="http://www.creation.uk.com/news/tags/savings/" />
+		<category term="scheme" label="Scheme" scheme="http://www.creation.uk.com/news/tags/scheme/" />
+	</entry>
+</feed>

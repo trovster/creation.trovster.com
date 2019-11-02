@@ -1,0 +1,55 @@
+#branding,
+#branding h1 {
+	position: absolute; top: 0; left: 0; z-index: 50;
+	width: 600px;
+	padding: 0;
+	background-image: none;
+}
+body.eshot #branding h1 a {
+	position: absolute; top: 60px; right: 49px; z-index: 50;
+	width: 137px; height: 34px;
+	background-image: url(/css/specifics/eshots/images/[2]_creation-logo.jpg);
+}
+#content {
+	position: relative;
+	padding-top: 30px;
+	background: url(/css/specifics/eshots/images/[2]_visual.jpg) no-repeat -20px 30px;
+}
+#content h3.entry-title, #content h3.entry-title span.gl-ir {
+	position: absolute; top: 137px; left: 18px;
+	height: 153px; width: 309px;
+	line-height: 153px; color: #fff;
+	background: url(/css/specifics/eshots/images/[2]_title.jpg) no-repeat 0 0;
+}
+#content .entry-content {
+	position: relative;
+	padding: 130px 20px 0;
+	width: 280px;
+}
+#footer-signature {
+	padding: 0 20px;
+}
+
+#content .entry-content h4,
+#content .entry-content a {
+	color: #c06;
+}
+#content .entry-content a:hover {
+	border-bottom-color: #c06;
+}
+#content #content-primary .entry-content em {
+	color: #000; font-style: italic;
+}
+#content #content-primary .entry-content p strong a {
+	display: block; overflow: hidden;
+	height: 30px; width: 174px;
+	margin: 16px 0; padding: 0;
+	text-indent: -9999px; line-height: 0.0; font-size: 0.0;
+	background: url(/css/specifics/eshots/images/[2]_take-the-survey.gif) no-repeat 0 0;
+}
+#content #content-primary .entry-content p strong a:hover {
+	background-position: 0 -33px;
+	border-bottom-color: #fff; text-decoration: none;
+}
+
+/* [2]_take-the-survey.gif */

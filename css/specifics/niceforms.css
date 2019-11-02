@@ -1,0 +1,32 @@
+/*##########################################
+Name: Default styling for Niceforms v.1.0
+Author: Lucian Slatineanu
+URL: http://www.badboy.ro/
+##########################################*/
+
+/*Transparent items*/
+.checkbox input.outtaHere {
+	position: absolute;
+	left: -3000px;
+}
+
+
+.checkboxArea, .checkboxAreaChecked {
+	display: block;
+	float: left; clear: left;
+	width: 22px; height: 22px;
+	padding: 0; margin: 0;
+	font-size: 0;
+	cursor: pointer;
+}
+#comments-form form.niceform .checkboxArea,
+#comments-form form.niceform .checkboxAreaChecked {
+	background: url(../images/forms/comments_remember_me.gif) no-repeat 0 0;
+}
+#comments-form form.niceform .checkboxAreaChecked {
+	background-position: 0 100%;
+}
+#comments-form form.niceform .checkbox label {
+	font-size: 1.35em;
+	padding-left: 5px;
+}

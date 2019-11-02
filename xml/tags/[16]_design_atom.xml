@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<title type="text">Creation: Latest Articles with the Tag "Design" (Atom)</title>
+<link rel="alternate" type="text/html" href="http://www.creation.uk.com/" />
+<link rel="self" type="application/atom+xml" href="http://www.creation.uk.com/archives/design/atom/" />
+<updated>2007-06-20T16:51:55+01:00</updated>
+<author>
+	<name>Creation</name>
+	<email>info@creation.uk.com</email>
+	<uri>http://www.creation.uk.com/</uri>
+</author>
+<id>http://www.creation.uk.com</id>
+<icon>http://www.creation.uk.com/favicon.ico</icon>
+	<entry>
+		<title type="text">Easy Money?</title>
+		<content type="html"><![CDATA[<p>Ok. I&#8217;ll keep this short because it&#8217;s day two and I&#8217;m sure you are already tired of the new <a
+href="http://www.london2012.com">London 2012</a> Olympic logo scandal.</p>
+
+<p>I picked up the general vibe of disapproval through the media a few hours before I saw the logo and couldn&#8217;t wait
+to form my own opinion on this &#8220;<em>obscene waste of tax payers money</em>&#8221;. </p>
+
+<p>My initial reactions were &#8220;<em>it&#8217;s not what I expected</em>&#8221; and &#8220;<em>it&#8217;s also very
+basic</em>&#8221; – and for me, these two reactions are both positive ones.</p>
+
+<p>I expected to see a flowing, freehand, prancing human form suspended over the word &#8216;London&#8217; in an optimistic
+script font - like many of the European sporting events that have come before. Thankfully the logo is nothing like this.
+It&#8217;s simple, as all good logos should be, and must be seen in context to be properly appreciated. I&#8217;m truly
+relieved that the design has avoided the red, white and blue, British war-paint colourway, designed to intimidate non
+patriots. <a href="http://www.olympic.org">The Olympics</a> is a no prejudice global gathering not a fight on our turf.</p>
+
+<p>I understand the general public&#8217;s reaction to a cluster of geometric shapes baring a price tag of £400,000.
+However, consider the research and deliberation behind a complete and incredibly high-profile graphic identity for an
+international event, coordinated by an agency with the branding pedigree of <a href="http://www.wolffolins.com">Wolff
+Olins</a> and the price seems quite reasonable to me.</p>
+
+<p>In my opinion the new London 2012 Olympic logo is unique and distinguishable and the work behind it&#8217;s creation
+should not be underestimated. Like <a href="http://en.wikipedia.org/wiki/Kelly_Holmes">Kelly Holmes</a>, <a
+href="http://en.wikipedia.org/wiki/Michael_Johnson_%28athlete%29">Michael Johnson</a>, <a
+href="http://en.wikipedia.org/wiki/Jonathan_Edwards_%28athlete%29">Jonathan Edwards</a>, <a
+href="http://en.wikipedia.org/wiki/Asafa_Powell">Asafa Powell</a> – true experts in their field make it all look so
+easy.</p>
+
+<p>No doubt that the <a href="http://www.london2012.com">2012 Olympics</a> will be an historic and spectacular event. As for
+the logo, it&#8217;s appeal will grow - trust me.</p>]]></content>
+		<link rel="alternate" href="http://www.creation.uk.com/news/2007/06/06/easy-money/" type="text/html" hreflang="en" />
+		<id>tag:creation.uk.com,2007-06-06:/news/2007/06/06/easy-money/</id>
+		<updated>2007-06-06T16:21:22+01:00</updated>
+		<published>2007-06-06T16:21:22+01:00</published>
+		<html:abbr class="published updated" title="2007-06-06">Wed 6th Jun 2007 at 16:21</html:abbr>
+		<author>
+			<name>Tim Webley</name>
+			<html:img><![CDATA[<img src="http://www.creation.uk.com/images/icons/large/tim-webley.gif" height="108" width="108" alt="Photo of Tim Webley" class="photo" />]]></html:img>
+			<uri>http://www.creation.uk.com/company/tim-webley/</uri>
+		</author>
+		<category term="design" label="Design" scheme="http://www.creation.uk.com/news/tags/design/" />
+		<category term="logo" label="Logo" scheme="http://www.creation.uk.com/news/tags/logo/" />
+		<category term="london-2012" label="London 2012" scheme="http://www.creation.uk.com/news/tags/london-2012/" />
+		<category term="opinion" label="Opinion" scheme="http://www.creation.uk.com/news/tags/opinion/" />
+	</entry>
+</feed>

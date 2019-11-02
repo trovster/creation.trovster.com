@@ -1,0 +1,386 @@
+/*
+* Author: 		Trevor Morris, Creation Design & Marketing
+* Contact:		trevor@creation.uk.com, leigh@creation.uk.com
+* Version:		1.0
+* Created:		24/04/2007
+* Updated:		05/05/2007
+* Notes:		Styles for primary and section navigation.
+*
+* CONTENTS
+* -------------------------
+* =nav - Navigation Setup
+* =nav-nor - Normal States
+* =nav-hov - Hover States
+* =nav-act - Active States
+* =sec - Section Navigation
+* =skip - Skiplinks
+* =sub - Page Navigation (Portfolio/Services)
+*
+*/
+
+
+
+/* =nav - Navigation
+--------------------------------------------------------------------------------------------------*/
+#navigation {
+	position: absolute; top: -4px; /*right: 0;*/ left: 370px; z-index: 50000;
+}
+	#navigation-primary ul {
+		overflow: hidden;
+		width: 388px; height: 73px;
+		margin: 0;
+		list-style: none;
+		background: url(/css/images/general/navigation.gif) no-repeat 0 4px;
+	}
+	#navigation-primary ul li {
+		float: left;
+		padding: 0;
+		background-image: none;
+	}
+	#navigation-primary ul li a,
+	#navigation-primary ul li.active ul li a {
+		position: relative; z-index: 50;
+		height: 32px;
+		margin: 0 17px 0 0; padding: 18px 0 0;
+		text-transform: uppercase; color: #777;
+		border: 0; border-top: 4px solid #900;
+		cursor: pointer;
+	}
+	#navigation-primary ul li a,
+	#navigation-primary ul li a span.gl-ir {
+		background-image: url(/css/images/general/navigation.gif);
+	}
+	#navigation-primary ul li a span.gl-ir {
+		height: 50px; padding: 0;
+	}
+	#navigation-primary ul li.lli a {
+		margin-right: 0;
+	}
+	#navigation-primary ul li.active ul li a:hover {
+		cursor: pointer;
+	}
+
+
+/* =nav-nor - Normal States
+--------------------------------------------------------------------------------------------------*/
+#navigation-primary ul li.home a,
+#navigation-primary ul li.home a span.gl-ir {
+	width: 30px;
+	margin-left: 18px;
+	background-position: -18px 0;
+}
+#navigation-primary ul li.home a span.gl-ir {
+	margin-left: 0;
+}
+#navigation-primary ul li.company a,
+#navigation-primary ul li.company a span.gl-ir {
+	width: 51px;
+	background-position: -65px 0;
+}
+#navigation-primary ul li.portfolio a,
+#navigation-primary ul li.portfolio a span.gl-ir {
+	width: 57px;
+	background-position: -133px 0;
+}
+#navigation-primary ul li.services a,
+#navigation-primary ul li.services a span.gl-ir {
+	width: 50px;
+	background-position: -207px 0;
+}
+#navigation-primary ul li.contact a,
+#navigation-primary ul li.contact a span.gl-ir {
+	width: 48px;
+	background-position: -274px 0;
+}
+#navigation-primary ul li.news a,
+#navigation-primary ul li.news a span.gl-ir {
+	width: 30px;
+	background-position: -339px 0;
+}
+
+
+/* =nav-hov - Hover States
+--------------------------------------------------------------------------------------------------*/
+#navigation-primary ul li a:hover,
+#navigation-primary ul li a:focus,
+#navigation-primary ul li a:active,
+#navigation-primary ul li.active ul li a:hover,
+#navigation-primary ul li.active ul li a:focus,
+#navigation-primary ul li.active ul li a:active {
+	color: #900;
+	border-color: #f00;
+}
+#navigation-primary ul li.home a:hover,
+#navigation-primary ul li.home a:focus,
+#navigation-primary ul li.home a:active,
+#navigation-primary ul li.home a:hover span.gl-ir,
+#navigation-primary ul li.home a:focus span.gl-ir,
+#navigation-primary ul li.home a:active span.gl-ir {
+	background-position: -18px -50px;
+}
+#navigation-primary ul li.company a:hover,
+#navigation-primary ul li.company a:focus,
+#navigation-primary ul li.company a:active,
+#navigation-primary ul li.company a:hover span.gl-ir,
+#navigation-primary ul li.company a:focus span.gl-ir,
+#navigation-primary ul li.company a:active span.gl-ir {
+	background-position: -65px -50px;
+}
+#navigation-primary ul li.portfolio a:hover,
+#navigation-primary ul li.portfolio a:focus,
+#navigation-primary ul li.portfolio a:active,
+#navigation-primary ul li.portfolio a:hover span.gl-ir,
+#navigation-primary ul li.portfolio a:focus span.gl-ir,
+#navigation-primary ul li.portfolio a:active span.gl-ir {
+	background-position: -133px -50px;
+}
+#navigation-primary ul li.services a:hover,
+#navigation-primary ul li.services a:focus,
+#navigation-primary ul li.services a:active,
+#navigation-primary ul li.services a:hover span.gl-ir,
+#navigation-primary ul li.services a:focus span.gl-ir,
+#navigation-primary ul li.services a:active span.gl-ir {
+	background-position: -207px -50px;
+}
+#navigation-primary ul li.contact a:hover,
+#navigation-primary ul li.contact a:focus,
+#navigation-primary ul li.contact a:active,
+#navigation-primary ul li.contact a:hover span.gl-ir,
+#navigation-primary ul li.contact a:focus span.gl-ir,
+#navigation-primary ul li.contact a:active span.gl-ir {
+	background-position: -274px -50px;
+}
+#navigation-primary ul li.news a:hover,
+#navigation-primary ul li.news a:focus,
+#navigation-primary ul li.news a:active,
+#navigation-primary ul li.news a:hover span.gl-ir,
+#navigation-primary ul li.news a:focus span.gl-ir,
+#navigation-primary ul li.news a:active span.gl-ir {
+	background-position: -339px -50px;
+}
+
+
+/* =nav-act - Active States
+--------------------------------------------------------------------------------------------------*/
+#navigation-primary ul li.active a,
+#navigation-primary ul li.active ul li.active a {
+	color: #900;
+}
+#navigation-primary ul li.active a:hover,
+#navigation-primary ul li.active ul li.active a:hover {
+	cursor: default;
+	border-color: #900;
+}
+body.welcome #navigation-primary ul li.home a,
+body.welcome #navigation-primary ul li.home a:hover,
+body.welcome #navigation-primary ul li.home a:focus,
+body.welcome #navigation-primary ul li.home a:active,
+body.welcome #navigation-primary ul li.home a span.gl-ir,
+body.welcome #navigation-primary ul li.home a:hover span.gl-ir,
+body.welcome #navigation-primary ul li.home a:focus span.gl-ir,
+body.welcome #navigation-primary ul li.home a:active span.gl-ir {
+	background-position: -18px -99px;
+}
+body.company #navigation-primary ul li.company a,
+body.company #navigation-primary ul li.company a:hover,
+body.company #navigation-primary ul li.company a:focus,
+body.company #navigation-primary ul li.company a:active,
+body.company #navigation-primary ul li.company a span.gl-ir,
+body.company #navigation-primary ul li.company a:hover span.gl-ir,
+body.company #navigation-primary ul li.company a:focus span.gl-ir,
+body.company #navigation-primary ul li.company a:active span.gl-ir {
+	background-position: -65px -99px;
+}
+body.portfolio #navigation-primary ul li.portfolio a,
+body.portfolio #navigation-primary ul li.portfolio a:hover,
+body.portfolio #navigation-primary ul li.portfolio a:focus,
+body.portfolio #navigation-primary ul li.portfolio a:active,
+body.portfolio #navigation-primary ul li.portfolio a span.gl-ir,
+body.portfolio #navigation-primary ul li.portfolio a:hover span.gl-ir,
+body.portfolio #navigation-primary ul li.portfolio a:focus span.gl-ir,
+body.portfolio #navigation-primary ul li.portfolio a:active span.gl-ir {
+	background-position: -133px -99px;
+}
+body.services #navigation-primary ul li.services a,
+body.services #navigation-primary ul li.services a:hover,
+body.services #navigation-primary ul li.services a:focus,
+body.services #navigation-primary ul li.services a:active,
+body.services #navigation-primary ul li.services a span.gl-ir,
+body.services #navigation-primary ul li.services a:hover span.gl-ir,
+body.services #navigation-primary ul li.services a:focus span.gl-ir,
+body.services #navigation-primary ul li.services a:active span.gl-ir {
+	background-position: -207px -99px;
+}
+body.contact #navigation-primary ul li.contact a,
+body.contact #navigation-primary ul li.contact a:hover,
+body.contact #navigation-primary ul li.contact a:focus,
+body.contact #navigation-primary ul li.contact a:active,
+body.contact #navigation-primary ul li.contact a span.gl-ir,
+body.contact #navigation-primary ul li.contact a:hover span.gl-ir,
+body.contact #navigation-primary ul li.contact a:focus span.gl-ir,
+body.contact #navigation-primary ul li.contact a:active span.gl-ir {
+	background-position: -274px -99px;
+}
+body.news #navigation-primary ul li.news a,
+body.news #navigation-primary ul li.news a:hover,
+body.news #navigation-primary ul li.news a:focus,
+body.news #navigation-primary ul li.news a:active,
+body.news #navigation-primary ul li.news a span.gl-ir,
+body.news #navigation-primary ul li.news a:hover span.gl-ir,
+body.news #navigation-primary ul li.news a:focus span.gl-ir,
+body.news #navigation-primary ul li.news a:active span.gl-ir {
+	background-position: -339px -99px;
+}
+
+
+
+/* =sec - Section Navigation
+--------------------------------------------------------------------------------------------------*/
+#content-navigation ul,
+#image-navigation ul {
+	float: left;
+	margin-bottom: 0;
+	list-style: none;
+}
+#content-navigation ul li,
+#image-navigation ul li {
+	position: relative;
+	height: 108px; width: 168px;
+	margin-bottom: 16px; padding: 0;
+	background-image: none;
+}
+#content-navigation ul li a,
+#content-navigation ul li a span.gl-ir {
+	height: 100%; width: 100%;
+	/*text-align: center; line-height: 108px;*/
+	border: 0;
+}
+#content-navigation ul li a:hover,
+#content-navigation ul li a:active,
+#content-navigation ul li a:focus,
+#content-navigation ul li.active a,
+#content-navigation ul li.active a:hover,
+#content-navigation ul li.active a:active,
+#content-navigation ul li.active a:focus,
+#content-navigation ul li a:hover span.gl-ir,
+#content-navigation ul li a:active span.gl-ir,
+#content-navigation ul li a:focus span.gl-ir,
+#content-navigation ul li.active a span.gl-ir,
+#content-navigation ul li.active a:hover span.gl-ir,
+#content-navigation ul li.active a:active span.gl-ir,
+#content-navigation ul li.active a:focus span.gl-ir {
+	background-position: 0 -108px;
+	border-bottom: 0;
+}
+#content-navigation ul li.active a:hover,
+#image-navigation ul li.active a:hover {
+	cursor: default;
+}
+
+
+
+/* =sub - Page Navigation (Portfolio/Services)
+--------------------------------------------------------------------------------------------------*/
+.selection dl {
+	clear: left;
+}
+.selection dd {
+	margin: 0 0 1em;
+}
+.selection dt:hover,
+.selection dt.next_to_hover,
+.selection dd.next_to_hover {
+	border-left-color: #ccc;
+	cursor: pointer;
+}
+.selection dt.active,
+.selection dd.active {
+	border-left: 4px solid #900;
+	padding-left: 7px;
+}
+.selection dt.active,
+.selection dd.active,
+.selection dt.active a,
+.selection dd.active a {
+	cursor: text;
+	border-bottom: 0;
+}
+
+
+#project-pagination {
+	margin-top: 4em;
+}
+#project-pagination li {
+	display: inline;
+	background-image: none;
+	padding: 0;
+}
+#project-pagination li.prev {
+	margin-right: 4px;
+	border-right: 1px solid #900;
+}
+#project-pagination li.prev a {
+	margin-right: 6px; 
+}
+#project-pagination li.lli,
+#project-pagination li.lli a {
+	margin-right: 0;
+	border-right: 0;
+}
+#project-pagination li.prev a::before {
+	content: '< ';
+}
+#project-pagination li.next a::after {
+	content: ' >';
+}
+
+
+
+/* =skip - Skiplinks
+--------------------------------------------------------------------------------------------------*/
+#skiplinks {
+	position: absolute; top: 10px; left: 15px; z-index: 501;
+	margin: 0;
+}
+#skiplinks li {
+	padding: 0;
+	background-image: none;
+}
+#skiplinks li a:focus,
+#skiplinks li a:active {
+	top: 0; left: 0; z-index: 502;
+	display: block;
+	height: 25px; width: 300px;
+	font-size: 10px; line-height: 1em; text-align: center; line-height: 25px;
+	background-color: #fff;
+	border: 1px solid #900;
+}
+
+
+
+/* =sub - Homepage Navigation
+--------------------------------------------------------------------------------------------------*/
+body.welcome #content-navigation ul li a,
+body.welcome #content-navigation ul li a span.gl-ir {
+	background-position: 0 -216px;
+}
+body.welcome #content-navigation ul li a:hover,
+body.welcome #content-navigation ul li a:active,
+body.welcome #content-navigation ul li a:focus,
+body.welcome #content-navigation ul li a:hover span.gl-ir,
+body.welcome #content-navigation ul li a:active span.gl-ir,
+body.welcome #content-navigation ul li a:focus span.gl-ir {
+	background-position: 0 -324px;
+}
+body.welcome #content-navigation ul li.news a,
+body.welcome #content-navigation ul li.news a span.gl-ir {
+	background-position: 0 0;
+}
+body.welcome #content-navigation ul li.news a:hover,
+body.welcome #content-navigation ul li.news a:active,
+body.welcome #content-navigation ul li.news a:focus,
+body.welcome #content-navigation ul li.news a:hover span.gl-ir,
+body.welcome #content-navigation ul li.news a:active span.gl-ir,
+body.welcome #content-navigation ul li.news a:focus span.gl-ir {
+	background-position: 0 -108px;
+}

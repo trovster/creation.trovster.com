@@ -1,0 +1,71 @@
+/*
+* Author: 		Trevor Morris, Creation Design & Marketing
+* Contact:		trevor@creation.uk.com, leigh@creation.uk.com
+* Version:		1.0
+* Created:		24/04/2007
+* Updated:		15/05/2007
+* Notes:		Contact section specific styles.
+*
+* CONTENTS
+* -------------------------
+* =nav - Section Navigation
+*
+*/
+
+/* =nav - Section Navigation
+--------------------------------------------------------------------------------------------------*/
+#content-navigation ul li {
+	margin-right: 0;
+}
+#content-navigation ul li.national a,
+#content-navigation ul li.national a span.gl-ir {
+	background-image: url(../images/contact/national.jpg);
+}
+#content-navigation ul li.regional a,
+#content-navigation ul li.regional a span.gl-ir {
+	background-image: url(../images/contact/regional.jpg);
+}
+#content-navigation ul li.local a,
+#content-navigation ul li.local a span.gl-ir {
+	background-image: url(../images/contact/local.jpg);
+}
+
+
+/* height for google maps */
+.has-googlemaps #contact-map {
+	height: 356px;
+	margin-bottom: 19px;
+}
+
+#contact-map address {
+	padding-bottom: 5px;
+	border: 1px solid red;
+}
+
+/* address */
+.vcard h4.org {
+	font-weight: bold;
+}
+.vcard h4.org,
+.vcard address.adr,
+.vcard .fax {
+	margin: 0 0 0.5em;
+}
+.vcard address.adr span {
+	display: block;
+}
+.vcard dd.tel .type {
+	float: left; clear: left;
+	width: 2.5em;
+}
+.vcard dd.tel .value {
+	margin-left: 0.2em;
+}
+
+
+#contact h4 {
+	margin: 1em 0 0.333em; 
+}
+#contact h5 {
+
+}

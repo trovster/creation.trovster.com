@@ -1,0 +1,217 @@
+/*
+* Author: 		Trevor Morris, Creation Design & Marketing
+* Contact:		trevor@creation.uk.com, leigh@creation.uk.com
+* Version:		1.0
+* Created:		24/04/2007
+* Updated:		05/05/2007
+* Notes:		Styles for primary and section navigation.
+*
+* CONTENTS
+* -------------------------
+* =nav - Navigation Setup
+* =nav-nor - Normal States
+* =nav-hov - Hover States
+* =nav-act - Active States
+* =sec - Section Navigation
+* =sub - Page Navigation (Portfolio/Services)
+*
+*/
+
+/* =nav - Navigation
+--------------------------------------------------------------------------------------------------*/
+#navigation {
+	position: absolute; top: 90px; left: 275px;
+}
+	#navigation-primary ul {
+		overflow: hidden;
+		width: 500px; height: 28px;
+		margin: 0;
+		list-style: none;
+	}
+	#navigation-primary ul li {
+		float: left;
+		padding: 0; margin-right: 10px;
+		background-image: none;
+	}
+	#navigation-primary ul li a {
+		height: 28px; width: 46px;
+		background-image: url(images/navigation.png);
+	}
+	#navigation-primary ul li.lli a {}
+
+
+/* =nav-nor - Normal States
+--------------------------------------------------------------------------------------------------*/
+#navigation-primary ul li.home a {}
+#navigation-primary ul li.company a {
+	width: 54px;
+	background-position: -46px 0;
+}
+#navigation-primary ul li.portfolio a {
+	width: 52px;
+	background-position: -100px 0;
+}
+#navigation-primary ul li.services a {
+	width: 50px;
+	background-position: -152px 0;
+}
+#navigation-primary ul li.contact a {
+	background-position: -202px 0;
+}
+#navigation-primary ul li.news a {
+	width: 38px;
+	background-position: -248px 0;
+}
+
+
+/* =nav-hov - Hover States
+--------------------------------------------------------------------------------------------------*/
+#navigation-primary ul li a:hover,
+#navigation-primary ul li a:focus,
+#navigation-primary ul li a:active {}
+
+#navigation-primary ul li.home a:hover,
+#navigation-primary ul li.home a:focus,
+#navigation-primary ul li.home a:active {
+	background-position: 0 -28px;
+}
+#navigation-primary ul li.company a:hover,
+#navigation-primary ul li.company a:focus,
+#navigation-primary ul li.company a:active {
+	background-position: -46px -28px;
+}
+#navigation-primary ul li.portfolio a:hover,
+#navigation-primary ul li.portfolio a:focus,
+#navigation-primary ul li.portfolio a:active {
+	background-position: -100px -28px;
+}
+#navigation-primary ul li.services a:hover,
+#navigation-primary ul li.services a:focus,
+#navigation-primary ul li.services a:active {
+	background-position: -152px -28px;
+}
+#navigation-primary ul li.contact a:hover,
+#navigation-primary ul li.contact a:focus,
+#navigation-primary ul li.contact a:active {
+	background-position: -202px -28px;
+}
+#navigation-primary ul li.news a:hover,
+#navigation-primary ul li.news a:focus,
+#navigation-primary ul li.news a:active {
+	background-position: -248px -28px;
+}
+
+
+/* =nav-act - Active States
+--------------------------------------------------------------------------------------------------*/
+#navigation-primary ul li.active a:hover {}
+
+body.welcome #navigation-primary ul li.home a,
+body.welcome #navigation-primary ul li.home a:hover {
+	background-position: 0 -56px;
+}
+body.company #navigation-primary ul li.company a,
+body.company #navigation-primary ul li.company a:hover {
+	background-position: -46px -56px;
+}
+body.portfolio #navigation-primary ul li.portfolio a,
+body.portfolio #navigation-primary ul li.portfolio a:hover {
+	background-position: -100px -56px;
+}
+body.services #navigation-primary ul li.services a,
+body.services #navigation-primary ul li.services a:hover {
+	background-position: -152px -56px;
+}
+body.contact #navigation-primary ul li.contact a,
+body.contact #navigation-primary ul li.contact a:hover {
+	background-position: -202px -56px;
+}
+body.news #navigation-primary ul li.news a,
+body.news #navigation-primary ul li.news a:hover {
+	background-position: -248px -56px;
+}
+
+
+/* =sec - Section Navigation
+--------------------------------------------------------------------------------------------------*/
+#content-navigation,
+#image-navigation {
+	margin-right: 16px;
+}
+#content-navigation ul,
+#image-navigation ul {
+	float: left;
+	margin-bottom: 0;
+	list-style: none;
+}
+#content-navigation ul li,
+#image-navigation ul li {
+	position: relative;
+	height: 108px; width: 168px;
+	margin-bottom: 16px; padding: 0;
+	background-image: none;
+}
+#content-navigation ul li a {
+	height: 100%; width: 100%;
+}
+#content-navigation ul li a:hover,
+#content-navigation ul li a:active,
+#content-navigation ul li a:focus,
+#content-navigation ul li.active a,
+#content-navigation ul li.active a:hover,
+#content-navigation ul li.active a:active,
+#content-navigation ul li.active a:focus {
+	background-position: 0 -108px;
+}
+#content-navigation ul li.active a:hover,
+#image-navigation ul li.active a:hover {
+	cursor: default;
+}
+
+
+/* =sub - Page Navigation (Portfolio/Services)
+--------------------------------------------------------------------------------------------------*/
+.selection dl {
+	clear: left;
+}
+.selection dd {
+	margin: 0 0 1em;
+}
+.selection dt:hover,
+.selection dt.next_to_hover,
+.selection dd.next_to_hover {
+	border-left-color: #ccc;
+	cursor: pointer;
+}
+.selection dt.active,
+.selection dd.active {
+	border-left: 4px solid #900;
+	padding-left: 7px;
+}
+.selection dt.active,
+.selection dd.active,
+.selection dt.active a,
+.selection dd.active a {
+	cursor: text;
+	border-bottom: 0;
+}
+
+
+/* =sub - Homepage Navigation
+--------------------------------------------------------------------------------------------------*/
+body.welcome #content-navigation ul li a {
+	background-position: 0 -216px;
+}
+body.welcome #content-navigation ul li a:hover,
+body.welcome #content-navigation ul li a:active,
+body.welcome #content-navigation ul li a:focus {
+	background-position: 0 -324px;
+}
+body.welcome #content-navigation ul li.news a {
+	background-position: 0 0;
+}
+body.welcome #content-navigation ul li.news a:hover,
+body.welcome #content-navigation ul li.news a:active,
+body.welcome #content-navigation ul li.news a:focus {
+	background-position: 0 -108px;
+}

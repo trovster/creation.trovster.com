@@ -1,0 +1,106 @@
+html {
+	font-size: 16px; /* email clients might be set up differently to browsers */
+}
+body.wide #container,
+body.wide #branding,
+#container,
+#branding {
+	width: 560px;
+	background: #fff;
+}
+body.wide #branding,
+#branding {
+	background: transparent;
+}
+
+#container,
+body.wide #container {
+	font-size: 1.2em;
+}
+#content {
+	min-height: 0;
+}
+#content h3.entry-title {
+	margin-top: 0;
+}
+#content .entry-content {
+	width: 410px;
+}
+#content .entry-content p em {
+	color: #900; font-style: normal;
+}
+#content .entry-content strong em {
+	text-transform: uppercase; font-weight: bold;
+}
+#content .entry-content strong em a {
+	text-transform: none;
+}
+#content .entry-content h4 {
+	font-size: 1.55em;
+}
+#content .entry-content h4 strong {
+	display: block;
+	margin-bottom: 1em;
+	text-transform: none; line-height: 1.25; font-weight: normal;
+}
+#content .entry-content h4 strong a {
+	font-size: 0.65em;
+}
+#content .entry-content h4 strong,
+#content .entry-content strong em a {
+	color: #333;
+}
+#content .entry-content strong em a:hover,
+#content .entry-content strong em a:active,
+#content .entry-content strong em a:focus {
+	border-bottom-color: #777;
+}
+
+
+body.permalink #footer {
+	margin: 0; line-height: 1.25;
+}
+body.permalink #footer-copyright {
+	margin: 0 -20px;
+}
+#signature-details {
+	margin: 25px 0;
+}
+#eshot-details {
+	margin-bottom: 25px;
+}
+#signature-details, #eshot-details, #footer-signature dl {
+	font-size: 0.85em;
+}
+#signature-details, #eshot-details,
+#signature-details a, #eshot-details a {
+	color: #999;
+}
+#signature-details a:hover, #signature-details a:focus, #signature-details a:active,
+#eshot-details a:hover, #eshot-details a:focus, #eshot-details a:active {
+	border-color: #999;
+}
+#signature-details p, #eshot-details p {
+	margin: 0;
+}
+
+#footer-signature dl dd abbr.type,
+#footer-signature dl a {
+	color: #000;
+}
+#footer-signature dl a:hover, #footer-signature dl a:focus, #footer-signature dl a:active {
+	border-color: #000;
+}
+#footer-signature dl dd abbr.type {
+	text-transform: lowercase;
+}
+
+
+#footer-signature em.fn,
+#footer-signature strong.org {
+	display: block;
+	font-style: normal;
+}
+#footer-signature strong.org {
+	margin-top: 15px;
+}

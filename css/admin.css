@@ -1,0 +1,210 @@
+/*
+* Author: 		Trevor Morris, Creation Design & Marketing
+* Contact:		trevor@creation.uk.com, leigh@creation.uk.com
+* Version:		1.0
+* Created:		24/04/2007
+* Updated:		06/06/2007
+* Notes:		All the styles for the administration area
+*
+* CONTENTS
+* -------------------------
+*
+*/
+
+/*
+--------------------------------------------------------------------------------------------------*/
+body.wide #container {
+	width: 720px;
+}
+body.wide #content {
+	float: none;
+	width: auto;
+}
+#content-primary h3 {
+	padding: 0; margin: 0.2em 0 0.333em;
+	color: #000; font-size: 1.6364em; /* 18px */ letter-spacing: -0.015em; text-transform: none;
+}
+.clickable {
+	cursor: pointer;
+}
+
+
+.info-box, .feedback-box {
+	padding: 10px;
+	background-color: #f3f3f3;
+}
+.info-box a {
+	border-bottom-color: #f3f3f3;
+}
+.is-spam {
+	background-color: #FEFFAF;
+}
+.is-spam a {
+	border-bottom-color: #FEFFAF;
+}
+.info-box p.new {
+	margin: 0 0 5px 0;
+}
+.view-online a,
+.is-spam a {
+	display: block;
+	text-align: center;
+}
+#content-primary .info-box .active {
+	background-image: none;
+}
+#content-primary .info-box .active a {
+	color: #000; cursor: text;
+}
+#content-primary .view-online a.external {
+	padding: 0;
+	background-image: none;
+}
+img.center {
+	display: block;
+	margin: 0 auto 1em;
+}
+
+
+#autosave-feedback {
+	position: fixed; top: -150px; left: 16px;
+	padding: 10px 25px;
+	color: #fff; font-size: 2em; /* 30px */ text-align: center;
+	background-color: red;
+}
+
+
+/* =feed - Feedback
+--------------------------------------------------------------------------------------------------*/
+#content-primary .feedback-box pre.sql {
+	white-space: pre-wrap; /* css-3 */
+	white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+#content-primary .feedback-also {
+	margin-top: -15px;
+}
+
+
+#content-primary div.success, 
+#content-primary div.success h3,
+#content-primary div.success a {
+	background-color: #E2F9E3;
+}
+#content-primary div.success a {
+	border-bottom-color: #E2F9E3;
+}
+#content-primary div.error, 
+#content-primary div.error h3,
+#content-primary div.error a {
+	color: #fff;
+	background-color: #C00;
+}
+#content-primary div.error a {
+	border-bottom-color: #C00;
+}
+#content-primary div.tampered,
+#content-primary div.tampered h3,
+#content-primary div.tampered a,
+#content-primary div.warning,
+#content-primary div.warning h3,
+#content-primary div.warning a {
+	background-color: #F93;
+}
+#content-primary div.tampered a,
+#content-primary div.warning a {
+	border-bottom-color: #F93;
+}
+
+
+#introduction {
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+#introduction h3 {
+	padding: 0.2em 0 0; margin: 0;
+}
+#user-details h3 {
+	font-size: 2em; /* 22px */
+}
+#section-specific h3 {
+	line-height: 1.45;
+	font-size: 1.6364em; /* 18px */
+}
+#user-details img {
+	float: left;
+	margin-right: 10px;
+}
+
+#introduction p {
+	color: #aaa;
+}
+.hot-topic-image {
+	margin-bottom: 15px;
+}
+
+
+
+form .expand-container a.expand-link {
+	float: right; margin-right: 13px;
+}
+form fieldset.images dd a.thickbox,
+form fieldset.images dd a.thickbox:hover {
+	border: 0;
+}
+
+form #password-required_bar {
+	height: 4px; width: 0px;
+	margin-top: 5px;
+	font-size: 1px;
+}
+form #password-required_text {}
+
+
+
+
+
+/* =nav - Navigation
+--------------------------------------------------------------------------------------------------*/
+#navigation {
+	left: auto; right: 15px;
+}
+#navigation-primary ul,
+#navigation-primary ul li,
+#navigation #navigation-primary ul li a,
+#navigation #navigation-primary ul li a span.gl-ir {
+	overflow: visible;
+	width: auto; height: auto;
+	font-weight: bold; line-height: 1;
+	background: none;
+	border: 0;
+}
+#navigation-primary ul {
+	width: auto;
+}
+#navigation-primary ul li {
+	position: relative;
+}
+#navigation-primary ul li ul {
+	position: absolute; display: none;
+	margin: 0; padding: 0;
+}
+#navigation-primary ul li.active {
+	height: 150px;
+}
+#navigation-primary ul li.active ul {
+	display: block;
+	width: auto;
+	padding: 5px 10px 10px 0;
+	background-color: #fff;
+}
+#navigation #navigation-primary ul li ul li {
+	float: none; white-space: nowrap;
+	height: auto; width: auto;
+}
+#navigation #navigation-primary ul li ul li a {
+	margin: 5px 0 0; padding: 0;
+	border-top: 3px; 
+}

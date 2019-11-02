@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<title type="text">Creation: Latest Articles with the Tag "Computers" (Atom)</title>
+<link rel="alternate" type="text/html" href="http://www.creation.uk.com/" />
+<link rel="self" type="application/atom+xml" href="http://www.creation.uk.com/archives/computers/atom/" />
+<updated>2007-06-20T16:51:55+01:00</updated>
+<author>
+	<name>Creation</name>
+	<email>info@creation.uk.com</email>
+	<uri>http://www.creation.uk.com/</uri>
+</author>
+<id>http://www.creation.uk.com</id>
+<icon>http://www.creation.uk.com/favicon.ico</icon>
+	<entry>
+		<title type="text">Donate Unwanted PCs</title>
+		<content type="html"><![CDATA[<p>Help students in The Gambia with your unwanted PCs. Following a visit to the region by our good friends at <a
+href="http://www.tlc.ac.uk">Tamworth &amp; Lichfield College</a>, John Fontaine and Belinda Ball, we are trying to help them
+collect computer equipment for students to use in Gambia.</p>
+
+<p>This part of the world is very poor but everyone is keen to learn. The students have very limited facilities at present
+and in some cases are using very old manual typewriters to learn keyboard skills. So our unwanted PCs would be a distinct
+step up for them.</p>
+
+<p>John and a friend of the College have made arrangements to ship any working PCs, capable of running Windows 2000, to the
+College in The Gambia. A container will be packed up and sent over when it&#8217;s full. <a
+href="mailto:leigh@creation.uk.com">Let me know</a> if you have any PCs you would like to donate.</p>
+
+<p>You could also be saving money by helping out, now the Regulations implementing the <a
+href="http://www.netregs.gov.uk/netregs/legislation/380525/473094/?lang=_e">WEEE Directive</a> (Waste Electrical and
+Electronic Equipment) in the UK were entered into force on 2nd January 2007. A directive to promote recycling and reduce
+waste. Find out more about the WEEE Directive and <a href="http://weeenetwork.com">get Free Advice</a> for all businesses
+affected by the regulations.</p>]]></content>
+		<link rel="alternate" href="http://www.creation.uk.com/news/2007/05/20/donate-unwanted-pcs/" type="text/html" hreflang="en" />
+		<id>tag:creation.uk.com,2007-05-20:/news/2007/05/20/donate-unwanted-pcs/</id>
+		<updated>2007-05-20T16:50:26+01:00</updated>
+		<published>2007-05-20T16:50:26+01:00</published>
+		<html:abbr class="published updated" title="2007-05-20">Sun 20th May 2007 at 16:50</html:abbr>
+		<author>
+			<name>Leigh Scott</name>
+			<html:img><![CDATA[<img src="http://www.creation.uk.com/images/icons/large/leigh-scott.gif" height="108" width="108" alt="Photo of Leigh Scott" class="photo" />]]></html:img>
+			<uri>http://www.creation.uk.com/company/leigh-scott/</uri>
+		</author>
+		<category term="charity" label="Charity" scheme="http://www.creation.uk.com/news/tags/charity/" />
+		<category term="computers" label="Computers" scheme="http://www.creation.uk.com/news/tags/computers/" />
+		<category term="donate" label="Donate" scheme="http://www.creation.uk.com/news/tags/donate/" />
+		<category term="scheme" label="Scheme" scheme="http://www.creation.uk.com/news/tags/scheme/" />
+	</entry>
+</feed>

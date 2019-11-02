@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<title type="text">Creation: Latest Articles by Trevor Morris (Atom)</title>
+<link rel="alternate" type="text/html" href="http://www.creation.uk.com/" />
+<link rel="self" type="application/atom+xml" href="http://www.creation.uk.com/company/trevor-morris/atom/" />
+<updated>2007-11-01T14:49:57+00:00</updated>
+<author>
+	<name>Creation</name>
+	<email>info@creation.uk.com</email>
+	<uri>http://www.creation.uk.com/</uri>
+</author>
+<id>http://www.creation.uk.com</id>
+<icon>http://www.creation.uk.com/favicon.ico</icon>
+	<entry>
+		<title type="text">Our Web Packages &#38; SEO</title>
+		<content type="html"><![CDATA[<p>If you&#8217;re looking for a <a href="/services/websites/" title="Check out our Website Packages">new website</a> or
+already have one, getting visitors to your website is a primary goal. SEO or <a
+href="http://en.wikipedia.org/wiki/Search_engine_optimization">Search Engine Optimisation</a> is the set of techniques which
+will help you achieve this goal.</p>
+
+<p>The SEO industry helps companies with a web
+presence achieve better rankings within search engines. There are a lot of different methods used by SEO companies. Some of
+these can improve your rankings. Others, however, can adversely affect your business.</p>
+
+<p>A lot of the reasons behind using a company specialising in SEO no longer apply in the web-standards based development
+environment. <a href="/services/websites/">Our web packages</a> are built with all the best practices in mind. Because of
+this, large, expensive and involved after-market SEO campaigns are almost always unnecessary and usually have very little
+impact on your search enginge ranking.</p>
+
+<p><a href="/services/websites/">Our web packages</a> employ numerous techniques which help your site gain good results in
+search engines from day one. We use the following techniques to help you achieve good search engine rankings:</p>
+
+<h4>Structured, semantic HTML</h4>
+
+<p>Our web packages are built using the latest web standards best practices. The templates use semantic HTML and are styled
+with CSS. <a href="http://microformats.org">Microformats</a> are also used throughout the packages. All of these factors
+help search engines understand your content and allow them to process the information better.</p>
+
+<h4>XML sitemaps</h4>
+
+<p>Our web packages automatically generate <a href="http://sitemaps.org">XML sitemaps</a> for your entire site. When we
+complete your website, we also submit them to Google and Yahoo! This helps search engines find your site and all your pages.
+If your website is brand new, this is a great starting point, especially if your website does not have any incoming
+links.</p>
+
+<h4>Nice and SEO-friendly URLs</h4>
+
+<p>Our web packages also generate your page URLs based on the title of your page. This has a threefold effect. Firstly, it
+means the URLs are easy to read, understand and remember. Secondly, because the URLs are based on your page title, the
+keywords of each page are duplicated. Finally, search engines emphasise words within the URL, so your keywords are even
+stronger.</p>
+
+<p>Every website we build, whether it&#8217;s a <a href="/services/websites/">web package</a> or completely custom, features
+all these SEO-based techniques.</p>
+
+<h4>Completing your SEO Campaign</h4>
+
+<p>There are two other influential factors which will help make your SEO campaign a success. First of all we can advise on
+the content for your site – remember <a href="http://www.akamarketing.com/content-is-king.html" title="An Internet marketing
+article by David Callan">content is king</a>. And we can also help you build links to your website because the more ways
+search engines can find your site the better! These two factors will have the biggest impact in your search engine
+ranking.</p>
+
+<p>If you wish to find out more, please <a href="/contact/">get in touch</a>.</p>]]></content>
+		<link rel="alternate" href="http://www.creation.uk.com/news/2007/10/25/our-web-packages-seo/" type="text/html" hreflang="en" />
+		<id>tag:creation.uk.com,2007-10-25:/news/2007/10/25/our-web-packages-seo/</id>
+		<updated>2007-10-25T09:58:41+01:00</updated>
+		<published>2007-10-25T09:45:53+01:00</published>
+		<html:abbr class="published updated" title="2007-10-25">Thu 25th Oct 2007 at 09:58</html:abbr>
+		<author>
+			<name>Trevor Morris</name>
+			<uri>http://www.creation.uk.com/company/trevor-morris/</uri>
+		</author>
+	</entry>
+	<entry>
+		<title type="text">dConstruct 2007</title>
+		<content type="html"><![CDATA[<p>Last week I had the pleasure of visiting Brighton to attend the <a href="http://2007.dconstruct.org" title="User
+Experience Design Conference">2007 dConstruct conference</a>. This is a small grass roots conference by <a
+href="http://clearleft.com" title="Web Design and Accessibility Consultants">Clearleft</a> which is billed as &#8216;an
+affordable, one-day conference aimed at those designing and building the latest generation of web-based applications&#8217;.
+The topic for this third annual conference was <strong>Designing the User Experience</strong>.</p>
+
+<p><a href="http://www.uie.com" title="User Interface Engineering">Jared Spool</a> opened the conference with his
+enthusiastic, engaging and entertaining presentation entitled &#8220;<em>The Dawning of the Age of Experience</em>&#8221;.
+Jared talked about the iPod (as did almost every presentation). The iPod isn&#8217;t the best MP3 player technologically
+speaking, but because the user experience is so rich the device is by far the highest selling product in the market. The
+iPod doesn&#8217;t have all the features other MP3 players have, but functionality commonly found on other devices has been
+cleverly moved to iTunes. More often than not you manage your music on a computer and Apple has recognised this behaviour.
+They have moved such functionality to iTunes leaving the iPod less cluttered and easier to use – all which lead to <em>great
+user experience</em>. This great user experience is something you should be building in to every service you provide.</p>
+
+<p>Jared also compared <a href="http://www.netflix.com" title="Netflix DVD Rental">Netflix</a>, a relatively new online-only
+movie rental company, to <a href="http://www.blockbuster.com">Blockbuster</a>, the well established DVD rental company, with
+over five-thousand stores in the US alone. Over recent years Netflix has become twice as large as Blockbuster. But they
+don&#8217;t advertise and they don&#8217;t have retail stores, so why have they become so successful? They found out 85% of
+existing customers had a friend recommend the service to them. Because they spend their money of designing their website and
+improving user experience, they do not need conventional marketing to become extremely successful. <strong>User experience
+makes and breaks products and services.</strong></p>
+
+<p>Jared was followed by another American, <a href="http://peterme.com" title="Links, thoughts, and essays from Peter
+Merholz">Peter Merholz</a>, who works for <a href="http://adaptivepath.com" title="An experience strategy and design firm
+based in San Francisco">Adaptive Path</a> and talked on the subject of &#8220;<em>Experience Strategies</em>&#8221;. Peter
+started with a history lesson about camera development in the late eighteen-hundreds.</p>
+
+<p>Up to the turn of the nineteenth century, photography wasn&#8217;t very accessible, requiring complex understanding of
+fundamentals and needing seventeen steps to complete the process. Kodak developed a &#8220;3 step camera&#8221; and their
+slogan was &#8220;<em>You press the button, we do the rest</em>&#8221;. Kodak didn&#8217;t change how photographs were
+developed, they simply recognised that the user should not need to know this information to take photographs. All the user
+had to do was push the button and send the film off, Kodak then did the rest. And because of this user experience Kodak have
+been the premier brand in the photography industry for over one hundred years.</p>
+
+<p>Secondly Peter talked about a pyramid of product evolution:</p>
+
+<ul>
+<li>At the bottom is the underlying product technology.</li>
+<li>Second are features. Features make technology more usable. Beware, simply cramming in features can ruin a product.</li>
+<li>Finally, experience is the most important part of the pyramid. Focus on what people want to do, and hide the rest — see
+the iPod!</li>
+</ul>
+
+<p>All these steps are required and each is important, but the user experience can either ruin or make the product a great
+success.</p>
+
+<p>The first two presentations complemented each other perfectly. Peter referenced and expanded upon information which Jared
+had just talked about and the two speaker styles fitted together very well. Both speakers were engaging, knowledgeable and
+able to communicate their experience extremely well.</p>
+
+<p>After lunch <a href="http://adactio.com">Jeremy Keith</a>, one of the event organisers, introduced <a
+href="http://cameronmoll.com" title="Authentic Boredom is the platitudinous web home of Cameron Moll">Cameron Moll</a> for
+the so-called &#8220;graveyard-watch&#8221;, in which he presented &#8220;<em>Good vs. Great Design</em>&#8221;. Cameron
+talked about choices which distinguish great design from good design and stated that this contributes to user experience
+because &#8220;great design yields meaningful communication&#8221;. Cameron posed the following question, which I felt was
+intriguing…</p>
+
+<blockquote>
+  <h4>Using a microwave, which takes less time?</h4>
+  
+  <ol>
+  <li>Heating water for <strong>one minute</strong> and <strong>ten seconds</strong>?</li>
+  <li>Heating it for <strong>one minute</strong> and <strong>eleven seconds</strong>?</li>
+  </ol>
+</blockquote>
+
+<p>A trick question? Partially. Below this question Cameron stated &#8220;User productivity trumps machine
+productivity&#8221;. Although it maybe quicker for the machine (microwave), the overall process for the <em>user</em> is
+slower. In choice one the user has to locate two buttons, 1 and zero, which are usually positioned away from each other. The
+second choice requires one button, and therefore is quicker for the user. This is very important to remember when developing
+any software applications, you should think about user efficiency over the ease of programming.</p>
+
+<p>Finally, the conference finished with <a href="http://plasticbag.org" title="A weblog by Tom Coates concerning future
+media, social software and the web of data">Tom Coates</a>, a former employee at the BBC who is currently heading up a very
+interesting research project called <a href="http://fireeagle.research.yahoo.com">FireEagle</a> at Brickhouse Yahoo!. Tom
+talked on the most technical-orientated subject of the day in his presentation &#8220;<em>Designing for a Web of
+Data</em>&#8221;.</p>
+
+<p>I am very interested in the &#8216;web of data&#8217; idea – all of the possibilities and phenomenal potential it
+contains. I believe this topic will be a huge part of the internet in the next few years. If you are intrigued I highly
+recommend viewing Tom&#8217;s other presentation on the subject &#8220;<em>Native to a Web of Data</em>&#8221;. You can <a
+href="http://www.plasticbag.org/archives/2006/02/my_future_of_web_apps_slides/">view the slides</a> and <a
+href="http://www.carsonworkshops.com/summit/2006/london/" title="Audio from all the presentations at The Future of Web Apps
+2006">listen to the audio</a> from the presentation which I watched at The Future of Web Apps in early 2006.</p>
+
+<h4>Other presentations</h4>
+
+<p><a href="http://www.disambiguity.com">Leisa Reichelt</a> presented &#8220;<em>Waterfall Bad, Washing Machine
+Good</em>&#8221; in which she talked about project development methodologies, discussing the differences between sequential
+methodologies and &#8216;iterative, incremental and collaborative/cross-disciplinary methodologies&#8217;. The talk was more
+project-management orientated, but enlighten the benefits of Agile and User Centred Design (UCD) practices.</p>
+
+<p><a href="http://george08.blogspot.com">George Oates</a> and <a href="http://www.kaiusdesign.com">Denise Wilton</a> had an
+informal chat on the sofa entitled &#8220;<em>Human Traffic</em>&#8221;. These two talked about the processes their
+respective companies go through when making design and interface choices and how they are handled in the fast
+response/feedback nature of the internet. Personally, this was my least favourite talk of the conference.</p>
+
+<p>&#8220;<em>The Experience Stack</em>&#8221; presented by <a href="http://interconnected.org/home/">Matt Webb</a> was an
+interesting talk. Matt threw away common presentation structure and gave a sporadic and sprawling talk about
+&#8216;experience&#8217;. I felt some of the slides were confusing and because of the unrelated nature of the presentation,
+understanding the overall premise was difficult. Matt has <a
+href="http://schulzeandwebb.com/blog/2007/09/09/the-experience-stack-at-dconstruct-2007/" title="The Experience Stack at
+d.construct 2007">understood there was a problem</a> with his talk but has tried to address this in an article called <a
+href="http://schulzeandwebb.com/blog/2007/09/09/the-experience-stack-revisited/">The Experience Stack revisited</a>. Matt
+has put his <a href="http://schulzeandwebb.com/2007/stack/">slides online</a> with extensive notes.</p>
+
+<p>Overall I really enjoyed the conference and thought it was a great success. <a href="http://www.andybudd.com">Andy
+Budd</a>, one of the organisers, <a href="http://www.andybudd.com/archives/2007/09/deconstructing/" title="deconstructing
+dConstruct 2007">summed up the conference</a> and mentioned what I felt about conferences in general:</p>
+
+<blockquote>
+  <p>The best conferences I find are always the ones that try to inspire rather than educate. … [we] walked into the office
+this morning with a renewed interest in our field and a desire to try out some new techniques and ideas. I hope you felt the
+same way.</p>
+</blockquote>
+
+<p><strong>I did.</strong></p>]]></content>
+		<link rel="alternate" href="http://www.creation.uk.com/news/2007/09/18/dconstruct-2007/" type="text/html" hreflang="en" />
+		<id>tag:creation.uk.com,2007-09-18:/news/2007/09/18/dconstruct-2007/</id>
+		<updated>2007-09-18T12:52:05+01:00</updated>
+		<published>2007-09-18T12:52:05+01:00</published>
+		<html:abbr class="published updated" title="2007-09-18">Tue 18th Sep 2007 at 12:52</html:abbr>
+		<author>
+			<name>Trevor Morris</name>
+			<uri>http://www.creation.uk.com/company/trevor-morris/</uri>
+		</author>
+	</entry>
+	<entry>
+		<title type="text">Web Usability Basics</title>
+		<content type="html"><![CDATA[<p>In a recent usability study we carried out on behalf of Kingston College we noticed a few common issues which a lot of
+websites have. There are a few basic issues which are often overlooked, but can be resolved relatively easily. Web usability
+should be an important focus when commissioning a new website as it can add significant value to your online presence.</p>
+
+<blockquote>
+  <p>Development projects should spend 10% of their budget on usability. Following a usability redesign, websites increase
+desired metrics by 135% on average.<br />
+  <a href="http://www.useit.com/alertbox/20030107.html">Return on Investment for Usability</a> by Jakob Nielsen.</p>
+</blockquote>
+
+<p>Below are a few common usability blunders and how to solve them.</p>
+
+<ol>
+<li><p>Every page (except for the homepage) should have an obvious link back to the homepage. The words &#8220;Home&#8221;
+should be used in the majority of cases. Other ways can be used as well, but these should be <em>in conjunction</em> with an
+explicit link.</p></li>
+<li><p>The company logo or site banner should be placed in a prominent position at the top of the design – convention tends
+towards the top-left, and user-expectation dictates that the logo should link back to the homepage.</p></li>
+<li><p>Navigation should be in a consistent, prominent position and be obvious of it&#8217;s function. The current active
+section should be highlighted sufficiently differently from the other links in the main navigation. The navigation should be
+clear and answer three questions: Where am I? Where have I been? and Where can I go?</p></li>
+<li><p>Your homepage should clearly articulate who you are, what you do, what your site offers and why it is of value to
+users. This is usually achieved by a one sentance tagline/strapline which should appear in the site&#8217;s window title and
+on the homepage.</p></li>
+<li><p>Content should be clear, simple and concise. Information should be easy to scan as findability is paramount in user
+experience. You should avoid using jargon and write using plain and easy to understand terminology. Lists and short
+paragraphs are quick to read and easy to digest.</p></li>
+</ol>
+
+<p>These easy steps can vastly improve the usability of your website. Better usability will keep users interested and
+engaged with your content because their experience of your site was pleasant. Users will return often and are more likely to
+recommend your site.</p>
+
+<p>If you have any other tips you wish to share with us, please place them in the <a href="#comments-form">comments</a>
+below.</p>]]></content>
+		<link rel="alternate" href="http://www.creation.uk.com/news/2007/07/17/web-usability-basics/" type="text/html" hreflang="en" />
+		<id>tag:creation.uk.com,2007-07-17:/news/2007/07/17/web-usability-basics/</id>
+		<updated>2007-07-17T13:07:19+01:00</updated>
+		<published>2007-07-17T13:07:19+01:00</published>
+		<html:abbr class="published updated" title="2007-07-17">Tue 17th Jul 2007 at 13:07</html:abbr>
+		<author>
+			<name>Trevor Morris</name>
+			<uri>http://www.creation.uk.com/company/trevor-morris/</uri>
+		</author>
+	</entry>
+	<entry>
+		<title type="text">Cycle Scheme</title>
+		<content type="html"><![CDATA[<p>Recently I had a fantastically silly idea — I&#8217;ll start cycling to work. After looking around on a few websites I
+found a bike I was happy with, a Specialized Hardrock. However, I then found out about a government funded <a
+href="http://www.cyclescheme.co.uk">Cycle Scheme</a> which allows you to get a bike tax free.</p>
+
+<p>The <a href="http://www.cyclescheme.co.uk">Cycle Scheme</a> works in saving you money in a few ways. Firstly, your
+company buys the bike VAT-free. Secondly, the bike is paid for over a period of twelve or eighteen months, with the money
+coming directly from your wages. This means two things: you&#8217;re basically getting the bike interest-free for the length
+of the term repayments and you are saving both national insurance and income tax because the payment comes out
+<em>before</em> these are calculated and taken.</p>
+
+<p>Beware, although the repayments may look higher than you expected and total more than you expected to save over the
+course of the year, the <a href="http://www.cyclescheme.co.uk/employee,calculator.htm">savings calculator</a> is actually
+pretty accurate. If you calculate your net pay sacrifice over the term of your repayments, the total is more or less the
+same as on the <a href="http://www.cyclescheme.co.uk/employee,calculator.htm">savings calculator</a> because you&#8217;re
+paying less tax over the year.</p>
+
+<p>Opting in to the <a href="http://www.cyclescheme.co.uk">Cycle Scheme</a> was a fairly easy process (at least for me as
+the employee), although it did feel like it took longer than necessary. Just <a
+href="http://www.cyclescheme.co.uk/employer,register.htm">ask your employer to sign up</a> for the scheme, then find a local
+bike shop (or online retailer) who participate. The Cycle Scheme website has a page to <a
+href="http://www.cyclescheme.co.uk/bikeshop,partner_finder.htm">help you find your nearest participating retailer</a> -
+simply enter your postcode and away you go!</p>
+
+<p>With the savings I was able to enjoy with the scheme I decided to get a Specialized Rockhopper Pro instead. It looks
+amazing, it&#8217;s very lightweight and rides nicely. Unfortunately, it is <em>not immune</em> from <strong>getting
+punctures</strong> which I found out on my first sixteen-mile return trip to work.</p>
+
+<p>Overall, if you&#8217;re planning on cycling to work in the near future, or if you already cycle to work but are looking
+to replace your worn-out ten-year-old bike, definitely persuade your employer to sign on to the <a
+href="http://www.cyclescheme.co.uk">Cycle Scheme</a> which means you will save yourself some money and get a fresh new bike
+— just in time for a glorious summer.</p>]]></content>
+		<link rel="alternate" href="http://www.creation.uk.com/news/2007/06/05/cycle-scheme/" type="text/html" hreflang="en" />
+		<id>tag:creation.uk.com,2007-06-05:/news/2007/06/05/cycle-scheme/</id>
+		<updated>2007-06-05T10:34:14+01:00</updated>
+		<published>2007-06-05T10:34:14+01:00</published>
+		<html:abbr class="published updated" title="2007-06-05">Tue 5th Jun 2007 at 10:34</html:abbr>
+		<author>
+			<name>Trevor Morris</name>
+			<uri>http://www.creation.uk.com/company/trevor-morris/</uri>
+		</author>
+	</entry>
+	<entry>
+		<title type="text">New Rules for Websites</title>
+		<content type="html"><![CDATA[<p>An update to the Companies Act legislation of 1985 has now come into force. To avoid breaching the <a
+href="http://www.dti.gov.uk/bbf/co-act-2006/index.html">Companies Act 2006</a>, from the 1st January 2007, all UK Limited
+companies must include certain information on their websites, email footers, order forms and electronic documentation. The
+penalty for non-compliance is a £1000 fine.</p>
+
+<p>Every company should list registered company name, company registration number, place of registration, registered office
+address and VAT number (if applicable). This information is already required on business letters and should, as a matter of
+good practice, be included on all your company documentation.</p>
+
+<p>If you would like our help to implement these updates on any of your corporate websites and documentation please <a
+href="mailto:info@creation.uk.com">email us</a> and we will offer our advice.</p>]]></content>
+		<link rel="alternate" href="http://www.creation.uk.com/news/2007/04/28/new-rules-for-websites/" type="text/html" hreflang="en" />
+		<id>tag:creation.uk.com,2007-04-28:/news/2007/04/28/new-rules-for-websites/</id>
+		<updated>2007-04-28T15:35:07+01:00</updated>
+		<published>2007-04-28T15:35:07+01:00</published>
+		<html:abbr class="published updated" title="2007-04-28">Sat 28th Apr 2007 at 15:35</html:abbr>
+		<author>
+			<name>Trevor Morris</name>
+			<uri>http://www.creation.uk.com/company/trevor-morris/</uri>
+		</author>
+	</entry>
+</feed>

@@ -1,0 +1,72 @@
+/*
+* Author: 		Trevor Morris, Creation Design & Marketing
+* Contact:		trevor@creation.uk.com, leigh@creation.uk.com
+* Version:		1.1
+* Created:		24/04/2007
+* Updated:		06/06/2007
+* Notes:		This is the core file for the entire site.
+*
+* CONTENTS
+* -------------------------
+* == includes
+*
+*/
+
+/* == includes
+--------------------------------------------------------------------------------------------------*/
+@import url(reset.css);
+@import url(techniques.css);
+@import url(layout.css);
+@import url(typography.css);
+
+@import url(navigation.css);
+@import url(forms.css);
+@import url(extra.css);
+
+body.error #content-primary .details {
+	min-height: 500px;
+}
+body.changelog .image {
+	display: inline;
+}
+body.changelog #upcoming-features ul li {
+	margin-bottom: 5px;
+}
+body.colophon #accesskeys dl dt {
+	float: left; clear: left;
+	font-weight: bold;
+}
+body.colophon #accesskeys dl dd {
+	margin-left: 3em;
+}
+body.colophon #colophon,
+body.colophon #colophon span.gl-ir {
+	height: 220px; width: 352px;
+	margin-bottom: 40px;
+	background-image: url(/css/images/colophon.gif);
+}
+#hello {
+	position: relative;
+	margin-bottom: 16px;
+	color: #fff;
+}
+#hello,
+#hello p,
+#hello p span.gl-ir {
+	height: 232px; width: 720px;
+}
+#hello p,
+#hello p span.gl-ir {
+	background: url(/css/images/hello.jpg) no-repeat 0 0;
+}
+#hello p {
+	background-color: #940D1C;
+	margin: 0;
+}
+#hello div.flash-replaced,
+#hello div.flash-replaced embed,
+#hello div.flash-replaced p {
+	position: absolute; bottom: 0; left: 0;
+	height: 124px; width: 720px;
+	background-image: none;
+}

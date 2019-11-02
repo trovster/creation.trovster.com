@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en" dir="ltr">
+<head>
+	<meta name="author" lang="en" content="Creation Design and Marketing Limited, Penkridge, Staffordshire, UK.">
+	<meta name="copyright" content="Creation">
+	<meta name="robots" content="index,follow">
+
+	<meta name="language" content="en">	
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="imagetoolbar" content="no">
+	
+	<!-- title... -->
+	<title>Fitted Boxes experiment</title>
+	
+	<script type="text/javascript" src="../dom/jquery-1.2.2.min.js"></script>
+	<script type="text/javascript" src="../dom/jquery.metadata.pack.js"></script> <!-- metadata is optional -->
+	
+	<!-- the plugin scripts -->
+	<script type="text/javascript" src="fitted_boxes.js"></script>
+	
+	<!-- page specific experiments, run the plugins developed above -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.fitt_c a').fitted_boxes(); // default controls
+			$('.fitted a').fitted_boxes({
+				'container'	: '.fitted', // different from default container to apply the hover/click to. usually matches the main part of the selector (minus the anchor)
+				'status'	: true, // only works if enabled by the browser itself
+				'title'		: false // stops the anchor title being applied to the container
+			});
+		});
+	</script>
+	
+	<style type="text/css">
+		body {
+			background-color: #fff;
+			padding: 20px;
+		}
+		p, h2 {
+			margin: 0 0 1em;
+		}
+		div.fitt_c,
+		div.fitted {
+			float: left;
+			width: 250px;
+			margin: 20px; padding: 10px;
+			border: 1px solid #000;
+		}
+		
+		/* plugin specific styles */
+		.fitt_hover {
+			cursor: pointer;
+		}
+		.fitt_hover a {
+			text-decoration: none;
+		}
+	</style>
+	
+</head>
+
+<body>
+
+	<h1>Fitted Boxes experiment</h1>
+
+	<div class="fitt_c f odd">
+		<h2>About Us</h2>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In quis metus. Morbi tempus interdum metus.
+		Pellentesque aliquam viverra est.</p>
+		<a href="#about-us">Find out more…</a>
+	</div>
+	
+	<div class="fitt_c {status:true}">
+		<h2>Apply Now</h2>
+		<p>Nam gravida, tellus a porta ultricies, nunc nisi feugiat odio, bibendum laoreet sapien augue eu ligula.</p>
+		<a href="#apply-now" title="More information on Applying">More information…</a>
+	</div>
+	
+	<div class="fitted l odd">
+		<h2><a href="#another-box" title="Find out more">Another Box</a></h2>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In quis metus. Morbi tempus interdum metus.
+		Pellentesque aliquam viverra est.</p>
+		<p>Nam gravida, tellus a porta ultricies, nunc nisi feugiat odio, bibendum laoreet sapien augue eu ligula.</p>
+	</div>
+
+</body>
+</html>

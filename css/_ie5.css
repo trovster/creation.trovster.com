@@ -1,0 +1,12 @@
+/* =!! IE5.* Stylesheet
+-------------------------------------------------------------------------------------------------- 
+* Internet Explorer versions before IE6 implement the box model incorrectly. They place border AND
+* margin inside on the set width, instead of adding to the overall width of the container.
+* - http://tantek.com/CSS/Examples/boxmodelhack.html
+*/
+body {
+	text-align: center;
+}
+#container {
+	text-align: left;
+}

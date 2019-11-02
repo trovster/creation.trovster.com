@@ -1,0 +1,45 @@
+/*
+* Author: 		Trevor Morris, Creation Design & Marketing
+* Contact:		trevor@creation.uk.com, leigh@creation.uk.com
+* Version:		1.0
+* Created:		24/04/2007
+* Updated:		21/05/2007
+* Notes:		Styles for any XML-related content.
+				This includes the sitemap and RSS feeds.
+*
+* CONTENTS
+* -------------------------
+* =site - Sitemap
+* =feed - RSS/Atom Feeds
+*
+*/
+
+/* =site - Sitemap
+--------------------------------------------------------------------------------------------------*/
+body.sitemap table {
+	margin-bottom: 40px;
+}
+
+
+/* =feed - RSS/Atom Feeds
+--------------------------------------------------------------------------------------------------*/
+body.feeds #comments-view {
+	padding-top: 0;
+	background-image: none;
+}
+#subscribe-icons li {
+	list-style: none;
+}
+#subscribe-icons li a {
+	height: 17px; width: 91px;
+	margin-bottom: 5px; padding: 0;
+}
+#subscribe-icons li#yahoo a {background-image: url(/css/images/feeds/yahoo.gif);}
+#subscribe-icons li#newsgator a {background-image: url(/css/images/feeds/newsgator.gif);}
+#subscribe-icons li#pluck a {background-image: url(/css/images/feeds/pluck.gif);}
+#subscribe-icons li#rojo a {background-image: url(/css/images/feeds/rojo.gif); width: 52px;}
+#subscribe-icons li#bloglines a {background-image: url(/css/images/feeds/bloglines.gif);}
+#subscribe-icons li#google a {background-image: url(/css/images/feeds/google.gif);}
+#subscribe-icons li#msn a {background-image: url(/css/images/feeds/msn.gif);}
+#subscribe-icons li#feedlounge a {background-image: url(/css/images/feeds/feedlounge.gif);}
+#subscribe-icons li#netvibes a {background-image: url(/css/images/feeds/netvibes.gif);}
