@@ -9,6 +9,7 @@
         "start": "docker-compose -f ./docker-compose.yaml up -d",
         "stop": "docker stop trovster_creation trovster_creation_mysql",
         "remove": "docker rm trovster_creation trovster_creation_mysql",
+        "prebuild": "npm run start",
         "build": "snap http://127.0.0.1:8005 -o www && cp CNAME ./www/",
         "deploy": "push-dir --dir=www --branch=gh-pages"
     },
@@ -18,6 +19,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/creation/creation.trovster.com"
+        "url": "https://github.com/trovster/creation.trovster.com"
     }
 }
