@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <title type="text">Comments on Creation article &#8220;Cycle Scheme&#8221; (Atom)</title>
-<link rel="alternate" type="text/html" href="http://www.creation.uk.com/news/2007/06/05/cycle-scheme/" />
-<link rel="self" type="application/atom+xml" href="http://www.creation.uk.com/news/2007/06/05/cycle-scheme/atom/" />
+<link rel="alternate" type="text/html" href="https://creation.trovster.com/news/2007/06/05/cycle-scheme/" />
+<link rel="self" type="application/atom+xml" href="https://creation.trovster.com/news/2007/06/05/cycle-scheme/atom/" />
 <updated>2007-06-15T16:22:26+00:00</updated>
 <author>
 	<name>Creation</name>
 	<email>info@creation.uk.com</email>
-	<uri>http://www.creation.uk.com/</uri>
+	<uri>https://creation.trovster.com/</uri>
 </author>
-<id>http://www.creation.uk.com</id>
-<icon>http://www.creation.uk.com/favicon.ico</icon>
+<id>https://creation.trovster.com</id>
+<icon>https://creation.trovster.com/favicon.ico</icon>
 	<entry>
 		<title type="text">Comment #2 on Cycle Scheme by Dave Cardwell</title>
 		<html:title type="text">Cycle Scheme</html:title>
 		<content type="html"><![CDATA[<p>Thanks for posting this write-up about the scheme—I’ll definitely be pestering my employer to sign up for this
 one.</p>]]></content>
-		<link rel="alternate" href="http://www.creation.uk.com/news/2007/06/05/cycle-scheme/#c_2" type="text/html" hreflang="en" />
+		<link rel="alternate" href="https://creation.trovster.com/news/2007/06/05/cycle-scheme/#c_2" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-06-07:/news/2007/06/05/cycle-scheme/#c_2</id>
 		<updated>2007-06-07T16:04:52+00:00</updated>
 		<published>2007-06-07T16:04:52+00:00</published>
 		<html:abbr class="published updated" title="2007-06-07">Thu 7th Jun 2007 at 16:04</html:abbr>
 		<author>
 			<name>Dave Cardwell</name>
-			<html:img><![CDATA[<img src="http://www.creation.uk.com/images/gravatars/cache/creation/2fa4d13f6c2fd58d88c9bbf0c9c899d8" height="48" width="48" alt="Gravatar for Dave Cardwell" class="gravatar" />]]></html:img>
+			<html:img><![CDATA[<img src="https://creation.trovster.com/images/gravatars/cache/creation/2fa4d13f6c2fd58d88c9bbf0c9c899d8" height="48" width="48" alt="Gravatar for Dave Cardwell" class="gravatar" />]]></html:img>
 			<uri>http://davecardwell.co.uk/</uri>
 		</author>
 	</entry>
@@ -32,14 +32,14 @@ one.</p>]]></content>
 		<html:title type="text">Cycle Scheme</html:title>
 		<content type="html"><![CDATA[<p>Unfortunately this scheme came out after I had bought my bike, I also heard that the paperwork was putting off employers.
 Oh well, maybe next time I’ll give it a go, might even be able to afford a bike like yours next time!</p>]]></content>
-		<link rel="alternate" href="http://www.creation.uk.com/news/2007/06/05/cycle-scheme/#c_1" type="text/html" hreflang="en" />
+		<link rel="alternate" href="https://creation.trovster.com/news/2007/06/05/cycle-scheme/#c_1" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-06-07:/news/2007/06/05/cycle-scheme/#c_1</id>
 		<updated>2007-06-07T16:02:21+00:00</updated>
 		<published>2007-06-07T16:02:21+00:00</published>
 		<html:abbr class="published updated" title="2007-06-07">Thu 7th Jun 2007 at 16:02</html:abbr>
 		<author>
 			<name>Stuart Maynard-Keene</name>
-			<html:img><![CDATA[<img src="http://www.creation.uk.com/images/gravatars/cache/creation/b9df38e93fe38bf670455f57beb064c6" height="48" width="48" alt="Gravatar for Stuart Maynard-Keene" class="gravatar" />]]></html:img>
+			<html:img><![CDATA[<img src="https://creation.trovster.com/images/gravatars/cache/creation/b9df38e93fe38bf670455f57beb064c6" height="48" width="48" alt="Gravatar for Stuart Maynard-Keene" class="gravatar" />]]></html:img>
 			<uri>http://www.stuup.com</uri>
 		</author>
 	</entry>

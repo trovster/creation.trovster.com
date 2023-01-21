@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <title type="text">Creation: Latest Articles with the Tag "Running" (Atom)</title>
-<link rel="alternate" type="text/html" href="http://www.creation.uk.com/" />
-<link rel="self" type="application/atom+xml" href="http://www.creation.uk.com/archives/running/atom/" />
+<link rel="alternate" type="text/html" href="https://creation.trovster.com/" />
+<link rel="self" type="application/atom+xml" href="https://creation.trovster.com/archives/running/atom/" />
 <updated>2007-06-20T16:51:55+01:00</updated>
 <author>
 	<name>Creation</name>
 	<email>info@creation.uk.com</email>
-	<uri>http://www.creation.uk.com/</uri>
+	<uri>https://creation.trovster.com/</uri>
 </author>
-<id>http://www.creation.uk.com</id>
-<icon>http://www.creation.uk.com/favicon.ico</icon>
+<id>https://creation.trovster.com</id>
+<icon>https://creation.trovster.com/favicon.ico</icon>
 	<entry>
 		<title type="text">Running for Charity</title>
 		<content type="html"><![CDATA[<p>The <a href="http://www.greatrun.org">2007 BUPA Great North Run</a> will take place on Sunday 30th September 2007,
@@ -34,19 +34,19 @@ weekend activities.</p>
 
 <p>If you would like to help with a donation <a href="mailto:leigh@creation.uk.com">drop me an email</a> or give me a call
 at the office on 01785 716136. Thanks Leigh.</p>]]></content>
-		<link rel="alternate" href="http://www.creation.uk.com/news/2007/05/08/running-for-charity/" type="text/html" hreflang="en" />
+		<link rel="alternate" href="https://creation.trovster.com/news/2007/05/08/running-for-charity/" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-05-08:/news/2007/05/08/running-for-charity/</id>
 		<updated>2007-05-08T11:35:07+01:00</updated>
 		<published>2007-05-08T11:35:07+01:00</published>
 		<html:abbr class="published updated" title="2007-05-08">Tue 8th May 2007 at 11:35</html:abbr>
 		<author>
 			<name>Leigh Scott</name>
-			<html:img><![CDATA[<img src="http://www.creation.uk.com/images/icons/large/leigh-scott.gif" height="108" width="108" alt="Photo of Leigh Scott" class="photo" />]]></html:img>
-			<uri>http://www.creation.uk.com/company/leigh-scott/</uri>
+			<html:img><![CDATA[<img src="https://creation.trovster.com/images/icons/large/leigh-scott.gif" height="108" width="108" alt="Photo of Leigh Scott" class="photo" />]]></html:img>
+			<uri>https://creation.trovster.com/company/leigh-scott/</uri>
 		</author>
-		<category term="charity" label="Charity" scheme="http://www.creation.uk.com/news/tags/charity/" />
-		<category term="leigh-scott" label="Leigh Scott" scheme="http://www.creation.uk.com/news/tags/leigh-scott/" />
-		<category term="marathon" label="Marathon" scheme="http://www.creation.uk.com/news/tags/marathon/" />
-		<category term="running" label="Running" scheme="http://www.creation.uk.com/news/tags/running/" />
+		<category term="charity" label="Charity" scheme="https://creation.trovster.com/news/tags/charity/" />
+		<category term="leigh-scott" label="Leigh Scott" scheme="https://creation.trovster.com/news/tags/leigh-scott/" />
+		<category term="marathon" label="Marathon" scheme="https://creation.trovster.com/news/tags/marathon/" />
+		<category term="running" label="Running" scheme="https://creation.trovster.com/news/tags/running/" />
 	</entry>
 </feed>

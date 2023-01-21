@@ -5,7 +5,7 @@
 		<html>
 			<head>
 				<title><xsl:value-of select="//atom:title"/></title>
-				
+
 				<xsl:element name="link">
 					<xsl:attribute name="type">text/css</xsl:attribute>
 					<xsl:attribute name="href">/css/creation.css</xsl:attribute>
@@ -13,7 +13,7 @@
 					<xsl:attribute name="media">screen,projection</xsl:attribute>
 					<xsl:attribute name="rel">stylesheet</xsl:attribute>
 				</xsl:element>
-				
+
 				<xsl:element name="link">
 					<xsl:attribute name="type">text/css</xsl:attribute>
 					<xsl:attribute name="href">/css/specifics/news.css</xsl:attribute>
@@ -21,7 +21,7 @@
 					<xsl:attribute name="media">screen,projection</xsl:attribute>
 					<xsl:attribute name="rel">stylesheet</xsl:attribute>
 				</xsl:element>
-				
+
 				<xsl:element name="link">
 					<xsl:attribute name="type">text/css</xsl:attribute>
 					<xsl:attribute name="href">/css/xml.css</xsl:attribute>
@@ -29,24 +29,24 @@
 					<xsl:attribute name="media">screen,projection</xsl:attribute>
 					<xsl:attribute name="rel">stylesheet</xsl:attribute>
 				</xsl:element>
-				
+
 				<xsl:element name="script">
 					<xsl:attribute name="type">text/javascript</xsl:attribute>
 					<xsl:attribute name="src">/dom/scripts/jquery.js</xsl:attribute>
 				</xsl:element>
-				
+
 				<xsl:comment><![CDATA[[if IE 6]><link rel="stylesheet" href="/css/ie.css" type="text/css" /><![endif]]]></xsl:comment>
 			</head>
 
 			<body id="www-creation-uk-com" class="feeds atom">
 				<div id="container">
-					
+
 					<div id="branding" class="author vcard">
 						<h1><a href="/" title="Back to the homepage of Creation" rel="home me" class="org fn url" accesskey="1">Creation</a></h1>
 						<p id="branding-strapline"><em class="strapline">Design &#38; marketing specialists in print and web development from Staffordshire, UK</em></p>
 					<!-- end of div id #brandng -->
 					</div>
-					
+
 					<div id="content">
 						<h2 id="page-title"><abbr title="Resource Description Framework Site Summary">RSS</abbr> feed</h2>
 						<div id="content-primary">
@@ -58,7 +58,7 @@
 								<p>See <a href="http://news.bbc.co.uk/1/hi/help/3223484.stm?rss=/rss/newsonline_uk_edition/world/americas/rss.xml">What is RSS?</a> at the
 								<abbr title="British Broadcasting Corporation">BBC</abbr> website.</p>
 							</div>
-							
+
 							<div class="text">
 								<h3 id="page-heading">Current Feed Content</h3>
 								<xsl:for-each select="//item">
@@ -82,7 +82,7 @@
 							</div>
 						</div>
 					</div>
-						
+
 					<div id="content-secondary">
 						<h3>Subscribe Now!</h3>
 						<p>Add this feed to a web based news reader. Click on your choice below:</p>
@@ -116,10 +116,10 @@
 							</a></li>
 						</ul>
 					</div>
-					
+
 					<div id="footer">
 						<p id="footer-copyright">© 2006 <strong class="org fn"><xsl:value-of select="//title"/></strong></p>
-						<p class="vcard">Website by <a href="http://www.creation.uk.com" class="url fn org">Creation Design &#38; Marketing Limited</a></p>
+						<p class="vcard">Website by <a href="https://creation.trovster.com" class="url fn org">Creation Design &#38; Marketing Limited</a></p>
 					</div>
 				</div>
 			</body>
