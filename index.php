@@ -38,7 +38,7 @@ $news_array_standard = news_setup($news_array);
 /* information setup
 ============================================================================================================= */
 $content_navigation = array(
-	array('text' => 'New Agila launch', 'link' => 'news/2008/04/14/new-agila-launch/', 'class' => array('news','news-agila','column')),
+	array('text' => 'New Agila launch', 'link' => '/news/2008/04/14/new-agila-launch/', 'class' => array('news','news-agila','column')),
 	array('text' => 'Rojac Brochure — A Print Portfolio Item', 'link' => '/portfolio/print/rojac-brochure/', 'class' => array('portfolio','portfolio-rojac','column')),
 
 	array('text' => 'Print Services', 'link' => '/services/print/', 'class' => array('services','services-print','column')),
