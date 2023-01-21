@@ -1,4 +1,5 @@
-<?php error_reporting(0);
+<?php error_reporting(E_ERROR);
+
 // UTC_TIMESTAMP | for MySQL pre 4.1.1 use $UTC_TIMESTAMP instead of NOW() to get 'now' in GMT/UTC
 $UTC_TIMESTAMP = "DATE_ADD( '1970-01-01', INTERVAL UNIX_TIMESTAMP() SECOND )";
 
@@ -21,7 +22,6 @@ $lang = 'en';
 $gl_ir = true;
 //$sifr = true;
 
-
 function stripslashes_deep($value) {
 	return is_array($value) ? array_map('stripslashes_deep', $value) : stripslashes($value);
 }
@@ -32,9 +32,13 @@ ini_set('arg_separator.output', '&amp;'); // Sets the aggregator
 ini_set('magic_quotes_runtime', 0); // make sure magic_quotes_gpc is OFF
 ini_set('session.use_trans_sid', 0); // session links
 
-if(get_magic_quotes_gpc()) $_POST = array_map('stripslashes_deep', $_POST);
-if(get_magic_quotes_gpc()) $_GET = array_map('stripslashes_deep', $_GET);
-if(get_magic_quotes_gpc()) $_COOKIE = array_map('stripslashes_deep', $_COOKIE);
+date_default_timezone_set('Europe/London');
+
+if (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc()) {
+    $_POST = array_map('stripslashes_deep', $_POST);
+	$_GET = array_map('stripslashes_deep', $_GET);
+	$_COOKIE = array_map('stripslashes_deep', $_COOKIE);
+}
 
 if(isset($_SERVER['HTTP_HOST'])) $domain = 'http://'.$_SERVER['HTTP_HOST'];
 
@@ -56,7 +60,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/_includes/header.php');
 
 // new caching details
 $cache = new Cache();
-$cache->exclude_array = array_merge($cache->exclude_array,array());
+// $cache->exclude_array = array_merge($cache->exclude_array,array());
 $cache->hash = $_SERVER['REQUEST_URI'];
 if(!empty($_GET['section']) && $_GET['section']=='news') $cache->group = 'news';
 //$cache->start();

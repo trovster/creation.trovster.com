@@ -1,12 +1,13 @@
 <?php
 
 function portfolio_sql($id='',$sql_extra='') {
+	global $connect_admin;
 	$sql_where = '';
-	
+
 	if(!empty($id) && is_numeric($id)) {
-		$sql_where = " AND pd.ID = '".mysql_real_escape_string($id)."' ";
+		$sql_where = " AND pd.ID = '".mysqli_real_escape_string($connect_admin, $id)."' ";
 	}
-	
+
 	$sql = "SELECT pd.ID AS Detail_ID,
 			pd.Title AS Detail_Title,
 			pd.Created AS Detail_Created,
@@ -16,7 +17,7 @@ function portfolio_sql($id='',$sql_extra='') {
 			pd.Description AS Detail_Description,
 			pd.Website AS Detail_Website,
 			pd.Landing AS Detail_Landing,
-			
+
 			cat.ID AS Category_ID,
 			cat.Category,
 			cat.Safe_URL AS Category_Safe_URL,
@@ -24,64 +25,65 @@ function portfolio_sql($id='',$sql_extra='') {
 			cat.Updated AS Category_Updated,
 			cat.TaglineHeading AS Category_Tagline_Heading,
 			cat.Tagline AS Category_Tagline,
-			
+
 			ps.Sector AS Sector_Title,
 			ps.Safe_URL AS Sector_Safe_URL,
 			ps.Description AS Sector_Description,
 			comp.Company AS Company_Title,
 			comp.Safe_URL AS Company_Safe_URL,
 			comp.Description AS Company_Description
-			
+
 			FROM portfolio_details AS pd
 			LEFT JOIN portfolio_company AS comp ON comp.ID = pd.Portfolio_Company_ID
 			LEFT JOIN portfolio_sector AS ps ON ps.ID = comp.Portfolio_Sector_ID
 			LEFT JOIN portfolio_category AS cat ON cat.ID = Portfolio_Category_ID
-			
+
 			WHERE pd.Active = '1'".$sql_where.$sql_extra."
 			ORDER BY
 			cat.Category = 'Concepts' DESC, cat.Category = 'Print' DESC, cat.Category = 'Websites' DESC,
 			cat.Category = 'Branding' DESC, cat.Category = 'Advertising' DESC, cat.Category = 'Display' DESC,
 			cat.Category ASC, pd.Landing ASC, pd.Title ASC, comp.Company ASC";
-	//echo $sql;
+
+	// echo $sql; exit;
 	$query = mysqli_query($connect_admin, $sql);
-	
+
 	return $query;
 }
 
 function portfolio_setup($array,$full=true) {
 	if(empty($array) || !is_array($array)) return false; // no array, nothing to do
-	
+
 	extract($array);
 	$return = array();
-	
+
 	$return['id'] = $Detail_ID;
 	$return['title'] = formatText($Detail_Title);
 	$return['description']['summary'] = wordwrap($Detail_Summary,125);
-	$return['description']['main'] = formatText($Detail_Description,'output');	
+	$return['description']['main'] = formatText($Detail_Description,'output');
 	$return['created'] = news_date_setup($Detail_Created);
 	$return['updated'] = news_date_setup($Detail_Updated,$Detail_Created);
 	$return['permalink'] = portfolio_setup_category_permalink($Category_Safe_URL).$Detail_Safe_URL;
 	$return['safe'] = trim($Detail_Safe_URL,'/');
 	$return['class'] = array(trim($Detail_Safe_URL,'/'));
-	
+
 	if(!empty($Detail_Website) && $Detail_Website_Valid = validate($Detail_Website,'url')) $return['website'] = $Detail_Website_Valid;
-	
+
 	$return['category']['id'] = $Category_ID;
 	$return['category']['permalink'] = portfolio_setup_category_permalink($Category_Safe_URL);
 	$return['category']['title'] = $Category;
 	$return['category']['safe'] = trim($Category_Safe_URL,'/');
 	$return['category']['created'] = news_date_setup($Category_Created);
 	$return['category']['updated'] = news_date_setup($Category_Created,$Category_Created);
-	
+
 	$return['category']['tagline']['title'] = formatText($Category_Tagline_Heading,'output');
 	$return['category']['tagline']['text'] = formatText($Category_Tagline,'output');
-	
+
 	$return['text'] = $return['title'];
 	$return['link'] = $return['permalink'];
 	$return['definition'] = $return['description']['summary'];
-	
+
 	$return['meta-description'] = $return['title'].' - '.$return['description']['summary'];
-	
+
 	if($full===true) {
 		$return['stylesheet'] = portfolio_setup_stylesheet($return);
 		$return['company'] = portfolio_setup_company($array);
@@ -97,20 +99,22 @@ function portfolio_setup_stylesheet($array) {
 	$stylesheet_image = image_setup($array['id'],trim($array['safe'],'/').'_navigation','jpg',$stylesheet_path);
 
 	if(empty($stylesheet_image['file'])) return false;
-	
+
 	$return = array();
 	$return['image'] = $stylesheet_image['file']['full-path'];
 	$return['selector'] = "\t".'#content-navigation ul li.'.$array['category']['safe'].' a, #content-navigation ul li.'.$array['category']['safe'].' a span.gl-ir';
 	$return['category'] = $array['category']['safe'];
 	$return['full'] = $return['selector'].'{'."\n\t\t".'background-image: url('.$return['image'].');'."\n\t".'}'."\n";
-	
+
 	return $return;
 }
 function portfolio_setup_images($array) {
+	global $connect_admin;
+
 	if(empty($array) || !is_array($array)) return false;
-	
+
 	$image_path = '/images/portfolio/'.$array['category']['safe'].'/';
-	
+
 	$sql = "SELECT pdi.ID AS Image_ID,
 			pdi.Image_Alt_Text,
 			pdi.Safe_URL AS Image_Safe_URL,
@@ -119,13 +123,13 @@ function portfolio_setup_images($array) {
 			pdi.Position AS Image_Position
 			FROM portfolio_details_images AS pdi
 			LEFT JOIN portfolio_details_images_join AS pdij ON pdi.ID = pdij.Portfolio_Image_ID
-			WHERE pdij.Portfolio_Detail_ID = '".mysql_real_escape_string($array['id'])."'
+			WHERE pdij.Portfolio_Detail_ID = '".mysqli_real_escape_string($connect_admin, $array['id'])."'
 			ORDER BY pdi.Position ASC, pdi.Image_Alt_Text ASC";
 
 	$query = mysqli_query($connect_admin, $sql);
 	$return = array(); $i=0;
 	while($image_array = mysqli_fetch_array($query)) {
-		$image_name = '['.$array['id'].']-'.trim($image_array['Image_Safe_URL']);		
+		$image_name = '['.$array['id'].']-'.trim($image_array['Image_Safe_URL']);
 		$j = $i+1;
 		$alt_text = $array['company']['title'].' '.$array['title'].' '.$image_array['Image_Alt_Text'];
 		if(image_setup($image_array['Image_ID'],$image_name,$image_array['Image_Extension'],$image_path)) {
@@ -146,7 +150,7 @@ function portfolio_setup_company($array) {
 	$return['title'] = formatText($array['Company_Title']);
 	$return['safe'] = $array['Company_Safe_URL'];
 	$return['description'] = formatText($array['Company_Description']);
-	$return['permalink'] = '/portfolio/company/'.$array['Company_Safe_URL'];	
+	$return['permalink'] = '/portfolio/company/'.$array['Company_Safe_URL'];
 	return $return;
 }
 function portfolio_setup_category_permalink($category) {
@@ -186,7 +190,7 @@ function portfolio_display_project_image($array) {
 
 function portfolio_display_project_images($array) {
 	if(empty($array) || !is_array($array) || empty($array['total']) || !is_numeric($array['total'])) return false;
-	
+
 	$image_total = $array['total'];
 	unset($array['total']);
 
@@ -218,7 +222,7 @@ function portfolio_display_project_images($array) {
 	}
 
 	$pagnation = pagination_setup($pagination_array,$image_key_next,$image_key_prev,$image_total);
-	
+
 	return array('image' => $image, 'pagination' => $pagnation, 'permalink' => $image_permalink, 'navigation' => $image_navigation);
 }
 ?>

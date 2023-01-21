@@ -2,12 +2,12 @@
 if(!empty($_POST['method']) && $_POST['method']=='profile-password') {
 	$stripped_post_array = stripTags($_POST,'',true);
 	if($_POST['action']=='new') {
-	
+
 	}
 	elseif($_POST['action']=='update' && !empty($_POST['identifier']) && is_numeric($_POST['identifier'])) {
 		$update_sql = "UPDATE author_details
 SET Password = '".md5($_POST['password-required'])."'
-WHERE ID = '".mysql_real_escape_string($stripped_post_array['identifier'])."'";
+WHERE ID = '".mysqli_real_escape_string($connect_admin, $stripped_post_array['identifier'])."'";
 		if(mysqli_query($connect_admin, $update_sql)) {
 			$updated_array = array(
 				'method' => 'success',

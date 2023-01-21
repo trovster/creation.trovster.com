@@ -1,7 +1,7 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'].'/_includes/_initialise.php');
 
 /* database setup
-============================================================================================================= */		   
+============================================================================================================= */
 $query = portfolio_sql();
 
 /* information setup
@@ -24,9 +24,9 @@ while($array = mysqli_fetch_array($query)) {
 		$portfolio_array[$c]['class'] = array($array_setup['category']['safe'],'column');
 		$portfolio_array[$c]['rel'] = array('tag','subsection');
 		if(!empty($gl_ir) && $gl_ir==true) $portfolio_array[$c]['gilder'] = true;
-		
+
 		$portfolio_array[$c]['detail'][$j] = $array_setup;
-		
+
 		if(
 			(!empty($_GET['category']) && $_GET['category']==$array_setup['category']['safe']) ||
 			(empty($_GET['category']) && $i==0)
@@ -36,7 +36,7 @@ while($array = mysqli_fetch_array($query)) {
 			$_GET['category_id'] = $array_setup['category']['id'];
 			$category_matched=true;
 		}
-		
+
 		$actives_array[$c]['style'] = $array_setup['stylesheet'];
 		$actives_array[$c]['link'] = $array_setup['permalink'];
 	}
@@ -53,22 +53,22 @@ foreach($portfolio_array[$_GET['category_id']]['detail'] as $key => $project) {
 	if(
 		(!empty($_GET['project']) && !empty($_GET['category']) && $_GET['project']==$project['safe']) ||
 		(empty($_GET['project']) && $i==0)) {
-		
+
 		// this is the active project detail
 		$project_detail_array = $project;
-		
+
 		// add this active project in to the style link
 		$c = $project['category']['id'];
 		$actives_array[$c]['style'] = $project['stylesheet'];
 		$actives_array[$c]['link'] = $project['permalink'];
 		$p_c = $i;
-		
+
 		$portfolio_array[$c]['detail']['class'][] = 'active';
 		$project['class'][] = 'active';
-		
+
 		// header for the page
 		$header_title = $project['title'].' | '.$project['category']['title'].' |  A Portfolio Item by ';
-		
+
 		// set the category ID to the project ID
 		setcookie('c_uk['.$project['category']['id'].'][id]', $project['id'], time()+(3600*24*7), '/');
 	}
@@ -146,16 +146,16 @@ $header->Display();
 ?>
 
 	<div id="content-primary">
-		<?php 
+		<?php
 		if(!empty($project_detail_array) && is_array($project_detail_array)) {
 			echo '<div'.addAttributes('','e_'.$project_detail_array['id'],array('project','column','double','first','vcard')).'>'."\n";
 			echo portfolio_display_project_details($project_detail_array);
-			
+
 			if(!empty($project_pagination) && is_array($project_pagination)) echo pagination_display($project_pagination,'project-pagination','pagination');
 			echo '<!-- end of div class .project -->'."\n";
 			echo '</div>'."\n";
 		}
-		
+
 		?>
 
 		<div id="content-navigation" class="column double last">
@@ -168,7 +168,7 @@ $header->Display();
 			?>
 		<!-- end of div id #content-navigation -->
 		</div>
-		
+
 		<div id="services-select" class="column selection">
 			<h3>More… <em>Projects</em></h3>
 			<?php
@@ -177,7 +177,7 @@ $header->Display();
 			}
 			?>
 		</div>
-		
+
 		<div class="tagline column last">
 			<?php
 			if(!empty($project['category']['tagline'])) {
@@ -188,7 +188,7 @@ $header->Display();
 		</div>
 	<!-- end of div id #content-primary -->
 	</div>
-	
+
 	<div id="content-secondary">
 	<!-- end of div id #content-secondary -->
 	</div>

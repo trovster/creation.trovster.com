@@ -1,6 +1,20 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
+
+RewriteRule ^(contact)/(local|regional)/?$ $1.php?section=$1&zoom=$2&category=$2 [L]
+RewriteRule ^(contact)/?$ $1.php?section=$1&zoom=national [L]
+
+RewriteRule ^(news)/(20[0-9]{2})/([0-9]{2})/([0-9]{2})/([a-z0-9_\-]+)/?$ news-permalink.php?section=$1&subsection=archive&year=$2&month=$2-$3&day=$4&permalink=$5&date=$2-$3-$4 [L]
+RewriteRule ^(news)/(20[0-9]{2})/([0-9]{2})/([0-9]{2})/?$ news-day-check.php?section=$1&subsection=archive&year=$2&month=$2-$3&date=$2-$3-$4 [L]
+RewriteRule ^(news)/(20[0-9]{2})/([0-9]{2})/?$ $1.php?section=$1&subsection=archive&year=$2&month=$2-$3 [L]
+RewriteRule ^(news)/(20[0-9]{2})/?$ $1.php?section=$1&subsection=archive&year=$2&month=$2 [L]
+RewriteRule ^(news)/?$ $1.php?section=$1 [L]
+
+RewriteRule ^([a-z0-9]+)/([a-z0-9_\-]+)/([a-z0-9_\-]+)/?$ $1.php?section=$1&subsection=$2&category=$2&project=$3 [L]
+RewriteRule ^([a-z0-9]+)/([a-z0-9_\-]+)/?$ $1.php?section=$1&subsection=$2&category=$2 [L]
+RewriteRule ^([a-z0-9]+)/?$ $1.php?section=$1 [L]
+
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

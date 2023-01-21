@@ -1,0 +1,23 @@
+{
+    "name": "creation",
+    "title": "Creation",
+    "description": "Website for Creation design agency.",
+    "author": "Trevor Morris",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "start": "docker-compose -f ./docker-compose.yaml up -d",
+        "stop": "docker stop trovster_creation trovster_creation_mysql",
+        "remove": "docker rm trovster_creation trovster_creation_mysql",
+        "build": "snap http://127.0.0.1:8005 -o www && cp CNAME ./www/",
+        "deploy": "push-dir --dir=www --branch=gh-pages"
+    },
+    "devDependencies": {
+        "@remy/snap": "^1.1.1",
+        "push-dir": "^0.4.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/creation/creation.trovster.com"
+    }
+}

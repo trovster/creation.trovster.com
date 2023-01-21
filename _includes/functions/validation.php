@@ -3,7 +3,7 @@ function validate($var,$type) {
 	$var = trim(str_replace(' ','',$var));
 	$type = strtolower($type);
 	global $g_validationArray;
-	
+
 	if(strstr($type,'email')!==FALSE ) {
 		if(!preg_match($g_validationArray['email'],$var)) {
 			return NULL;
@@ -33,7 +33,7 @@ function validate($var,$type) {
 function validateError($var,$type) {
 	$var = strip_tags(trim($var));
 	$type = strtolower($type);
-	
+
 	if(strstr($type,'postcode')!==FALSE) {
 		return 'Invalid postcode';
 	}
@@ -78,6 +78,7 @@ function check_form_required_elements($form) {
 	return checkRequired($array);
 }
 function stripTags($array,$type='',$admin=false) {
+	global $connect_admin;
 	if(!is_array($array)) return FALSE;
 	$trimmedArray = array();
 	$allowed_html = '';
@@ -91,7 +92,7 @@ function stripTags($array,$type='',$admin=false) {
 		else $value_array = $value;
 		foreach($value_array as $value_output) {
 			$value_output = trim($value_output);
-			if($type=='db') $value_output = mysql_real_escape_string($value_output);
+			if($type=='db') $value_output = mysqli_real_escape_string($connect_admin, $value_output);
 			if(is_array($value)) $key_output = $key.'-'.$value_output;
 			else $key_output = $key;
 			$trimmedArray[$key_output] = strip_tags(trim($value_output),$allowed_html);
@@ -101,6 +102,8 @@ function stripTags($array,$type='',$admin=false) {
 }
 
 function authorise() {
+	global $connect_admin;
+
 	if(!empty($_SESSION['login']) && $_SESSION['login']['session']==session_id() && is_numeric($_SESSION['login']['id'])) {
 		return TRUE;
 	}
@@ -118,8 +121,8 @@ function authorise() {
 				$array = mysqli_fetch_array($query);
 				$_SESSION['login']['session'] = session_id();
 				$_SESSION['login']['id'] = $array['ID'];
-				
-				$person_update_sql = "UPDATE author_details SET Last_Login = NOW() WHERE ID = '".mysql_real_escape_string($array['ID'])."'";
+
+				$person_update_sql = "UPDATE author_details SET Last_Login = NOW() WHERE ID = '".mysqli_real_escape_string($connect_admin, $array['ID'])."'";
 				mysqli_query($connect_admin, $person_update_sql);
 				return TRUE;
 			}

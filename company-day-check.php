@@ -4,8 +4,8 @@
 // if only one date is found, redirct to that hot-topic
 // else redirect 302 to the month version.
 
-$hot_topic_extra = " AND ad.SafeURL = '".mysql_real_escape_string($_GET['subsection'])."'";
-$hot_topic_extra .= " AND d.Created LIKE '".mysql_real_escape_string($_GET['date'])."%'";
+$hot_topic_extra = " AND ad.SafeURL = '".mysqli_real_escape_string($connect_admin, $_GET['subsection'])."'";
+$hot_topic_extra .= " AND d.Created LIKE '".mysqli_real_escape_string($connect_admin, $_GET['date'])."%'";
 $hot_topic_array = hot_topic_setup($hot_topic_extra);
 
 if(count($hot_topic_array)==1) {

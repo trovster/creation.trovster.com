@@ -34,22 +34,23 @@ if(!empty($_GET['date']) && !empty($_GET['month']) && !empty($_GET['permalink'])
 				 LEFT JOIN author_profile AS ap ON ad.ID = ap.Author_Detail_ID
 				 WHERE d.News_Section_ID = '1'
 				 ".$sql_extra."
-				 AND d.Safe_URL = '".mysql_real_escape_string($_GET['permalink'])."/'
-				 AND d.Created LIKE '".mysql_real_escape_string($_GET['date'])."%'
+				 AND d.Safe_URL = '".mysqli_real_escape_string($connect_admin, $_GET['permalink'])."/'
+				 AND d.Created LIKE '".mysqli_real_escape_string($connect_admin, $_GET['date'])."%'
 				 GROUP BY d.ID
 				 ORDER BY d.Created DESC, d.Title ASC, d.Updated DESC
 				 LIMIT 0,1";
 
 	$news_query = mysqli_query($connect_admin, $news_sql);
-	
-	if(mysql_num_rows($news_query)==0) die(require_once($_SERVER['DOCUMENT_ROOT'].'/_error.php'));
-	
+
+	if(mysqli_num_rows($news_query)==0) die(require_once($_SERVER['DOCUMENT_ROOT'].'/_error.php'));
+
 	$news_array = mysqli_fetch_array($news_query);
 	if(!empty($_GET['preview']) && $_GET['preview']==1) {
 		$news_array['Comments_Active'] = 0;
 	}
 	$news_array_standard = news_setup($news_array);
 	$this_page_url = $news_array_standard['permalink']['link'];
+
 }
 else die(require_once($_SERVER['DOCUMENT_ROOT'].'/_error.php'));
 
@@ -69,7 +70,7 @@ $g_skiplinksArray['comments-form'] = array('text' => 'Skip to comments form', 't
 $g_skiplinksArray['content-nav']['link'] = '#image-navigation';
 
 $news_dom_array = array('scripts/jquery.jcarousel.js','scripts/jquery.metadata.js','scripts/jquery.validate.min.js','forms.js','news.js');
-				
+
 
 /* setup the header information
 ============================================================================================================= */

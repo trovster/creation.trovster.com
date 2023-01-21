@@ -1,20 +1,21 @@
 <?php
 function news_comments_setup($setup_array,$sql_order='',$author='',$admin=false) {
+	global $connect_admin;
 	if(empty($setup_array) || !is_array($setup_array)) return false;
-	
+
 	$where = '';
 	$where .= " AND c.Active = '1'";
 	$where .= " AND c.Is_Spam = '0'";
 	if($admin==true) {
 		$where = '';
 	}
-	
+
 	if(empty($sql_order)) $sql_order = 'c.Created ASC';
-	if(!empty($setup_array['id'])) $where .= " AND  cj.News_Detail_ID = '".mysql_real_escape_string($setup_array['id'])."'";
+	if(!empty($setup_array['id'])) $where .= " AND  cj.News_Detail_ID = '".mysqli_real_escape_string($connect_admin, $setup_array['id'])."'";
 	if(!empty($author) && is_numeric($author)) {
-		$where .= " AND c.Author = '1' AND c.Author_ID = '".mysql_real_escape_string($author)."'";
+		$where .= " AND c.Author = '1' AND c.Author_ID = '".mysqli_real_escape_string($connect_admin, $author)."'";
 	}
-	
+
 	$comment_sql = "SELECT
 					c.ID AS Comment_ID,
 					c.Created AS Comment_Created,
@@ -28,14 +29,14 @@ function news_comments_setup($setup_array,$sql_order='',$author='',$admin=false)
 					c.IP AS Comment_IP,
 					c.Is_Spam,
 					c.Active AS Is_Active,
-					
+
 					xfn.Relation AS Comment_Relation,
-					
+
 					d.ID AS Detail_ID,
 					d.Created AS Detail_Created,
 					d.Safe_URL as Detail_Safe_URL,
 					d.Title AS Detail_Title,
-					
+
 					s.Section AS Section_Name
 					FROM news_comments AS c
 					LEFT JOIN news_comments_join AS cj ON c.ID = cj.News_Comment_ID
@@ -47,7 +48,7 @@ function news_comments_setup($setup_array,$sql_order='',$author='',$admin=false)
 					WHERE 1 = 1
 					".$where."
 					ORDER BY ".$sql_order;
-	
+
 	//echo $comment_sql;
 	$comment_query = mysqli_query($connect_admin, $comment_sql);
 
@@ -56,14 +57,14 @@ function news_comments_setup($setup_array,$sql_order='',$author='',$admin=false)
 		extract($array);
 		if(!in_array($Comment_ID,$check_array)) {
 			$check_array[] = $Comment_ID;
-			
+
 			$microformat_name = new Guess($Comment_Name);
 			$microformat_name_array = $microformat_name->guess;
 			if(is_array($microformat_name_array) && !empty($microformat_name_array['meta'])) unset($microformat_name_array['meta']);
 			$microformat_name_optimised = $microformat_name->output();
-			
+
 			$permalink = news_permalink_setup($Detail_ID,$Detail_Created,$Detail_Safe_URL,$Section_Name,$Detail_Title);
-			
+
 			$return[$i]['id'] = $Comment_ID;
 			$return[$i]['created'] = news_date_setup($Comment_Created);
 			$return[$i]['updated'] = news_date_setup($Comment_Updated);
@@ -80,7 +81,7 @@ function news_comments_setup($setup_array,$sql_order='',$author='',$admin=false)
 			$return[$i]['description']['markdown'] = $Comment_Text;
 			$return[$i]['description']['main'] = formatText($Comment_Text,'output');
 			$return[$i]['description']['summary'] = formatText($Comment_Text,'output');
-			
+
 			//$return[$i]['author'] = $microformat_name_array;
 			$return[$i]['author']['n-optimised'] = $microformat_name_optimised;
 			$return[$i]['author']['plain'] = $Comment_Name;
@@ -88,7 +89,7 @@ function news_comments_setup($setup_array,$sql_order='',$author='',$admin=false)
 			$return[$i]['author']['md5'] = md5(validate($Comment_Email,'email'));
 			$return[$i]['author']['url'] = validate($Comment_Website,'url');
 			$return[$i]['author']['image'] = '';
-			
+
 			$return[$i]['author']['image']['text']['alt'] = 'Gravatar for '.$return[$i]['author']['plain'];
 			$return[$i]['author']['image']['dimensions']['height'] = '48';
 			$return[$i]['author']['image']['dimensions']['width'] = '48';
@@ -97,11 +98,11 @@ function news_comments_setup($setup_array,$sql_order='',$author='',$admin=false)
 			$return[$i]['author']['image']['file']['full-path'] = '/css/images/general_avatar.gif';
 			$return[$i]['author']['image']['file']['type'] = 'gif';
 			$return[$i]['author']['image']['class'] = array('gravatar');
-			
+
 			// get the gravatar via caching
 			$return[$i]['author']['image']['file']['name'] = '/images/gravatars/cache/creation/'.$return[$i]['author']['md5'];
 			$return[$i]['author']['image']['file']['full-path'] = '/images/gravatars/cache/creation/'.$return[$i]['author']['md5'];
-			
+
 			//http://create/images/gravatars/cache/creation/a489725ad8451b6e87fcb9ed4f189cf9
 
 			if(!empty($Comment_Author_Value) && $Comment_Author_Value==1 && $admin_author = news_comments_check_author($return[$i]['author']['url'],$return[$i]['author']['email'],$return[$i]['author']['plain'])) {
@@ -110,7 +111,7 @@ function news_comments_setup($setup_array,$sql_order='',$author='',$admin=false)
 				$return[$i]['author']['image'] = image_setup('0',$admin_author['full-name'],'gif','/images/icons/','Gravatar for '.$admin_author['full-name'],'','',array('gravatar','logo'));
 				$return[$i]['author']['n-optimised'] = $admin_author['full-name']; // set the author name to the one from the DB
 			}
-		
+
 			if(!empty($Comment_Relation)) {
 				$return[$i]['relationship'] = array($Comment_Relation);
 			}
@@ -132,7 +133,7 @@ function news_comments_display($array,$id='',$class='') {
 		$class[] = 'hfeed';
 	}
 	else $class = array('hfeed');
-	
+
 	$subscribe_class_array = array();
 	if($array['comments']['active'] && $array['comments']['total']>0 && !empty($array['xml'])) {
 		if(is_file($_SERVER['DOCUMENT_ROOT'].$array['xml']['atom']['local'])) {
@@ -144,7 +145,7 @@ function news_comments_display($array,$id='',$class='') {
 			$subscribe_feed_array = $array['xml']['rss'];
 		}
 	}
-	
+
 	$article_author_array = $array['author'];
 	$output = '';
 	$comment_total = $array['comments']['total'];
@@ -153,12 +154,12 @@ function news_comments_display($array,$id='',$class='') {
 	unset($array['comments']['total']);
 	unset($array['comments']['active']);
 	unset($array['comments']['title']);
-	
+
 	$reaction_title = 'Reactions';
 	if($comment_total==1) {
 		$reaction_title = rtrim($reaction_title,'s');
 	}
-	
+
 	$output .= '<div'.addAttributes('',$id,$class).'>'."\n";
 	$output .= '<h3 class="section-title column triple">'.$comment_total.' × '.$reaction_title.'… <em>'.$comment_title.'</em></h3>'."\n";
 
@@ -171,7 +172,7 @@ function news_comments_display($array,$id='',$class='') {
 		$output .= '</a></p>';
 		$output .= '</div>'."\n";
 	}
-			
+
 	$array = $array['comments'];
 	foreach($array as $comment_array) {
 		// actual comments bits
@@ -183,7 +184,7 @@ function news_comments_display($array,$id='',$class='') {
 		$class_array = array('external','url');
 		$link_title = '';
 		$author_comment_class = array('fn');
-		
+
 		$gravatar = array();
 		if(!empty($comment_array['author']['admin'])) {
 			// a comment by one of us..
@@ -194,7 +195,7 @@ function news_comments_display($array,$id='',$class='') {
 				$comment_class[] = 'creation-comment';
 				$author_comment_class[] = 'org';
 				$comment_array['author']['url'] = validate($g_company_domain,'website');
-				
+
 			}
 			else {
 				if(url_encode($article_author_array['full-name'])==url_encode($comment_array['author']['plain'])) {
@@ -208,7 +209,7 @@ function news_comments_display($array,$id='',$class='') {
 			if(!empty($comment_array['author']['class'])) $author_comment_class = array_merge($author_comment_class,$comment_array['author']['class']);
 		}
 		$gravatar_show = image_show($comment_array['author']['image']);
-		
+
 		if(!empty($comment_array['author']['url'])) {
 			// we have a URL
 			$link_start = '<a href="'.$comment_array['author']['url'].'"'.addAttributes($link_title,'',$class_array,'',$rel_link).'>';
@@ -220,7 +221,7 @@ function news_comments_display($array,$id='',$class='') {
 		if(!empty($gravatar_show)) $output .= $link_start.$gravatar_show.$link_end;
 		$output .= '<p class="'.addClass($author_comment_class).'">'.$link_start.$comment_array['author']['n-optimised'].$link_end.'</p>'."\n";
 		$output .= '<p class="timestamp">'.$comment_array['permalink']['anchor'].'</p>'."\n";
-		
+
 		$output .= '</div>'."\n";
 		$output .= '<div class="entry-content column double last">'.$comment_array['description']['main']."\n".'<!-- end of div class .entry-content -->'."\n".'</div>'."\n";
 		$output .= '</div>'."\n\n";
@@ -229,27 +230,28 @@ function news_comments_display($array,$id='',$class='') {
 	if($comment_active==1) {
 		$output .=  '<p class="comments-closed">Reactions are now closed for this article!</p>'."\n";
 	}
-		
+
 	if(!empty($id) && validToken($id)) {
 		$output .= '<!-- end of div id #'.validToken($id).' -->'."\n";
 	}
-	$output .= '</div>'."\n\n";	
+	$output .= '</div>'."\n\n";
 	return $output;
 }
 
 
 function news_comments_add($array,$post_array,$post_data,$via_ajax=0) {
+	global $connect_admin;
 	global $now_timestamp;
 	global $g_apiArray;
 	global $g_company_domain;
 	global $domain;
-	
+
 	$feedback_array = array();
 	$is_author = 0; $author_id = 0;
 	$is_spam = 0;
 	$is_active = 1;
 	$disabled_text = '';
-	
+
 	if(empty($post_array) || !is_array($post_array) || empty($array) || !is_array($array)) {
 		$feedback_array['title'] = 'Comment Error';
 		$feedback_array['text'] = 'There was an unexpected error, please try again.';
@@ -262,7 +264,7 @@ function news_comments_add($array,$post_array,$post_data,$via_ajax=0) {
 		$feedback_array['class'] = array('error','invalid','email');
 		return $feedback_array;
 	}
-	
+
 	comment_cookie_toggle($post_array);
 
 	// akismet
@@ -296,18 +298,18 @@ function news_comments_add($array,$post_array,$post_data,$via_ajax=0) {
 			}
 		}
 	}
-	
+
 	$is_author_array = news_comments_check_author_insert($post_array); // check whether author is logged in, and details match.
 	if(!empty($is_author_array) && is_array($is_author_array)) {
 		$is_author = 1;
 		if(!empty($is_author_array['id']) && is_numeric($is_author_array['id'])) $author_id = $is_author_array['id'];
 	}
-	
+
 	$sql_insert = "INSERT INTO news_comments (Created, Updated, IP, UA, Is_Spam, Via_AJAX, Name, Email, Website, Text, Active, Author, Author_ID)
 				   VALUES('".$now_timestamp."',
 						  '".$now_timestamp."',
-						  '".mysql_real_escape_string($_SERVER['REMOTE_ADDR'])."',
-						  '".mysql_real_escape_string($_SERVER['HTTP_USER_AGENT'])."',
+						  '".mysqli_real_escape_string($connect_admin, $_SERVER['REMOTE_ADDR'])."',
+						  '".mysqli_real_escape_string($connect_admin, $_SERVER['HTTP_USER_AGENT'])."',
 						  '".$is_spam."',
 						  '".$via_ajax."',
 						  '".$post_array['comment-name-required']."',
@@ -317,17 +319,17 @@ function news_comments_add($array,$post_array,$post_data,$via_ajax=0) {
 						  '".$is_active."',
 						  '".$is_author."',
 						  '".$author_id."')";
-	
-	
+
+
 	if(mysqli_query($connect_admin, $sql_insert) && is_numeric(mysql_insert_id())) {
 		// the comment was added successfully, join it to the article
 		$sql_insert_join = "INSERT INTO news_comments_join (News_Comment_ID,News_Detail_ID)
-							VALUES('".mysql_insert_id()."','".mysql_real_escape_string($array['id'])."')";
+							VALUES('".mysql_insert_id()."','".mysqli_real_escape_string($connect_admin, $array['id'])."')";
 		mysqli_query($connect_admin, $sql_insert_join);
-		
+
 		// grab gravatar here and cache it
 		$email_md5 = md5(validate($post_array['comment-email-required'],'email'));
-		
+
 		// create / update the RSS feed for the comments
 		setup_feed($array,'comments');
 		if(!empty($author_id) && is_numeric($author_id)) {
@@ -336,11 +338,11 @@ function news_comments_add($array,$post_array,$post_data,$via_ajax=0) {
 			$return_author_comments_array = setup_comments_author($author_array);
 			create_feed($author_comments_array,$return_author_comments_array);
 		}
-		
+
 		$feedback_array['title'] = 'Comment Added';
 		$feedback_array['text'] = 'Thanks!'.$disabled_text;
 		$feedback_array['class'] = array('comment','confirmation','added');
-		
+
 		$redirect_header = $array['permalink']['link'];
 		if(!empty($is_spam) && $is_spam==1) {
 			$redirect_header .= '#comments-view';
@@ -350,7 +352,7 @@ function news_comments_add($array,$post_array,$post_data,$via_ajax=0) {
 		else $redirect_header .= '#c_'.mysql_insert_id();
 		header('Location: '.$redirect_header);
 		exit;
-		
+
 	}
 	else {
 		$feedback_array['title'] = 'Comment Error';
@@ -363,25 +365,26 @@ function news_comments_add($array,$post_array,$post_data,$via_ajax=0) {
 
 function news_comments_check_author($url,$email,$name,$type='') {
 	if(empty($url) || empty($email) || empty($name)) return false;
-	
+
 	global $g_company_domain;
 	global $g_company_name;
 	global $g_company_comment_email;
-	
+	global $connect_admin;
+
 	$our_url 	= validate($g_company_domain,'url');
 	$user_url 	= strtolower(validate($url,'url'));
 	$user_email = strtolower(validate($email,'email'));
 	$user_name 	= strtolower($name);
-	
+
 	$check_users_sql = "SELECT ad.ID AS Author_ID,
 						ad.Forename as Author_Forename,
 						ad.Surname AS Author_Surname,
 						ad.Email AS Author_Email,
 						CONCAT_WS(' ',ad.Forename,ad.Surname) AS Author_Full_Name
 						FROM author_details AS ad";
-	
+
 	if($type=='insert') {
-		$check_users_sql .= " WHERE ad.ID = '".mysql_real_escape_string($_SESSION['login']['id'])."'";
+		$check_users_sql .= " WHERE ad.ID = '".mysqli_real_escape_string($connect_admin, $_SESSION['login']['id'])."'";
 	}
 
 	$check_users_query = mysqli_query($connect_admin, $check_users_sql);
@@ -394,7 +397,7 @@ function news_comments_check_author($url,$email,$name,$type='') {
 			break;
 		}
 	}
-	
+
 	// none of our profiles, so check globally
 	if($user_url===$our_url && $user_email==validate($g_company_comment_email,'email') && $user_name===strtolower($g_company_name)) {
 		return array('full-name' => 'Creation');
@@ -403,7 +406,7 @@ function news_comments_check_author($url,$email,$name,$type='') {
 }
 function news_comments_check_author_insert($array) {
 	if(empty($array) || !is_array($array)) return 0;
-	
+
 	if(authorise()) {
 		$author_check = news_comments_check_author($array['comment-website'],$array['comment-email-required'],$array['comment-name-required'],'insert');
 		if(!empty($author_check) && is_array($author_check)) return $author_check;

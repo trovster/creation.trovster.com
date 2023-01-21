@@ -8,14 +8,14 @@ if(!empty($_POST['id']) && !empty($_POST['type']) && !empty($_POST['area']) && i
 	$edit_id = $_POST['id'];
 	if($_POST['type']=='ht') {
 		// this is a HOT TOPIC
-		$specific_array = hot_topic_setup(" AND d.ID = '".mysql_real_escape_string($edit_id)."'",' LIMIT 0,1');
+		$specific_array = hot_topic_setup(" AND d.ID = '".mysqli_real_escape_string($connect_admin, $edit_id)."'",' LIMIT 0,1');
 	}
 	elseif($_POST['type']=='e') {
 		// this is a NEWS ARTICLE
-		$specific_array = related_setup(" AND d.ID = '".mysql_real_escape_string($edit_id)."'",' LIMIT 0,1');
+		$specific_array = related_setup(" AND d.ID = '".mysqli_real_escape_string($connect_admin, $edit_id)."'",' LIMIT 0,1');
 	}
-	
-	if(!empty($specific_array) && count($specific_array==1)) {
+
+	if(!empty($specific_array) && count($specific_array) === 1) {
 		if($_POST['area']=='entry-content') {
 			//$return['description']['markdown']
 			//$return['description']['main']

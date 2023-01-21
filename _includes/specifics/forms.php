@@ -1,7 +1,7 @@
 <?php
 function form_feedback_show() {
 	global $this_page_url;
-	
+
 	$contact_form_array = array(
 		'text' => array(
 			'fieldset' => 'Contact Form',
@@ -18,15 +18,15 @@ function form_feedback_show() {
 			)
 		)
 	);
-	
+
 	if(!empty($_POST['type']) && strtolower($_POST['type'])=='feedback') {
 		$contact_form_array_checked = checkRequired($_POST);
 		if(!empty($contact_form_array_checked)) $contact_form_array_checked = cleanArray($contact_form_array_checked);
 		$post_array = stripTags($_POST,'db');
-		
+
 		if(empty($contact_form_array_checked)) {
 			unset($contact_form_array);
-			$feedback_array = form_feedback_send($post_array,$this_page_url);			
+			$feedback_array = form_feedback_send($post_array,$this_page_url);
 			return '<div'.addAttributes($feedback_array['title'],'',$feedback_array['class']).'>'.formatText($feedback_array['text'],'output').'</div>'."\n";
 		}
 		else {
@@ -55,22 +55,22 @@ function form_unsubscribe_eshot($page_url) {
 	);
 	$return = '';
 	$return = createForm($unsubscribe_eshot_array,'get',$page_url.'#eshots-unsubscribe');
-	
+
 	if(!empty($_GET['type']) && strtolower($_GET['type'])=='contact') {
 		$array_checked = checkRequired($_GET);
 		if(!empty($array_checked)) $array_checked = cleanArray($array_checked);
 		$post_array = stripTags($_GET);
-		
+
 		if(empty($array_checked)) {
 			//$feedback_array = form_feedback_send($post_array,$page_url);
 			//$return = '<div'.addAttributes($feedback_array['title'],'',$feedback_array['class']).'>'.formatText($feedback_array['text'],'output').'</div>'."\n";
-			
+
 			// check the DB for this email address
 			// if doesn't exist, feedback saying the email doesn't exist
 			// else email that address with confirmation of unsubscription
 			//      md5(ID-email@example.com)
 			//      feedback screen saying a confirmation has been sent to the email@example.com
-			
+
 			if(!empty($feedback_array) && !empty($feedback_array['type']) && strtolower($feedback_array['type'])=='error') {
 				// there is an error... show the form again
 				//$contact_us_array = createFormErrors($contact_us_array,$contact_form_array_checked);
@@ -83,7 +83,7 @@ function form_unsubscribe_eshot($page_url) {
 			$return = createForm($unsubscribe_eshot_array,'get',$page_url.'#eshots-unsubscribe');
 		}
 	}
-	
+
 	return $return;
 }
 
@@ -110,21 +110,21 @@ function form_contact_feedback_show($page_url) {
 	);
 	$return = '';
 	$return = createForm($contact_us_array,'post',$page_url.'#contact-feedback');
-	
+
 	if(!empty($_POST['type']) && strtolower($_POST['type'])=='contact') {
 		$contact_form_array_checked = checkRequired($_POST);
 		if(!empty($contact_form_array_checked)) $contact_form_array_checked = cleanArray($contact_form_array_checked);
 		$post_array = stripTags($_POST);
-		
+
 		if(empty($contact_form_array_checked)) {
-			
+
 			$feedback_array = form_feedback_send($post_array,$page_url);
 			$return = '<div'.addAttributes($feedback_array['title'],'',$feedback_array['class']).'>'.formatText($feedback_array['text'],'output').'</div>'."\n";
-			
+
 			if(!empty($feedback_array) && !empty($feedback_array['type']) && strtolower($feedback_array['type'])=='error') {
 				// there is an error... show the form again
 				//$contact_us_array = createFormErrors($contact_us_array,$contact_form_array_checked);
-				$return .= createForm($contact_us_array,'post',$page_url.'#contact-feedback');				
+				$return .= createForm($contact_us_array,'post',$page_url.'#contact-feedback');
 			}
 			else unset($contact_us_array);
 		}
@@ -143,14 +143,14 @@ function form_contact_feedback_show($page_url) {
 
 function news_comments_form($array) {
 	global $this_page_url;
-	
+
 	//$openid_note = '<p>If you have <a href="http://openid.net" rel="external" class="external">OpenID</a> use it here.</p>';
-	
+
 	$remember_checkbox_array = array(
 		'agree' => array('value' => 'agree', 'label' => 'Remember My Details?', 'id' => 'agree')
 	);
 	//$remember_checkbox_array['agree']['checked'] = 'checked';
-		
+
 	$comment_form_array = array(
 		'user-inputs' => array(
 			'fieldset' => 'Comments: Your Details',
@@ -189,14 +189,14 @@ function news_comments_form($array) {
 			)
 		)
 	);
-	
+
 	if(!empty($_COOKIE['c_uk_comment']) && is_array($_COOKIE['c_uk_comment'])) {
 		if(!empty($_COOKIE['c_uk_comment']['name'])) 	$comment_form_array['user-inputs']['elements']['comment-name-required']['value'] = $_COOKIE['c_uk_comment']['name'];
 		if(!empty($_COOKIE['c_uk_comment']['email'])) 	$comment_form_array['user-inputs']['elements']['comment-email-required']['value'] = $_COOKIE['c_uk_comment']['email'];
 		if(!empty($_COOKIE['c_uk_comment']['website'])) $comment_form_array['user-inputs']['elements']['comment-website']['value'] = $_COOKIE['c_uk_comment']['website'];
 		$comment_form_array['user-inputs']['elements']['comment-remember']['checkbox']['agree']['checked'] = 'checked';
 	}
-	
+
 	//'remember' => array('label' => 'Remember My Details'),
 
 	if(!empty($_POST['type']) && $_POST['type']=='comment') {
@@ -204,7 +204,7 @@ function news_comments_form($array) {
 		if(!empty($checkedArray)) $checkedArray = cleanArray($checkedArray);
 		$post_array = stripTags($_POST,'db');
 		comment_cookie_toggle($_POST);
-		
+
 		if(empty($checkedArray)) {
 			// comment was successful, submit it
 			unset($comment_form_array);
@@ -231,14 +231,15 @@ function news_comments_form($array) {
 
 
 function form_feedback_send($array,$my_page='',$via_ajax=0) {
+	global $connect_admin;
 	global $now_timestamp;
 	global $g_company_feedback_email;
 	global $domain;
 	global $g_apiArray;
-	
+
 	if(!empty($my_page)) $this_page_url = $my_page;
 	else $this_page_url = '';
-	
+
 	$feedback_array = array();
 	$sent_value = 0; $is_spam = 0;
 	$name = ''; $subject = '';
@@ -259,39 +260,39 @@ function form_feedback_send($array,$my_page='',$via_ajax=0) {
 		$feedback_array['type'] = 'error';
 		return $feedback_array;
 	}
-	
-		
+
+
 	// insert in to our DB forms_feedback
 	$mail = new PHPMailer();
 	$mail->AddAddress($g_company_feedback_email,'Creation Feedback');
 	$mail->AddBCC('trevor@creation.uk.com','Creation Feedback');
 	$mail->AddCustomHeader('Content-Type: text/plain; charset=utf8');
 	$mail->AddReplyTo(validate($array['email-required'],'email'),validate($array['email-required'],'email'));
-	
+
 	$email_subject = 'Feedback Form';
 	if(!empty($subject)) $email_subject .= ' — Subject: '.$subject."\n";
-	
+
 	$body = 'New feedback comment'."\n\n";
 
 	$body .= 'Referring Page: '.$domain.$this_page_url."\n";
 	$body .= 'User Agent:     '.$_SERVER['HTTP_USER_AGENT']."\n";
 	$body .= 'IP Address:     '.$_SERVER['REMOTE_ADDR']."\n";
 	$body .= 'Whois:          http://whoisx.co.uk/'.$_SERVER['REMOTE_ADDR']."\n";
-	
+
 	$body .= "\n".'Comment information'."\n";
-	
+
 	if(!empty($name)) $body .= 'Name:    '.$name."\n";
 	$body .= 'Email:   '.validate($array['email-required'],'email')."\n";
 	if(!empty($subject)) $body .= 'Subject: '.$subject."\n";
 	$body .= 'Message: '."\n".str_replace("\r\n","\n",$array['message-required'])."\n";
-	
+
 	$mail->Subject 	= $email_subject;
 	$mail->From 	= validate($array['email-required'],'email');
 	if(!empty($name)) $mail->FromName = $name;
-	else $mail->FromName = validate($array['email-required'],'email');		
+	else $mail->FromName = validate($array['email-required'],'email');
 	$mail->Body		= $body;
 	$mail->Mailer	= 'mail';
-	
+
 	if($mail->Send()) {
 		$feedback_array['title'] = 'Feedback Sent';
 		$feedback_array['text'] = 'Thank-you for your feedback. We\'ll be in touch soon.';
@@ -305,23 +306,23 @@ function form_feedback_send($array,$my_page='',$via_ajax=0) {
 		$feedback_array['class'] = array('error','mail');
 		$feedback_array['type'] = 'error';
 	}
-	
+
 	// finally insert in to our database
 	$feedback_sql = "INSERT INTO forms_feedback (Created, IP, UA, Page, Subject, Message, Name, Email, Sent, Is_Spam, Via_AJAX)
 					 VALUES('".$now_timestamp."',
-					 		'".mysql_real_escape_string($_SERVER['REMOTE_ADDR'])."',
-							'".mysql_real_escape_string($_SERVER['HTTP_USER_AGENT'])."',
-							'".mysql_real_escape_string($this_page_url)."',
-							'".mysql_real_escape_string($subject)."',
-							'".mysql_real_escape_string($array['message-required'])."',
-							'".mysql_real_escape_string($name)."',
-							'".mysql_real_escape_string(validate($array['email-required'],'email'))."',
-							'".mysql_real_escape_string($sent_value)."',
+					 		'".mysqli_real_escape_string($connect_admin, $_SERVER['REMOTE_ADDR'])."',
+							'".mysqli_real_escape_string($connect_admin, $_SERVER['HTTP_USER_AGENT'])."',
+							'".mysqli_real_escape_string($connect_admin, $this_page_url)."',
+							'".mysqli_real_escape_string($connect_admin, $subject)."',
+							'".mysqli_real_escape_string($connect_admin, $array['message-required'])."',
+							'".mysqli_real_escape_string($connect_admin, $name)."',
+							'".mysqli_real_escape_string($connect_admin, validate($array['email-required'],'email'))."',
+							'".mysqli_real_escape_string($connect_admin, $sent_value)."',
 							'".$is_spam."',
 							'".$via_ajax."')";
 
 	mysqli_query($connect_admin, $feedback_sql);
-		
+
 	unset($_POST);
 	unset($array);
 	return $feedback_array;

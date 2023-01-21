@@ -11,31 +11,31 @@ if(!empty($_POST['method']) && $_POST['method']=='hot-topic') {
 	$status = $stripped_post_array['status-required']-1;
 
 	if($_POST['action']=='new') {
-		
+
 		$insert_sql = "INSERT INTO author_topics (CreatedID,UpdatedID,Author_Detail_ID,Created,Updated,
 Title,Safe_URL,Summary,Description,Image_Alt_Text,Image_Title,Image_Link,Status)
 VALUES(
-	'".mysql_real_escape_string($person_details_array['identifier'])."',
-	'".mysql_real_escape_string($person_details_array['identifier'])."',
-	'".mysql_real_escape_string($stripped_post_array['person'])."',
-	'".mysql_real_escape_string($stripped_post_array['date-required'])."',
-	'".mysql_real_escape_string($stripped_post_array['date-required'])."',
-	'".mysql_real_escape_string($stripped_post_array['title-required'])."',
-	'".mysql_real_escape_string(url_encode($stripped_post_array['title-required']))."/',
-	'".mysql_real_escape_string($stripped_post_array['summary-required'])."',
-	'".mysql_real_escape_string($stripped_post_array['text-required'])."',
-	'".mysql_real_escape_string($stripped_post_array['image-alt'])."',
-	'".mysql_real_escape_string($stripped_post_array['image-title'])."',
-	'".mysql_real_escape_string($stripped_post_array['image-link'])."',
-	'".mysql_real_escape_string($status)."'
+	'".mysqli_real_escape_string($connect_admin, $person_details_array['identifier'])."',
+	'".mysqli_real_escape_string($connect_admin, $person_details_array['identifier'])."',
+	'".mysqli_real_escape_string($connect_admin, $stripped_post_array['person'])."',
+	'".mysqli_real_escape_string($connect_admin, $stripped_post_array['date-required'])."',
+	'".mysqli_real_escape_string($connect_admin, $stripped_post_array['date-required'])."',
+	'".mysqli_real_escape_string($connect_admin, $stripped_post_array['title-required'])."',
+	'".mysqli_real_escape_string($connect_admin, url_encode($stripped_post_array['title-required']))."/',
+	'".mysqli_real_escape_string($connect_admin, $stripped_post_array['summary-required'])."',
+	'".mysqli_real_escape_string($connect_admin, $stripped_post_array['text-required'])."',
+	'".mysqli_real_escape_string($connect_admin, $stripped_post_array['image-alt'])."',
+	'".mysqli_real_escape_string($connect_admin, $stripped_post_array['image-title'])."',
+	'".mysqli_real_escape_string($connect_admin, $stripped_post_array['image-link'])."',
+	'".mysqli_real_escape_string($connect_admin, $status)."'
 )";
-		
+
 		if(mysqli_query($connect_admin, $insert_sql)) {
 			$checkout = '';
 			$entry_id 			= mysql_insert_id();
 			$entry_edit_link 	= $stripped_post_array['edit-link'].$entry_id.'/';
-			
-			$hot_topics_specific_array = hot_topic_setup("AND d.ID = '".mysql_real_escape_string($entry_id)."'");
+
+			$hot_topics_specific_array = hot_topic_setup("AND d.ID = '".mysqli_real_escape_string($connect_admin, $entry_id)."'");
 			if(!empty($hot_topics_specific_array[0]['permalink']) && !empty($hot_topics_specific_array[0]['permalink']['link'])) {
 				$checkout = ' [check it out]('.$hot_topics_specific_array[0]['permalink']['link'].') or';
 			}
@@ -45,7 +45,7 @@ VALUES(
 				'description' => 'Your **hot topic was added**. You can'.$checkout.' make further [changes]('.$entry_edit_link.').',
 				'class' => array('added')
 			);
-			
+
 		}
 		else {
 			$updated_array = array(
@@ -56,38 +56,38 @@ VALUES(
 				'sql' => $insert_sql,
 			);
 		}
-	
+
 	}
 	elseif($_POST['action']=='update' && !empty($_POST['identifier']) && is_numeric($_POST['identifier']) && !empty($_REQUEST['update']) && is_numeric($_REQUEST['update'])) {
-	
+
 		if($_POST['identifier']==$_REQUEST['update']) {
 
 			$update_sql = "UPDATE author_topics
-SET UpdatedID = '".mysql_real_escape_string($person_details_array['identifier'])."',
-Author_Detail_ID = '".mysql_real_escape_string($stripped_post_array['person'])."',
-Created = '".mysql_real_escape_string($stripped_post_array['date-required'])."',
+SET UpdatedID = '".mysqli_real_escape_string($connect_admin, $person_details_array['identifier'])."',
+Author_Detail_ID = '".mysqli_real_escape_string($connect_admin, $stripped_post_array['person'])."',
+Created = '".mysqli_real_escape_string($connect_admin, $stripped_post_array['date-required'])."',
 Updated = NOW(),
-Title = '".mysql_real_escape_string($stripped_post_array['title-required'])."',
-Safe_URL = '".mysql_real_escape_string(url_encode($stripped_post_array['title-required']))."/',
-Summary = '".mysql_real_escape_string($stripped_post_array['summary-required'])."',
-Description = '".mysql_real_escape_string($stripped_post_array['text-required'])."',
-Image_Alt_Text = '".mysql_real_escape_string($stripped_post_array['image-alt'])."',
-Image_Title = '".mysql_real_escape_string($stripped_post_array['image-title'])."',
-Image_Link = '".mysql_real_escape_string($stripped_post_array['image-link'])."',
-Status = '".mysql_real_escape_string($status)."'
-WHERE ID = '".mysql_real_escape_string($stripped_post_array['identifier'])."'";
-			
+Title = '".mysqli_real_escape_string($connect_admin, $stripped_post_array['title-required'])."',
+Safe_URL = '".mysqli_real_escape_string($connect_admin, url_encode($stripped_post_array['title-required']))."/',
+Summary = '".mysqli_real_escape_string($connect_admin, $stripped_post_array['summary-required'])."',
+Description = '".mysqli_real_escape_string($connect_admin, $stripped_post_array['text-required'])."',
+Image_Alt_Text = '".mysqli_real_escape_string($connect_admin, $stripped_post_array['image-alt'])."',
+Image_Title = '".mysqli_real_escape_string($connect_admin, $stripped_post_array['image-title'])."',
+Image_Link = '".mysqli_real_escape_string($connect_admin, $stripped_post_array['image-link'])."',
+Status = '".mysqli_real_escape_string($connect_admin, $status)."'
+WHERE ID = '".mysqli_real_escape_string($connect_admin, $stripped_post_array['identifier'])."'";
+
 			if(mysqli_query($connect_admin, $update_sql)) {
-				
+
 				$checkout = '';
 				$entry_id 			= $stripped_post_array['identifier'];
 				$entry_edit_link 	= $stripped_post_array['edit-link'];
-				
-				$hot_topics_specific_array = hot_topic_setup("AND d.ID = '".mysql_real_escape_string($stripped_post_array['identifier'])."'");
+
+				$hot_topics_specific_array = hot_topic_setup("AND d.ID = '".mysqli_real_escape_string($connect_admin, $stripped_post_array['identifier'])."'");
 				if(!empty($hot_topics_specific_array[0]['permalink']) && !empty($hot_topics_specific_array[0]['permalink']['link'])) {
 					$checkout = ' [check it out]('.$hot_topics_specific_array[0]['permalink']['link'].') or';
 				}
-				
+
 				$updated_array = array(
 					'method' => 'success',
 					'heading' => 'Victory!',
@@ -112,10 +112,10 @@ WHERE ID = '".mysql_real_escape_string($stripped_post_array['identifier'])."'";
 			'class' => array('tampered')
 		);
 	}
-	
+
 	// XML reposnse check...
-	require_once($_SERVER['DOCUMENT_ROOT'].'/_admin/_includes/xml_reposonse.php');	
-	
+	require_once($_SERVER['DOCUMENT_ROOT'].'/_admin/_includes/xml_reposonse.php');
+
 	if(!empty($entry_id) && is_numeric($entry_id) && $entry_id!=0) {
 		$updated_array = array($updated_array);
 		if(!empty($_FILES['image']) && !empty($_FILES['image']['name'])) {
@@ -124,9 +124,9 @@ WHERE ID = '".mysql_real_escape_string($stripped_post_array['identifier'])."'";
 				$image_ext = strtolower($file_info_array['extension']);
 				$sql_image_update = "UPDATE author_topics
 									SET Image_Extension = '".$image_ext."'
-									WHERE ID = '".mysql_real_escape_string($entry_id)."'";
+									WHERE ID = '".mysqli_real_escape_string($connect_admin, $entry_id)."'";
 				mysqli_query($connect_admin, $sql_image_update);
-			
+
 				$image_upload_array = array(
 					'id' => $entry_id,
 					'name' => url_encode($stripped_post_array['title-required']),
@@ -142,7 +142,7 @@ WHERE ID = '".mysql_real_escape_string($stripped_post_array['identifier'])."'";
 				delete_file($entry_id,$image_path);
 				delete_file($entry_id,$image_path.'orginials/');
 				delete_file($entry_id,$image_path.'thumbnails/');
-				
+
 				$image_upload_information = image_upload($image_upload_array);
 				$image_upload_information['class'][] = 'feedback-also';
 				$updated_array[] = $image_upload_information;
@@ -154,8 +154,8 @@ WHERE ID = '".mysql_real_escape_string($stripped_post_array['identifier'])."'";
 			rename_file($entry_id,url_encode($stripped_post_array['title-required']),$image_path.'orginials/');
 			rename_file($entry_id,url_encode($stripped_post_array['title-required']),$image_path.'thumbnails/');
 		}
-		
-		
+
+
 		if($status==1) {
 			// status is active so...
 			// setup the RSS feed for hot-topics AND this persons hot-topic...

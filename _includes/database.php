@@ -1,4 +1,4 @@
-<?php
+<?php require_once($_SERVER['DOCUMENT_ROOT'].'/_includes/scripts/mysql.php');
 
 /* database connections
 ============================================================================================================= */
@@ -6,9 +6,9 @@ function dbConnect() {
 
 	/* DATABASE
 	--------------------------------------------------------------------------------------------------*/
-	$database_hostname = 'localhost';
-	$database_username = 'root';
-	$database_password = '';
+	$database_hostname = 'trovster_creation_mysql'; // 127.0.0.1:3321
+	$database_username = 'creation';
+	$database_password = 'password';
 	$database_database = 'creation';
 
 	$connect_admin = mysqli_connect($database_hostname, $database_username, $database_password)
@@ -18,4 +18,3 @@ function dbConnect() {
 
 	return $connect_admin;
 }
-?>

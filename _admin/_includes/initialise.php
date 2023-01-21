@@ -42,12 +42,12 @@ foreach($language_greet_array as $greet_language) $greet_tagline_array[] = 'Now 
 $person_sql = "SELECT a_d.ID, a_d.Username, a_d.SafeURL, a_d.Forename, a_d.Surname, a_d.Email, CONCAT_WS(' ',a_d.Forename,a_d.Surname) AS FullName
 				FROM author_details AS a_d
 				WHERE a_d.Active = '1'
-				AND a_d.ID = '".mysql_real_escape_string($user_id)."'";
+				AND a_d.ID = '".mysqli_real_escape_string($connect_admin, $user_id)."'";
 
 $person_query = mysqli_query($connect_admin, $person_sql);
 if(mysql_num_rows($person_query)==1) {
 	$person_array = mysqli_fetch_array($person_query);
-	$person_details_array = profile_setup(" AND ad.ID = '".mysql_real_escape_string($person_array['ID'])."'",false,false);
+	$person_details_array = profile_setup(" AND ad.ID = '".mysqli_real_escape_string($connect_admin, $person_array['ID'])."'",false,false);
 	$person_details_array = $person_details_array[0];
 }
 else {

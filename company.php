@@ -14,7 +14,7 @@ $page_sql = "SELECT Created, Updated, TabName, TabURL, Title, Text
 			 WHERE TabURL = '/company/'
 			 AND Active = '1'
 			 LIMIT 0,1";
-			 
+
 $page_query = mysqli_query($connect_admin, $page_sql);
 $page_array = mysqli_fetch_array($page_query);
 $header_title = $page_array['Title'];
@@ -32,38 +32,39 @@ if(!empty($_GET['subsection']) && strtolower($_GET['subsection']=='testimonials'
 	$primary_id = 'about-testimonials';
 }
 elseif(!empty($_GET['subsection']) && strtolower($_GET['subsection']!=='about')) {
-	$profile_sql = "AND ad.SafeURL = '".mysql_real_escape_string($_GET['subsection'])."'";
+	global $connect_admin;
+	$profile_sql = "AND ad.SafeURL = '".mysqli_real_escape_string($connect_admin, $_GET['subsection'])."'";
 	$profile_array = profile_setup($profile_sql);
-	
+
 	if(empty($profile_array)) die(require_once($_SERVER['DOCUMENT_ROOT'].'/_error.php'));
-	
+
 	$header_title = 'Profile of '.$profile_array[0]['author']['full-name'].' | Company';
-	
+
 	$profile_details = profile_details_display($profile_array[0]);
 	$profile = profile_display($profile_array[0]);
-	
+
 	$primary_class_array[] = 'my-profile';
 	$primary_class_array[] = 'vcard';
 	//$primary_class_array[] = 'hresume';
 	$content_class_array[] = 'hresume';
 	$primary_id = $profile_array[0]['id'];
-	
+
 	// hot topic setup
-	$hot_topic_sql_extra = " AND ap.ID = '".mysql_real_escape_string($profile_array[0]['author']['id'])."'";
+	$hot_topic_sql_extra = " AND ap.ID = '".mysqli_real_escape_string($connect_admin, $profile_array[0]['author']['id'])."'";
 	$hot_topic_sql_limit = 'LIMIT 0,10';
-	
+
 	$status = true;
 	if(!empty($_GET['preview']) && $_GET['preview']=='true') $status = false;
-	
+
 	$hot_topics_array = hot_topic_setup($hot_topic_sql_extra,$hot_topic_sql_limit,'',$status);
 	if(!empty($hot_topics_array)) $hot_topics_standard = $hot_topics_array[0];
-	
+
 	if(!empty($_GET['hot-topic'])) {
 		$hot_topics_specific_sql_extra = $hot_topic_sql_extra;
 		$hot_topics_specific_sql_limit = 'LIMIT 0,20';
 		$hot_topics_highlight = '';
 		$hot_topics_specific_title_middle = 'Archive';
-		
+
 		if(!empty($_GET['date']) && !empty($_GET['type'])) {
 			if(!empty($_GET['permalink'])) {
 				$hot_topics_highlight = $_GET['permalink'];
@@ -76,11 +77,11 @@ elseif(!empty($_GET['subsection']) && strtolower($_GET['subsection']!=='about'))
 				$date_search = formatDate($_GET['date'],'admin-sql-check');
 				$hot_topics_specific_title_middle = formatDate($_GET['date'],'news-archive');
 			}
-			if(!empty($date_search)) $hot_topics_specific_sql_extra .= " AND d.Created LIKE '".mysql_real_escape_string($date_search)."'";
+			if(!empty($date_search)) $hot_topics_specific_sql_extra .= " AND d.Created LIKE '".mysqli_real_escape_string($connect_admin, $date_search)."'";
 		}
 		$hot_topics_specific_title = '<h3>Hot Topics <em>'.$hot_topics_specific_title_middle.'</em></h3>'."\n";
 		$hot_topics_specific_array = hot_topic_setup($hot_topics_specific_sql_extra,$hot_topics_specific_sql_limit,$hot_topics_highlight,$status);
-		
+
 		if(!empty($hot_topics_highlight)) {
 			$hot_topics_search_array = array_search_recursive('active',$hot_topics_specific_array);
 			if(count($hot_topics_search_array)==3) {
@@ -90,7 +91,7 @@ elseif(!empty($_GET['subsection']) && strtolower($_GET['subsection']!=='about'))
 		}
 		if(count($hot_topics_specific_array)==0) die(require_once($_SERVER['DOCUMENT_ROOT'].'/_error.php'));
 	}
-	
+
 	// related author setup
 	$news_array_standard = related_author_setup($profile_array[0]);
 	$setup_feed_author_array = setup_feed_author_information($profile_array[0]['author']['id']);
@@ -99,14 +100,14 @@ elseif(!empty($_GET['subsection']) && strtolower($_GET['subsection']!=='about'))
 	if(!empty($setup_feed_author_array)) {
 		$g_filesArray[$profile_array[0]['author']['url'].'-atom'] = $setup_feed_author_array['xml']['atom'];
 		$g_filesArray[$profile_array[0]['author']['url'].'-rss'] = $setup_feed_author_array['xml']['rss'];
-		
+
 		if(!empty($setup_feed_author_array['xml']['atom']) && is_file($_SERVER['DOCUMENT_ROOT'].$setup_feed_author_array['xml']['atom']['path'].$setup_feed_author_array['xml']['atom']['name'])) {
 			$my_feed_info = $setup_feed_author_array['xml']['atom'];
 		}
 		elseif(!empty($setup_feed_author_array['xml']['rss']) && is_file($_SERVER['DOCUMENT_ROOT'].$setup_feed_author_array['xml']['rss']['path'].$setup_feed_author_array['xml']['rss']['name'])) {
 			$my_feed_info = $setup_feed_author_array['xml']['rss'];
 		}
-		
+
 		if(!empty($my_feed_info)) {
 			$my_feed_text = '<a href="'.$my_feed_info['permalink'].'"'.addAttributes(rtrim(rtrim($my_feed_info['title'],'  (Atom)'),' (RSS)'),'',$my_feed_info['class'],'',$my_feed_info['rel'],'','','','',$my_feed_info['mime']).'>';
 			$my_feed_text .= 'Subscribe</a>';
@@ -171,13 +172,13 @@ $header->Display();
 	if(!empty($hot_topics_specific_array) && is_array($hot_topics_specific_array)) {
 		// display the hot-topic information in here...
 		echo $profile_details;
-		
+
 		echo '<div'.addAttributes('','hot-topic-select',array('column','news','mini-container','hfeed','vcard','author','selection')).'>';
 		echo $hot_topics_specific_title;
 		echo news_display_mini($hot_topics_specific_array,'','','summary');
 		echo '<!-- end of div id #hot-topic-select -->'."\n";
 		echo '</div>'."\n";
-		
+
 		if(!empty($hot_topics_specific_standard)) {
 			echo '<div class="column last">'."\n";
 			echo news_display_hot_topic($hot_topics_specific_standard);
@@ -200,7 +201,7 @@ $header->Display();
 	echo '<!-- end of div id #'.$primary_id.' -->'."\n";
 	echo '</div>'."\n";
 	?>
-	
+
 	<div id="content-navigation" class="column double last">
 		<h3>Content Navigation</h3>
 	<?php
@@ -211,7 +212,7 @@ $header->Display();
 	?>
 	<!-- end of div id #content-navigation -->
 	</div>
-	
+
 	<?php
 	if(!empty($profile_array) && is_array($profile_array) && !empty($profile)) {
 		// display the profile information
@@ -236,10 +237,10 @@ $header->Display();
 			echo '</div>'."\n";
 		}
 		*/
-	
+
 		echo '<!-- end of div id #latest-posts -->'."\n";
 		echo '</div>'."\n";
-		
+
 		if(!empty($hot_topics_specific_array) && is_array($hot_topics_specific_array)) {
 			echo '<h3>What are… <em>Hot Topics</em></h3>';
 			echo '<blockquote><p>A thought for the moment. Something we recommend. Just a informal chat.</p></blockquote>'."\n";
@@ -262,10 +263,10 @@ $header->Display();
 			echo '</div>'."\n";
 		}
 	}
-	?>		
+	?>
 	<!-- end of div id #content-primary -->
 	</div>
-	
+
 	<div id="content-secondary">
 	<!-- end of div id #content-secondary -->
 	</div>

@@ -2,9 +2,10 @@
 /* FORMAT TEXT -- basic formatting of text
 -------------------------------------------------------------------------------------------------- */
 function formatText($var,$type='') {
+	global $connect_admin;
 	$var = trim(stripslashes($var));
 	$type = strtolower($type);
-		
+
 	if($type=='output') {
 		$var = wordwrap(trim(SmartyPants(markdown($var))),125)."\n";
 		$var = abbreviate($var);
@@ -22,7 +23,7 @@ function formatText($var,$type='') {
 		$var = strtolower(str_replace(' ','-',$var));
 	}
 	elseif($type=='db') {
-		$var = mysql_real_escape_string(strip_tags($var));
+		$var = mysqli_real_escape_string($connect_admin, strip_tags($var));
 	}
 	else {
 		if(!preg_match('/<[^<^>]+>/',$var)) {
@@ -31,7 +32,7 @@ function formatText($var,$type='') {
 			if(preg_match('/"/',$var,$array)!==false) $var = str_replace('"','&#34;',$var);
 		}
 	}
-	
+
 	return $var;
 }
 
@@ -75,7 +76,7 @@ function abbreviate($var) {
 	global $g_company_name;
 	global $g_abbreviations;
 	if(empty($g_abbreviations) || !is_array($g_abbreviations)) return $var;
-	
+
 	$var = preg_replace('#<abbr title="(.*?)">(.*?)</abbr>#', '\2', $var);
 	$var = preg_replace('#<acronym title="(.*?)">(.*?)</acronym>#', '\2', $var);
 	foreach($g_abbreviations as $abbr => $def) {
@@ -114,7 +115,7 @@ function process_links($var) {
 
 function feedback_show($feedback,$id='feedback',$class=array()) {
 	if(empty($feedback[0])) $feedback = array($feedback);
-	
+
 	$output = '';
 	$output .= '<div'.addAttributes('',$id,$class).'>';
 
@@ -140,7 +141,7 @@ function feedback_show($feedback,$id='feedback',$class=array()) {
 function formatDate($var,$type='') {
 	if(!is_int($var)) $var = strtotime($var); //$var = strtotime($var.' GMT');
 	$type = strtolower($type);
-	
+
 	if($type=='short-date') {
 		$var = date('d.m.Y',$var); // 2006.03.07
 	}
@@ -208,7 +209,7 @@ function truncateString($str, $len, $el='...') {
 		}
 		$str = substr($str, 0, $len-$xl);
 		$spc = strrpos($str, ' ');
-		
+
 		if ($spc > 0) {
 			$str = substr($str, 0, $spc);
 		}
@@ -220,7 +221,7 @@ function truncateString($str, $len, $el='...') {
 
 /* WORD COUNT -- ... ;)
 -------------------------------------------------------------------------------------------------- */
-function wordCount($var) { 
-	return substr_count($var,' ') + 1; 
+function wordCount($var) {
+	return substr_count($var,' ') + 1;
 }
 ?>

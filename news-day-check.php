@@ -30,13 +30,14 @@ $sql = "SELECT
 		 LEFT JOIN news_category_join AS tj ON tj.News_Detail_ID = d.ID
 		 WHERE d.Active = '1'
 		 AND d.News_Section_ID = '1'
-		 AND d.Created LIKE '".mysql_real_escape_string($_GET['date'])."%'
+		 AND d.Created LIKE '".mysqli_real_escape_string($connect_admin, $_GET['date'])."%'
 		 GROUP BY d.ID
 		 ORDER BY d.Created DESC, d.Title ASC, d.Updated DESC";
 
+
 $query = mysqli_query($connect_admin, $sql);
 
-if(mysql_num_rows($query)==1) {
+if(mysqli_num_rows($query)==1) {
 	$array = mysqli_fetch_array($query);
 	$news_array = news_setup($array);
 	header('HTTP/1.0 302 Permanent Redirect');

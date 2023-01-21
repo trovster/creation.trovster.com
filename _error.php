@@ -6,19 +6,19 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/_includes/_initialise.php');
 ============================================================================================================= */
 if(!empty($_GET['section']) && $_GET['section']=='news' && !empty($_GET['month']) && !empty($_GET['date'])) {
 	$sql_exclude = '';
-	
+
 	if(!empty($_GET['permalink'])) {
 		// partial article, but nothing found
-		$sql_extra = " AND d.Safe_URL LIKE '".mysql_real_escape_string($_GET['permalink'])."%' AND d.Created LIKE '".mysql_real_escape_string($_GET['date'])."%'";
+		$sql_extra = " AND d.Safe_URL LIKE '".mysqli_real_escape_string($connect_admin, $_GET['permalink'])."%' AND d.Created LIKE '".mysqli_real_escape_string($connect_admin, $_GET['date'])."%'";
 		$match_array_setup = related_setup($sql_extra);
-		
+
 		if(count($match_array_setup)==1) {
 			$matched_article = $match_array_setup[0];
 			$sql_exclude = " AND d.Safe_URL NOT LIKE '".$matched_article['safe']."%'";
 		}
-	}	
-	
-	$sql_extra = " AND d.Created LIKE '".mysql_real_escape_string($_GET['month'])."%'".$sql_exclude;
+	}
+
+	$sql_extra = " AND d.Created LIKE '".mysqli_real_escape_string($connect_admin, $_GET['month'])."%'".$sql_exclude;
 	$month_array_setup = related_setup($sql_extra);
 }
 
@@ -77,7 +77,7 @@ $header->Display();
 			search engine listing or we simply deleted a file. Please try one of the links below.
 			Alternatively you can click the logo to go back to the <a href="/">homepage</a>.</p>
 		</div>
-		
+
 		<div class="column double last second">
 		<?php
 		if(!empty($all_else_fails_array) && is_array($all_else_fails_array)) {
@@ -99,7 +99,7 @@ $header->Display();
 		}
 		?>
 		</div>
-		
+
 	<!-- end of div id #content-primary -->
 	</div>
 

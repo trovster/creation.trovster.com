@@ -16,7 +16,7 @@ foreach($profile_array as $profile_details_array) {
 		'text' => $profile_details_array['author']['full-name'],
 		'link' => '/admin/profile/'.$profile_details_array['identifier'].'/'
 	);
-	
+
 	if($profile_details_array['identifier']==$person_details_array['identifier']) {
 		$profile_list[$i]['text'] .= ' ← You!';
 	}
@@ -29,9 +29,9 @@ foreach($profile_array as $profile_details_array) {
 		$hot_topic_specific_array['edit-link'] = $new_hot_topic_link;
 
 		// hot-topic setup
-		$hot_topics_array = hot_topic_setup("AND ap.ID = '".mysql_real_escape_string($edit_details_array['identifier'])."'",'','',false);
+		$hot_topics_array = hot_topic_setup("AND ap.ID = '".mysqli_real_escape_string($connect_admin, $edit_details_array['identifier'])."'",'','',false);
 		foreach($hot_topics_array as $hot_topic_details_array) {
-			
+
 			if($hot_topic_details_array['status']==1) {
 				// disabled
 				$hot_topics_list_type = 'hot_topics_list_saved';
@@ -41,7 +41,7 @@ foreach($profile_array as $profile_details_array) {
 				$hot_topics_list_type = 'hot_topics_list';
 				$ht = 'h';
 			}
-			
+
 			${$hot_topics_list_type}[${$ht}] = array(
 				'text' => $hot_topic_details_array['title'],
 				'link' => '/admin/profile/'.$edit_details_array['identifier'].'/hot-topic/'.$hot_topic_details_array['id'].'/'
@@ -49,7 +49,7 @@ foreach($profile_array as $profile_details_array) {
 			$hot_topic_specific_array['person-id'] = $edit_details_array['identifier'];
 			if(!empty($_GET['subsection']) && strtolower($_GET['subsection'])=='hot-topic') {
 				$update_hot_topic = true;
-				
+
 				if(!empty($_GET['update']) && is_numeric($_GET['update'])) {
 					if($_GET['update']==$hot_topic_details_array['id']) {
 						${$hot_topics_list_type}[${$ht}]['class'][] = 'active';
@@ -104,7 +104,7 @@ $header->Display();
 ?>
 
 	<div id="content-primary">
-	
+
 		<div id="introduction">
 			<?php echo profile_admin_display($person_details_array,$greet_array,$greet_tagline_array); ?>
 			<div id="section-specific" class="column double last">
@@ -112,7 +112,7 @@ $header->Display();
 				<p>Update your profile text and manage your hot topics.</p>
 			</div>
 		</div>
-		
+
 		<div class="column">
 			<?php
 			if(!empty($profile_list)) {
@@ -120,15 +120,15 @@ $header->Display();
 				echo '<h3>Select Employee</h3>';
 				echo createList($profile_list);
 				echo '</div>';
-				
+
 				if($update_person==true && $hot_topic_list==true) {
 					$hot_topic_class = array('new');
 					if(!empty($_GET['update']) && strtolower($_GET['update'])=='new') $hot_topic_class[] = 'active';
-					
+
 					echo '<div class="info-box second">'."\n";
 					echo '<h3>Hot Topics</h3>';
 					echo '<p'.addAttributes('','',$hot_topic_class).'><a href="'.$new_hot_topic_link.'">Add a new Hot Topic</a></p>'."\n";
-					
+
 					if(!empty($hot_topics_list)) {
 						echo createList($hot_topics_list);
 					}
@@ -141,7 +141,7 @@ $header->Display();
 			}
 			?>
 		</div>
-		
+
 		<?php
 		if(!empty($hot_topics_form_output)) {
 			echo $hot_topics_form_output;
@@ -153,10 +153,10 @@ $header->Display();
 			echo $profile_password_form_output;
 		}
 		?>
-		
+
 	<!-- end of div id #content-primary -->
 	</div>
-	
+
 	<div id="content-secondary">
 	<!-- end of div id #content-secondary -->
 	</div>

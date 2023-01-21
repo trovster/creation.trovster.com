@@ -29,7 +29,7 @@ $page_sql = "SELECT Created, Updated, TabName, TabURL, Title, Text
 			 WHERE TabURL = '/eshots/'
 			 AND Active = '1'
 			 LIMIT 0,1";
-			 
+
 $page_query = mysqli_query($connect_admin, $page_sql);
 $page_array = mysqli_fetch_array($page_query);
 $eshot_title_main = $page_array['Title'];
@@ -55,11 +55,11 @@ if(!empty($_GET['date'])) {
 ============================================================================================================= */
 if(!empty($_GET['month']) && !empty($_GET['year']) && !empty($_GET['permalink'])) {
 
-	$sql_extra .= "AND es.Safe_URL = '".mysql_real_escape_string($_GET['permalink'])."/'";
+	$sql_extra .= "AND es.Safe_URL = '".mysqli_real_escape_string($connect_admin, $_GET['permalink'])."/'";
 	$eshot_array = eshot_sql($sql_extra);
-	
+
 	if(count($eshot_array)!=1) die(require_once($_SERVER['DOCUMENT_ROOT'].'/_error.php'));
-	
+
 	$eshot_title = $eshot_array[0]['title'].' | An '.rtrim($eshot_title_main,'s');
 	$eshot_text = eshot_display($eshot_array[0]);
 	$eshot_stylesheet_array = $eshot_array[0]['stylesheet']['file'];
@@ -85,20 +85,20 @@ elseif(!empty($_GET['month']) && !empty($_GET['year'])) {
 elseif(!empty($_GET['subsection']) && strtolower($_GET['subsection'])=='unsubscribe') {
 	$eshot_title = 'Unsubscribe from our '.$eshot_title_main;
 	$eshot_text_output = form_unsubscribe_eshot('/eshots/unsubscribe/');
-	
+
 	if(!empty($_GET['md5'])) {
 		// check the DB for that MD5
 		// check whether entry has 'unsubscribe' set to '1'
-		// if true set Subscribed to '0' 
+		// if true set Subscribed to '0'
 		//         show confirmation of unsubscribed email@example.com
 		// else output an error message
-		
+
 		// 1-trovster@gmail.com => d43b4613e6e2ab49799937c04c496601
 		// 2-trevor@creation.uk.com => 229eaf29a4409e68d873cd20443ee3f3
-		
+
 		$eshot_text_output .= 'Unsubscribe information here';
 	}
-	
+
 	$eshot_text .= '<div id="eshots-unsubscribe" class="column double last">'."\n";
 	$eshot_text .= '<h3>Unsubscribe… <em>from our Eshots</em></h3>'."\n";
 	$eshot_text .= $eshot_text_output;
@@ -115,12 +115,12 @@ else {
 
 /* information setup
 ============================================================================================================= */
-if(!empty($g_skiplinksArray['content-nav'])) unset($g_skiplinksArray['content-nav']); 
-if(!empty($g_skiplinksArray['navigation'])) unset($g_skiplinksArray['navigation']); 
+if(!empty($g_skiplinksArray['content-nav'])) unset($g_skiplinksArray['content-nav']);
+if(!empty($g_skiplinksArray['navigation'])) unset($g_skiplinksArray['navigation']);
 
 /* form setup
 ============================================================================================================= */
-		
+
 
 /* setup the header information
 ============================================================================================================= */

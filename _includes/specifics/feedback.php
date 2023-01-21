@@ -51,10 +51,11 @@ function form_element_value_setup($array) {
 /* checkboxes, radio buttons and selects setup
 ============================================================================================================= */
 function form_element_multiple_setup($input) {
+	global $connect_admin;
 	$sql = "SELECT am.ID, am.Answer, fq_am.ID AS Join_ID
 			FROM feedback_answer_multiple AS am
 			LEFT JOIN feedback_question_to_answer_multiple AS fq_am ON fq_am.feedback_answer_multiple_ID = am.ID
-			WHERE fq_am.feedback_question_ID = '".mysql_real_escape_string($input['identifier'])."'
+			WHERE fq_am.feedback_question_ID = '".mysqli_real_escape_string($connect_admin, $input['identifier'])."'
 			ORDER BY fq_am.ID ASC";
 	$query = mysqli_query($connect_admin, $sql);
 	$multiple = array(); $check_array = array(); $i=0;
@@ -86,13 +87,14 @@ function form_element_multiple_setup($input) {
 /* send feedback data
 ============================================================================================================= */
 function feedback_setup($sql_extra_array=array(),$extra_array=array()) {
+	global $connect_admin;
 	global $logged_in;
 	global $user_id;
 	$sql_where = ''; $sql_join = '';
 	$person_answer_array = array(); $person_question_id_array = array(); $user_array = array();
 	if(!empty($sql_extra_array['id'])) $sql_where .= " AND f.ID = '".$sql_extra_array['id']."'";
 	if(!empty($sql_extra_array['url'])) $sql_where .= " AND f.Feedback_Safe = '".$sql_extra_array['url']."'";
-	
+
 	if(!empty($extra_array['person']) && $logged_in==true && !empty($user_id) && is_numeric($user_id)) {
 		// $extra_array['person']['id']
 		// $sql_extra_array['id']
@@ -102,27 +104,27 @@ function feedback_setup($sql_extra_array=array(),$extra_array=array()) {
 						f_u.Email AS email, f_u.Website AS website,
 						f_u.Comments
 						FROM feedback_user AS f_u
-						WHERE f_u.ID = '".mysql_real_escape_string($extra_array['person']['id'])."'
+						WHERE f_u.ID = '".mysqli_real_escape_string($connect_admin, $extra_array['person']['id'])."'
 						LIMIT 0,1";
 		$person_query = mysqli_query($connect_admin, $person_sql);
 		$user_array = mysqli_fetch_array($person_query);
-		
+
 		$person_answer_sql = "SELECT f_a_j.feedback_question_ID AS Question_ID,
 						f_a_j.Answer AS Answer_Text
 						FROM feedback_answer_join as f_a_j
-						WHERE f_a_j.feedback_user_ID = '".mysql_real_escape_string($user_array['feedback_user_ID'])."'
+						WHERE f_a_j.feedback_user_ID = '".mysqli_real_escape_string($connect_admin, $user_array['feedback_user_ID'])."'
 						ORDER BY f_a_j.feedback_question_ID ASC";
-		
+
 		$person_multiple_sql = "SELECT fq_am.feedback_answer_multiple_ID AS Answer_ID,
 								fq_am.feedback_question_ID AS Question_ID,
 								f_a_m.Answer AS Answer_Text
 								FROM feedback_answer_multiple as f_a_m
 								LEFT JOIN feedback_question_to_answer_multiple AS fq_am ON fq_am.feedback_question_ID = f_a_m.ID
 								LEFT JOIN feedback_answer_multiple_join AS f_a_m_i ON f_a_m_i.feedback_question_to_answer_multiple_ID = fq_am.ID
-								WHERE f_a_m_i.feedback_user_ID = '".mysql_real_escape_string($user_array['feedback_user_ID'])."'
+								WHERE f_a_m_i.feedback_user_ID = '".mysqli_real_escape_string($connect_admin, $user_array['feedback_user_ID'])."'
 								ORDER BY fq_am.feedback_question_ID ASC";
-		
-		
+
+
 		$person_answer_query = mysqli_query($connect_admin, $person_answer_sql);
 		while($pq_array = mysqli_fetch_array($person_answer_query)) {
 			$person_answer_array[$pq_array['Question_ID']] = $pq_array['Answer_Text'];
@@ -133,8 +135,8 @@ function feedback_setup($sql_extra_array=array(),$extra_array=array()) {
 			//$person_question_id_array[$pq_array['Question_ID']] = $pq_array['Answer_ID'];
 			$person_answer_array[$pq_array['Question_ID']] = $pq_array['Answer_ID'];
 		}
-	}	
-	
+	}
+
 	$sql = "SELECT f.ID AS Feedback_ID,
 			f.Created AS Feedback_Created,
 			f.Updated AS Feedback_Updated,
@@ -144,28 +146,28 @@ function feedback_setup($sql_extra_array=array(),$extra_array=array()) {
 			f.Sub_Title AS Feedback_Sub_Title,
 			f.Summary AS Feedback_Summary,
 			f.Description AS Feedback_Description,
-			
+
 			f_q.ID AS Question_ID,
 			f_q.Question,
 			f_q.Type,
 			f_q.Position,
 			f_q.Required,
-			
+
 			f_f.ID AS Fieldset_ID,
 			f_f.Created AS Fieldset_Created,
 			f_f.Updated AS Fieldset_Updated,
 			f_f.Fieldset AS Fieldset_Title,
 			f_f.Fieldset_Safe AS Fieldset_Title_Safe
-			
+
 			FROM feedback AS f
 			LEFT JOIN feedback_question AS f_q ON f_q.feedback_ID = f.ID
 			LEFT JOIN feedback_question_fieldset_join AS f_q_f_j ON f_q_f_j.feedback_question_ID = f_q.ID
 			LEFT JOIN feedback_fieldset AS f_f ON f_f.ID = f_q_f_j.feedback_fieldset_ID
 			".$sql_join."
-			
+
 			WHERE f_q.Active = '1'
 			".$sql_where."
-			
+
 			ORDER BY f.Created DESC, f_f.Position ASC, f_q.Position ASC, f.Feedback ASC";
 
 	$query = mysqli_query($connect_admin, $sql);
@@ -218,18 +220,18 @@ function feedback_setup($sql_extra_array=array(),$extra_array=array()) {
 			);
 			$feedback_array[$i]['fieldset'][$f]['questions'] = array();
 		}
-		
+
 		// $person_answer_array = array(); $person_question_id_array = array();
 		$array['Question_Answer'] = '';
 		if(!empty($person_answer_array) && !empty($person_answer_array[$array['Question_ID']])) {
 			$array['Question_Answer'] = $person_answer_array[$array['Question_ID']];
 		}
 		//$person_question_id_array[$pq_array['Question_ID']]
-		
+
 		$feedback_array[$i]['fieldset'][$f]['questions'] = array_merge($feedback_array[$i]['fieldset'][$f]['questions'],form_element_setup($array));
 		$feedback_array[$i]['questions'] = array_merge($feedback_array[$i]['questions'],form_element_setup($array));
 	}
-	
+
 	return array(
 		'array' => $feedback_array,
 		'user' => $user_array,
@@ -241,14 +243,15 @@ function feedback_setup($sql_extra_array=array(),$extra_array=array()) {
 /* insert feedback data and show thank-you
 ============================================================================================================= */
 function form_feedback_insert($feedback_array,$array) {
+	global $connect_admin;
 	$standard_check_array = array('feedback_id','forename-required','surname-required','email-required','website','general-comments');
 	$exclude_array = array('type','submit_form');
-	
+
 	$standard_array = array();
 	$custom_array = array();
 	$custom_multiple_array = array();
 	$user_details_id = 0;
-	
+
 	// REMOVE THIS TO STORE DATA!
 	/*
 	return $feedback_array = array(
@@ -257,7 +260,7 @@ function form_feedback_insert($feedback_array,$array) {
 		'text' => 'Your feedback has been received. We appreciate the time you\'ve taken to fill in this online survey.'
 	);
 	*/
-	
+
 	foreach($array as $key => $value) {
 		if(in_array($key,$standard_check_array)) {
 			// standard for elements
@@ -283,20 +286,20 @@ function form_feedback_insert($feedback_array,$array) {
 			}
 		}
 	}
-	
+
 	// basic user detail information
 	$user_insert_sql = "INSERT INTO feedback_user (feedback_ID,Forename,Surname,Email,Website,Comments)
 						VALUES(
-							'".mysql_real_escape_string($standard_array['feedback_id'])."',
-							'".mysql_real_escape_string($standard_array['forename-required'])."',
-							'".mysql_real_escape_string($standard_array['surname-required'])."',
-							'".mysql_real_escape_string($standard_array['email-required'])."',
-							'".mysql_real_escape_string($standard_array['website'])."',
-							'".mysql_real_escape_string(@$standard_array['general-comments'])."'
+							'".mysqli_real_escape_string($connect_admin, $standard_array['feedback_id'])."',
+							'".mysqli_real_escape_string($connect_admin, $standard_array['forename-required'])."',
+							'".mysqli_real_escape_string($connect_admin, $standard_array['surname-required'])."',
+							'".mysqli_real_escape_string($connect_admin, $standard_array['email-required'])."',
+							'".mysqli_real_escape_string($connect_admin, $standard_array['website'])."',
+							'".mysqli_real_escape_string($connect_admin, @$standard_array['general-comments'])."'
 						)";
 	$user_insert_query = mysqli_query($connect_admin, $user_insert_sql);
 	$user_details_id = mysql_insert_id();
-	
+
 	// feedback details to email...
 	$feedback_data_array = array(
 		'user' => array('id' => $user_details_id, 'array' => $standard_array),
@@ -305,13 +308,13 @@ function form_feedback_insert($feedback_array,$array) {
 	);
 	$feedback_data_array['user']['name'] = name($feedback_data_array['user']['array']['forename-required'],$feedback_data_array['user']['array']['surname-required']);
 	feedback_send_email($feedback_data_array);
-	
+
 	if($user_details_id!=0) {
 		if(!empty($custom_array)) {
 			$total_inserts = count($custom_array);
 			$value_sql_ids = ''; $i=0;
 			foreach($custom_array as $key => $value) {
-				$value_sql_ids .= "('".$user_details_id."','".mysql_real_escape_string($key)."','".mysql_real_escape_string($value)."')";
+				$value_sql_ids .= "('".$user_details_id."','".mysqli_real_escape_string($connect_admin, $key)."','".mysqli_real_escape_string($connect_admin, $value)."')";
 				if($i<($total_inserts-1)) $value_sql_ids .= ',';
 				$i++;
 			}
@@ -323,7 +326,7 @@ function form_feedback_insert($feedback_array,$array) {
 			$total_inserts = count($custom_multiple_array);
 			$value_sql_ids = '';
 			for($i=0; $i<$total_inserts; $i++) {
-				$value_sql_ids .= "('".$user_details_id."','".mysql_real_escape_string($custom_multiple_array[$i])."')";
+				$value_sql_ids .= "('".$user_details_id."','".mysqli_real_escape_string($connect_admin, $custom_multiple_array[$i])."')";
 				if($i<($total_inserts-1)) $value_sql_ids .= ',';
 			}
 			$custom_multiple_insert_sql = "INSERT INTO feedback_answer_multiple_join (feedback_user_ID,feedback_question_to_answer_multiple_ID)
@@ -353,16 +356,16 @@ function feedback_send_email($array) {
 	global $now_timestamp;
 	global $g_company_feedback_email;
 	global $domain;
-			
+
 	$mail = new PHPMailer();
 	//$mail->AddAddress($g_company_feedback_email,'Creation Feedback');
 	//$mail->AddBCC('trevor@creation.uk.com','Creation Feedback');
 	//$mail->AddReplyTo();
 	$mail->AddAddress('trevor@creation.uk.com','Creation Feedback');
 	$mail->AddCustomHeader('Content-Type: text/plain; charset=utf8');
-	
+
 	$email_subject = 'Feedback: '.$array['details']['text'];
-	
+
 	$body = 'Feedback for '.$array['details']['text']."\n";
 	$body .= $array['details']['summary']['plain']."\n";
 
@@ -371,16 +374,16 @@ function feedback_send_email($array) {
 	$body .= 'User Agent:     '.$_SERVER['HTTP_USER_AGENT']."\n";
 	$body .= 'IP Address:     '.$_SERVER['REMOTE_ADDR']."\n";
 	$body .= 'Whois:          http://whoisx.co.uk/'.$_SERVER['REMOTE_ADDR']."\n";
-	
+
 	$body .= "\n\n".'# User information'."\n";
 	$body .= 'User ID: '.$array['user']['id']."\n";
 	$body .= 'Name:    '.$array['user']['name']['full-name']."\n";
 	$body .= 'Email:   '.$array['user']['array']['email-required']."\n";
 	if(!empty($array['user']['array']['website'])) $body .= 'Website: '.$array['user']['array']['website']."\n";
-	
+
 	// details from the form...
 	$body .= "\n\n".'# Feedback information'."\n";
-	
+
 	foreach($array['details']['questions'] as $questions) {
 		$answer = 'A: ';
 		$post_key = $questions['name'];
@@ -395,13 +398,13 @@ function feedback_send_email($array) {
 		$body .= 'Q: '.$questions['label']."\n";
 		$body .= $answer."\n\n";
 	}
-	
+
 	$mail->Subject 	= $email_subject;
 	$mail->From 	= validate($array['user']['array']['email-required'],'email');
 	$mail->FromName = $array['user']['name']['full-name'];
 	$mail->Body		= $body;
 	$mail->Mailer	= 'mail';
-	
+
 	$feedback_array = array();
 	if($mail->Send()) {
 		$feedback_array['title'] = 'Feedback Sent';

@@ -4,7 +4,7 @@
 ============================================================================================================= */
 $sql_extra = '';
 if(!empty($_GET['subsection']) && strtolower($_GET['subsection'])=='archive' && !empty($_GET['month'])) {
-	$sql_extra = " AND d.Created LIKE '".mysql_real_escape_string($_GET['month'])."%'";
+	$sql_extra = " AND d.Created LIKE '".mysqli_real_escape_string($connect_admin, $_GET['month'])."%'";
 }
 
 $news_sql = "SELECT
@@ -36,7 +36,7 @@ $news_sql = "SELECT
 			 GROUP BY d.ID
 			 ORDER BY d.Created DESC, d.Title ASC, d.Updated DESC
 			 LIMIT 0,6";
-			 
+
 $news_query = mysqli_query($connect_admin, $news_sql);
 
 $news_array_setup = array(); $i=0;
@@ -81,35 +81,35 @@ $header->Display();
 ?>
 
 	<div id="content-primary" class="hfeed">
-		
+
 	<?php echo news_display_summary($active_article,'',array('column','double','first','hfeed','news')); ?>
-	
+
 	<div id="content-navigation" class="column double last">
 		<h3>Content Navigation</h3>
 		<?php if(!empty($content_navigation_array['navigation'])) echo createList($content_navigation_array['navigation']); ?>
 	<!-- end of div id #content-navigation -->
 	</div>
-	
-	<?php	
+
+	<?php
 	echo '<div'.addAttributes('','',array('column','news','mini-container','hfeed','vcard','author','selection')).'>'."\n";
 	echo '<h3>More… <em>News</em></h3>'."\n";
 	echo news_display_mini($news_array_setup);
 	echo '</div>'."\n";
-	
+
 	echo '<div'.addAttributes('','news-archives',array('column','last','news')).'>'."\n";
 
 		echo '<div'.addAttributes('','',array()).'>'."\n";
-		echo '<h3>News Archive <em>2007</em></h3>'."\n";
+		echo '<h3>News <em>Archive</em></h3>'."\n";
 		echo news_display_archive_months();
 		echo '</div>'."\n";
-		
+
 		/*
 		echo '<div'.addAttributes('','',array('second')).'>'."\n";
 		echo '<h3>Tag Archive</h3>'."\n";
 		echo news_display_archive_tags();
 		echo '</div>'."\n";
 		*/
-		
+
 		$subscribe_array = array();
 		foreach($g_filesArray as $key => $rss_feed_array) {
 			$check_files[] = $key;
@@ -126,20 +126,20 @@ $header->Display();
 				'class' => $rss_feed_array['class']
 			);
 		}
-		
+
 		if(!empty($subscribe_array)) {
 			echo '<div'.addAttributes('','news-subscribe',array('second','subscribe','feed')).'>'."\n";
 			echo '<h3>Subscribe to… <em>Feeds</em></h3>'."\n";
 			echo createList($subscribe_array);
 			echo '</div>'."\n";
 		}
-	
+
 	echo '<!-- end of div id #news-archives -->'."\n";
 	echo '</div>'."\n";
 	?>
 	<!-- end of div id #content-primary -->
 	</div>
-	
+
 	<div id="content-secondary">
 	<!-- end of div id #content-secondary -->
 	</div>

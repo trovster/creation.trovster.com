@@ -35,17 +35,15 @@ $news_query = mysqli_query($connect_admin, $news_sql);
 $news_array = mysqli_fetch_array($news_query);
 $news_array_standard = news_setup($news_array);
 
-//print_r($news_array_standard);
-
 /* information setup
 ============================================================================================================= */
 $content_navigation = array(
 	array('text' => 'New Agila launch', 'link' => 'news/2008/04/14/new-agila-launch/', 'class' => array('news','news-agila','column')),
 	array('text' => 'Rojac Brochure — A Print Portfolio Item', 'link' => '/portfolio/print/rojac-brochure/', 'class' => array('portfolio','portfolio-rojac','column')),
-	
+
 	array('text' => 'Print Services', 'link' => '/services/print/', 'class' => array('services','services-print','column')),
 	array('text' => 'Tamworth College Website — A Website Portfolio Item', 'link' => '/portfolio/websites/tamworth-lichfield-college-website/', 'class' => array('portfolio','portfolio-tlc','column')),
-	
+
 	array('text' => 'Website Services', 'link' => '/services/websites/', 'class' => array('portfolio','services-websites','column')),
 	array('text' => 'The Fruit Box Co. Logos — A Branding Portfolio Item', 'link' => '/portfolio/branding/the-fruit-box-co-logos/', 'class' => array('services','portfolio-fruitbox','column')),
 );
@@ -79,7 +77,7 @@ body.welcome #content-navigation ul li.portfolio-fruitbox a span.gl-ir {
 }';
 
 
-// TASC, F1 Events, 
+// TASC, F1 Events,
 $portfolio_sql_extra = " AND (pd.Safe_URL = 'instant-training-website/' OR pd.Safe_URL = 'product-branding/')";
 $portfolio_query = portfolio_sql('',$portfolio_sql_extra);
 $portfolio_array_list = array(); $i=0;
@@ -111,32 +109,32 @@ $header->Display();
 ?>
 
 	<div id="content-primary" class="hfeed">
-		
-		
-	
-		<?php echo news_display_summary($news_array_standard,'latest-news',array('column','double')); ?>		
-		
+
+
+
+		<?php echo news_display_summary($news_array_standard,'latest-news',array('column','double')); ?>
+
 		<div id="content-navigation" class="column double last">
 			<h3>Content Navigation</h3>
 			<?php if(!empty($content_navigation)) echo createList($content_navigation); ?>
 		<!-- end of div id #content-navigation -->
 		</div>
-		
+
 		<div class="column selection">
 			<h3>Latest Projects… <em>Who's Been Keeping us Busy</em></h3>
 			<?php echo createDefinitionList($portfolio_array_list); ?>
 		</div>
-				
+
 		<div id="our-vision" class="column last">
 			<h3>Creation… <em>Our Vision</em></h3>
 			<blockquote>
 				<p>To inspire everyone with our dedication and passion for creativity.</p>
 			</blockquote>
 		</div>
-		
+
 	<!-- end of div id #content-primary -->
 	</div>
-	
+
 	<div id="content-secondary">
 	<!-- end of div id #content-secondary -->
 	</div>

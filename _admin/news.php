@@ -19,7 +19,7 @@ elseif(strtolower($_GET['type'])=='extra') {
 	$page_heading = 'Extra News';
 	$page_tagline = 'Add and manage "extra" articles.';
 	$page_new_text = 'Add a new extra article';
-	
+
 	$news_section = 3;
 	$news_update_specific_array['section'] = 'extra';
 	$news_update_specific_array['section-id'] = 3;
@@ -39,7 +39,7 @@ $news_articles_general_list_disabled = array(); $g_d=0;
 if(!empty($news_articles_user_array)) {
 	foreach($news_articles_user_array as $news_article) {
 		if(empty($news_article['title'])) continue;
-		
+
 		if($news_article['status']==1) {
 			if($news_article['author']['id']==$person_details_array['identifier']) {
 				$i = $u_d; $news_list_string = 'news_articles_user_list_disabled';
@@ -60,7 +60,7 @@ if(!empty($news_articles_user_array)) {
 				$g_a++;
 			}
 		}
-		
+
 		${$news_list_string}[$i] = array(
 			'text' => $news_article['title'],
 			'link' => $news_link.$news_article['id'].'/'
@@ -79,15 +79,15 @@ if(!empty($news_articles_user_array)) {
 if(!empty($_GET['update'])) {
 	if(is_numeric($_GET['update'])) {
 		$news_update_type = 'update';
-		$news_sql_extra_specific = " AND d.ID = '".mysql_real_escape_string($_GET['update'])."'";
+		$news_sql_extra_specific = " AND d.ID = '".mysqli_real_escape_string($connect_admin, $_GET['update'])."'";
 		$news_articles_specific_array = related_setup($news_sql_extra_specific,'',false,$news_update_specific_array['section-id']);
 		$news_update_specific_array = array_merge($news_update_specific_array,$news_articles_specific_array[0]);
 		$news_update_specific_array['edit-link'] = $news_link.$news_update_specific_array['id'].'/';
 		$news_update_specific_array['person-id'] = $news_update_specific_array['author']['id'];
-		
+
 		$news_update_specific_array['images'] = news_setup_images($news_update_specific_array,true);
 		$news_update_specific_array['images'] = cleanArray($news_update_specific_array['images']);
-		
+
 		// get the images...
 	}
 	elseif(strtolower($_GET['update'])=='new') {
@@ -116,7 +116,7 @@ $header->Display();
 ?>
 
 	<div id="content-primary">
-	
+
 		<div id="introduction">
 			<?php echo profile_admin_display($person_details_array,$greet_array,$greet_tagline_array); ?>
 			<div id="section-specific" class="column double last">
@@ -124,7 +124,7 @@ $header->Display();
 				<p><?php echo $page_tagline; ?></p>
 			</div>
 		</div>
-		
+
 		<div class="column">
 			<?php
 			echo '<div class="info-box">'."\n";
@@ -136,7 +136,7 @@ $header->Display();
 				echo createList($news_articles_user_list_disabled);
 			}
 			echo '</div>';
-			
+
 			if(!empty($news_articles_general_list_active) || !empty($news_articles_general_list_disabled)) {
 				echo '<div class="info-box second">'."\n";
 				echo '<h3>Other Articles</h3>'."\n";
@@ -149,12 +149,12 @@ $header->Display();
 			}
 			?>
 		</div>
-		
+
 		<?php echo $news_form_output; ?>
-		
+
 	<!-- end of div id #content-primary -->
 	</div>
-	
+
 	<div id="content-secondary">
 	<!-- end of div id #content-secondary -->
 	</div>
