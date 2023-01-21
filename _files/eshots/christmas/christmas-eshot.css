@@ -1,7 +1,7 @@
 html, body, div,
 dl, dt, dd, ul, ol, li,
 h1, h2, h3, h4, h5, h6,
-pre, p, blockquote, img { 
+pre, p, blockquote, img {
 	margin: 0; padding: 0;
 	font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline;
 	background: transparent;
@@ -52,7 +52,7 @@ body.eshot-permalink #content h3.entry-title span.gl-ir {
 	font-size: 0.0; line-height: 0.0;
 }
 html, body {
-	background: #585756 url(http://www.creation.uk.com/css/images/general/background.gif) repeat 0 0;
+	background: #585756 url(http://creation.trovster.com/css/images/general/background.gif) repeat 0 0;
 }
 html {
 	font-size: 16px;
@@ -75,7 +75,7 @@ ol {
 	list-style-type: decimal;
 }
 ul li {
-	background: url(http://www.creation.uk.com/css/images/general/list-bullet.gif) no-repeat 0 0.6em;
+	background: url(http://creation.trovster.com/css/images/general/list-bullet.gif) no-repeat 0 0.6em;
 	padding-left: 10px;
 }
 blockquote {
@@ -220,25 +220,25 @@ a {
 	margin-top: 15px;
 }
 body.colour-blue #content h3.entry-title {top: 70px; left: 15px; line-height: 170px;}
-body.colour-blue #content {background: url(http://www.creation.uk.com/css/specifics/eshots/images/[3]_visual-blue.jpg) no-repeat 0 30px;}
+body.colour-blue #content {background: url(http://creation.trovster.com/css/specifics/eshots/images/[3]_visual-blue.jpg) no-repeat 0 30px;}
 body.colour-blue #content h3.entry-title, body.colour-blue #content h3.entry-title span.gl-ir {
-	height: 170px; width: 260px; 
-	background: url(http://www.creation.uk.com/css/specifics/eshots/images/[3]_title-blue.jpg) no-repeat 0 0;
+	height: 170px; width: 260px;
+	background: url(http://creation.trovster.com/css/specifics/eshots/images/[3]_title-blue.jpg) no-repeat 0 0;
 }
 body.colour-green #content h3.entry-title {top: 58px; left: 8px; line-height: 170px; }
 body.colour-green #content {background: url(/css/specifics/eshots/images/[3]_visual-green.jpg) no-repeat 0 30px;}
 body.colour-green #content h3.entry-title, body.colour-green #content h3.entry-title span.gl-ir {
 	height: 170px; width: 367px;
-	background: url(http://www.creation.uk.com/css/specifics/eshots/images/[3]_title-green.jpg) no-repeat 0 0;
+	background: url(http://creation.trovster.com/css/specifics/eshots/images/[3]_title-green.jpg) no-repeat 0 0;
 }
 body.colour-red #content h3.entry-title {top: 73px; left: 16px; line-height: 170px;}
 body.colour-red #content {background: url(/css/specifics/eshots/images/[3]_visual-red.jpg) no-repeat 0 30px;}
 body.colour-red #content h3.entry-title, body.colour-red #content h3.entry-title span.gl-ir {
-	height: 170px; width: 323px; 
-	background: url(http://www.creation.uk.com/css/specifics/eshots/images/[3]_title-red.jpg) no-repeat 0 0;
+	height: 170px; width: 323px;
+	background: url(http://creation.trovster.com/css/specifics/eshots/images/[3]_title-red.jpg) no-repeat 0 0;
 }
 body.eshot-permalink #branding h1 a {
 	position: absolute; top: 60px; right: 49px; z-index: 50; top: 560px;
 	width: 137px; height: 34px;
-	background-image: url(http://www.creation.uk.com/css/specifics/eshots/images/[3]_creation-logo-white.gif);
+	background-image: url(http://creation.trovster.com/css/specifics/eshots/images/[3]_creation-logo-white.gif);
 }

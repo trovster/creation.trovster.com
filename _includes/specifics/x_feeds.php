@@ -125,6 +125,7 @@ function setup_feed_article($array) {
 }
 function setup_feed_author($array) {
 	global $domain;
+	global $connect_admin;
 	$sql_extra = " AND ad.ID = '".mysqli_real_escape_string($connect_admin, $array['author']['id'])."'";
 	$sql_limit = 'LIMIT 0,10';
 	$setup_array = related_setup($sql_extra,$sql_limit);

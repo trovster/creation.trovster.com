@@ -49,7 +49,7 @@ if(!empty($_GET['date'])) {
 	$sql_extra .= " AND es.Created LIKE '".$date_search."'";
 	$date_title = ucfirst($_GET['month']).' '.$_GET['year'];
 }
-
+// var_dump($_GET); exit;
 
 /* database setup
 ============================================================================================================= */

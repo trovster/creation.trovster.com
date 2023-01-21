@@ -2,8 +2,23 @@
 RewriteEngine On
 RewriteBase /
 
+RewriteRule ^sitemap/?$ sitemap.xml [L]
+
+RewriteRule ^rss/comments/?$ xml/latest-comments_rss.xml [L]
+RewriteRule ^atom/comments/?$ xml/latest-comments_atom.xml [L]
+
+RewriteRule ^rss/hot-topics/?$ xml/latest-hot-topics_rss.xml [L]
+RewriteRule ^atom/hot-topics/?$ xml/latest-hot-topics_atom.xml [L]
+
+RewriteRule ^rss/?$ xml/latest-articles_rss.xml [L]
+RewriteRule ^atom/?$ xml/latest-articles_atom.xml [L]
+
 RewriteRule ^(contact)/(local|regional)/?$ $1.php?section=$1&zoom=$2&category=$2 [L]
 RewriteRule ^(contact)/?$ $1.php?section=$1&zoom=national [L]
+
+RewriteRule ^(feedback)/([a-z-0-9]+)/?$ $1.php?permalink=$2 [L]
+
+RewriteRule ^(eshots)/([a-z]+)-([0-9]{2})/([a-z0-9_\-]+)/?$ eshots.php?section=$1&subsection=archive&month=$2&year=$3&permalink=$4 [L]
 
 RewriteRule ^(news)/(20[0-9]{2})/([0-9]{2})/([0-9]{2})/([a-z0-9_\-]+)/?$ news-permalink.php?section=$1&subsection=archive&year=$2&month=$2-$3&day=$4&permalink=$5&date=$2-$3-$4 [L]
 RewriteRule ^(news)/(20[0-9]{2})/([0-9]{2})/([0-9]{2})/?$ news-day-check.php?section=$1&subsection=archive&year=$2&month=$2-$3&date=$2-$3-$4 [L]
@@ -11,9 +26,9 @@ RewriteRule ^(news)/(20[0-9]{2})/([0-9]{2})/?$ $1.php?section=$1&subsection=arch
 RewriteRule ^(news)/(20[0-9]{2})/?$ $1.php?section=$1&subsection=archive&year=$2&month=$2 [L]
 RewriteRule ^(news)/?$ $1.php?section=$1 [L]
 
-RewriteRule ^([a-z0-9]+)/([a-z0-9_\-]+)/([a-z0-9_\-]+)/?$ $1.php?section=$1&subsection=$2&category=$2&project=$3 [L]
-RewriteRule ^([a-z0-9]+)/([a-z0-9_\-]+)/?$ $1.php?section=$1&subsection=$2&category=$2 [L]
-RewriteRule ^([a-z0-9]+)/?$ $1.php?section=$1 [L]
+RewriteRule ^([a-z0-9]+)/([a-z0-9_\-]+)/([a-z0-9_\-]+)/?$ $1.php?section=$1&subsection=$2&category=$2&project=$3 [L,QSA]
+RewriteRule ^([a-z0-9]+)/([a-z0-9_\-]+)/?$ $1.php?section=$1&subsection=$2&category=$2 [L,QSA]
+RewriteRule ^([a-z0-9]+)/?$ $1.php?section=$1 [L,QSA]
 
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f

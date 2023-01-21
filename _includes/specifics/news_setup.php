@@ -46,7 +46,7 @@ function news_permalink_setup($id,$date,$tab,$section,$title,$profile='') {
 	$return['array'] = $url_array;
 	$return['link'] = url_create($url_array);
 	$return['identifier'] = 'id-'.$id.'-'.trim($tab,'/');
-	$return['atom-id'] = 'tag:'.preg_replace('#http://(www.)?#','','http://www.creation.uk.com').','.formatDate($date,'iso8601').':'.$return['link'];
+	$return['atom-id'] = 'tag:'.preg_replace('#http://(www.)?#','','http://creation.trovster.com').','.formatDate($date,'iso8601').':'.$return['link'];
 	$return['anchor-not-closed-no-text'] = '<a href="'.$return['link'].'"'.addAttributes($link_title,'',$class_array,$rel_array).'>';
 	$return['anchor-not-closed'] = $return['anchor-not-closed-no-text'].$title;
 	$return['anchor'] = $return['anchor-not-closed'].'</a>';

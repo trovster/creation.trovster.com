@@ -72,7 +72,7 @@ function news_comments_setup($setup_array,$sql_order='',$author='',$admin=false)
 			$return[$i]['permalink']['link'] = $permalink['link'].'#c_'.$Comment_ID;
 			$return[$i]['permalink']['anchor-not-closed-no-text'] = '<a href="'.$return[$i]['permalink']['link'].'" title="Permalink to this comment" rel="bookmark">';
 			$return[$i]['permalink']['anchor'] = $return[$i]['permalink']['anchor-not-closed-no-text'].'<abbr class="published updated entry-title" title="'.$return[$i]['created']['iso'].'">'.preg_replace('/(at [0-9]{2}:[0-9]{2})/','<span>\\1</span>',$return[$i]['created']['comments']).'</abbr></a>';
-			$return[$i]['permalink']['atom-id'] = 'tag:'.preg_replace('#http://(www.)?#','','http://www.creation.uk.com').','.$return[$i]['created']['iso8601'].':'.$return[$i]['permalink']['link'];
+			$return[$i]['permalink']['atom-id'] = 'tag:'.preg_replace('#http://(www.)?#','','http://creation.trovster.com').','.$return[$i]['created']['iso8601'].':'.$return[$i]['permalink']['link'];
 
 			$return[$i]['status'] = $Is_Active+1;
 			$return[$i]['spam'] = $Is_Spam+1;

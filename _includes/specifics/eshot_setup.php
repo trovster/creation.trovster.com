@@ -1,6 +1,6 @@
 <?php
 function eshot_sql($sql_extra='',$sql_limit='') {
-	
+	global $connect_admin;
 	$eshot_sql = "SELECT
 				 es.ID AS EShot_ID,
 				 es.Created AS EShot_Created,
@@ -24,12 +24,12 @@ function eshot_sql($sql_extra='',$sql_limit='') {
 		$return[$i] = eshot_setup($eshot_array);
 		$i++;
 	}
-	return $return;	
+	return $return;
 }
 function eshot_setup($array) {
 	if(empty($array) || !is_array($array)) return false;
 	global $now_timestamp;
-	
+
 	$return = array();
 	$return['id'] = 'es_'.$array['EShot_ID'];
 	$return['title'] = formatText($array['EShot_Title']);
@@ -44,26 +44,26 @@ function eshot_setup($array) {
 	$return['image']['main'] = image_setup($array['EShot_ID'],$array['EShot_Safe_URL'],'jpg','/css/specifics/eshots/images/');
 	$return['image']['header'] = image_setup($array['EShot_ID'],rtrim($array['EShot_Safe_URL'],'/').'_title','gif','/css/specifics/eshots/images/',$array['EShot_Title'],'','','');
 	$return['image']['thumb'] = image_setup($array['EShot_ID'],rtrim($array['EShot_Safe_URL'],'/').'_thumb','gif','/images/eshots/',$array['EShot_Title'],'','','');
-		
+
 	$return['stylesheet']['internal'] = '';
 	$return['stylesheet']['file'][] = array('file' => 'specifics/eshots/defaults.css', 'media' => 'screen');
 	$return['stylesheet']['file'][] = array('file' => 'specifics/eshots/['.$array['EShot_ID'].']_'.trim($array['EShot_Safe_URL'],'/').'.css', 'media' => 'screen');
 
 	$return['text'] = $return['title'];
 	$return['link'] = $return['permalink']['link'];
-	
-	return $return;	
+
+	return $return;
 }
 function eshot_display($array,$id='',$class='') {
 	if(empty($array) || !is_array($array)) return false;
-	
+
 	if(!empty($class)) {
 		if(!is_array($class)) $class = array($class);
 		$class[] = 'hentry';
 	}
 	else $class = array('hentry');
 	$id = $array['id'];
-	
+
 	$output = '<div'.addAttributes('',$id,$class).'>'."\n";
 	$output .= '<h3 class="entry-title"><span class="gl-ir"></span>'.$array['title'].'</h3>'."\n";
 	$output .= '<div class="entry-content">'.$array['description']['main'].'</div>'."\n";

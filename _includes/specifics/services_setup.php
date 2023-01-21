@@ -177,7 +177,7 @@ function services_display_project_details($array) {
 	}
 
 	if($array['category']['safe']=='websites' && $array['type']!='introduction') {
-		//$return .= '<p class="more-info">Your site could be live within 7 days, find out more at <a href="http://www.creation.uk.com">www.creation.uk.com</a></p>';
+		//$return .= '<p class="more-info">Your site could be live within 7 days, find out more at <a href="http://creation.trovster.com">creation.trovster.com</a></p>';
 	}
 
 	return $return;

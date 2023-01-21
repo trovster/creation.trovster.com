@@ -77,26 +77,26 @@ if(!empty($_POST['type']) && strtolower($_POST['type'])=='feedback') {
 	if(empty($feedback_form_array_checked)) {
 		// insert feedback into database...
 		$show_form = false;
-		$form_feedback_data = form_feedback_insert($feedback,$feedback_post_array);		
+		$form_feedback_data = form_feedback_insert($feedback,$feedback_post_array);
 		if($form_feedback_data['type']=='success') {
 			$show_form = false;
 			unset($feedback_form_array);
 			$feedback['class'][] = 'feedback-'.$feedback['safe'].'-complete';
 		}
 		else $feedback_form_array = createFormErrors($feedback_form_array,$feedback_form_array_checked);
-		
+
 		$feedback['description']['html'] = '';
 		$feedback['description']['html'] .= '<div'.addAttributes('','',@$form_feedback_data['class']).'>'."\n";
 		$feedback['description']['html'] .= formatText($form_feedback_data['text'],'output');
 		$feedback['description']['html'] .= '</div>'."\n";
 	}
-	else {	
+	else {
 		if(!empty($feedback_form_array_checked['email-required']) && strpos(strtolower($feedback_form_array_checked['email-required']),'invalid')!==false) {
 			$feedback_form_array_checked['email-required'] = 'Invalid';
 		}
 		if(!empty($feedback_form_array_checked['website']) && strpos(strtolower($feedback_form_array_checked['website']),'invalid')!==false) {
 			$feedback_form_array_checked['website'] = 'Invalid';
-		}		
+		}
 		$feedback_form_array = createFormErrors($feedback_form_array,$feedback_form_array_checked);
 		$form_error = true;
 	}
@@ -144,7 +144,7 @@ $header->Display();
 		<?php echo $feedback_output; ?>
 	<!-- end of div id #content-primary -->
 	</div>
-	
+
 	<div id="content-secondary">
 	<!-- end of div id #content-secondary -->
 	</div>

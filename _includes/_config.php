@@ -1,6 +1,6 @@
 <?php
 // required
-$g_company_domain 			= 'www.creation.uk.com'; // without the http://
+$g_company_domain 			= 'creation.trovster.com'; // without the http://
 $g_company_name 			= 'Creation'; // class="org fn"
 $g_company_title			= 'Creation design & marketing'; // <title></title>
 $g_company_contact_email	= 'info@creation.uk.com'; // default email address
@@ -14,7 +14,7 @@ $g_meta_keywords			= array('design', 'print', 'branding', 'web development', 'st
 $g_company_tagline			= 'Specialist graphic designers and web developers based in Staffordshire, UK'; // company strap/tag line, goes below company heading.
 $g_company_vision 			= 'To inspire everyone with our dedication and passion for creativity.';
 
-// optional, but helpful for contact 
+// optional, but helpful for contact
 $g_company_tel_work			= '01785 716 136';
 $g_company_tel_fax			= '01785 716 137';
 $g_company_tel_mobile		= '07976 743 117';
