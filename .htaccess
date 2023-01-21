@@ -3,6 +3,7 @@ RewriteEngine On
 RewriteBase /
 
 RewriteRule ^sitemap/?$ sitemap.xml [L]
+RewriteRule ^files/(.+)$ _files/$1 [L]
 
 RewriteRule ^rss/comments/?$ xml/latest-comments_rss.xml [L]
 RewriteRule ^atom/comments/?$ xml/latest-comments_atom.xml [L]
