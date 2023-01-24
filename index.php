@@ -51,7 +51,7 @@ for($i=0; $i<count($content_navigation); $i++) $content_navigation[$i]['gilder']
 
 $style_block = 'body.welcome #content-navigation ul li.news-agila a,
 body.welcome #content-navigation ul li.news-agila a span.gl-ir {
-	background-image: url(/images/news/[71]_cd-and-inner-spread_small.jpg);
+	background-image: url(/images/news/71_cd-and-inner-spread_small.jpg);
 }
 
 body.welcome #content-navigation ul li.services-print a,
@@ -65,15 +65,15 @@ body.welcome #content-navigation ul li.services-websites a span.gl-ir {
 
 body.welcome #content-navigation ul li.portfolio-tlc a,
 body.welcome #content-navigation ul li.portfolio-tlc a span.gl-ir {
-	background-image: url(/images/portfolio/websites/[35]_tamworth-lichfield-college-website_navigation.jpg);
+	background-image: url(/images/portfolio/websites/35_tamworth-lichfield-college-website_navigation.jpg);
 }
 body.welcome #content-navigation ul li.portfolio-rojac a,
 body.welcome #content-navigation ul li.portfolio-rojac a span.gl-ir {
-	background-image: url(/images/portfolio/print/[34]_rojac-brochure_navigation.jpg);
+	background-image: url(/images/portfolio/print/34_rojac-brochure_navigation.jpg);
 }
 body.welcome #content-navigation ul li.portfolio-fruitbox a,
 body.welcome #content-navigation ul li.portfolio-fruitbox a span.gl-ir {
-	background-image: url(/images/portfolio/branding/[27]_the-fruit-box-co-logos_navigation.jpg);
+	background-image: url(/images/portfolio/branding/27_the-fruit-box-co-logos_navigation.jpg);
 }';
 
 

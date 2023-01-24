@@ -21,6 +21,7 @@ RewriteRule ^(feedback)/([a-z-0-9]+)/?$ $1.php?permalink=$2 [L]
 
 RewriteRule ^(eshots)/([a-z]+)-([0-9]{2})/([a-z0-9_\-]+)/?$ eshots.php?section=$1&subsection=archive&month=$2&year=$3&permalink=$4 [L]
 
+RewriteRule ^(news)/(20[0-9]{2})/([0-9]{2})/([0-9]{2})/([a-z0-9_\-]+)/([a-z0-9_\-]+)/?$ news-permalink.php?section=$1&subsection=archive&year=$2&month=$2-$3&day=$4&permalink=$5&date=$2-$3-$4&image=$6 [L]
 RewriteRule ^(news)/(20[0-9]{2})/([0-9]{2})/([0-9]{2})/([a-z0-9_\-]+)/?$ news-permalink.php?section=$1&subsection=archive&year=$2&month=$2-$3&day=$4&permalink=$5&date=$2-$3-$4 [L]
 RewriteRule ^(news)/(20[0-9]{2})/([0-9]{2})/([0-9]{2})/?$ news-day-check.php?section=$1&subsection=archive&year=$2&month=$2-$3&date=$2-$3-$4 [L]
 RewriteRule ^(news)/(20[0-9]{2})/([0-9]{2})/?$ $1.php?section=$1&subsection=archive&year=$2&month=$2-$3 [L]
