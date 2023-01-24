@@ -1,102 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <title type="text">Comments on Creation article &#8220;Easy Money?&#8221; (Atom)</title>
-<link rel="alternate" type="text/html" href="https://creation.trovster.com/news/2007/06/06/easy-money/" />
-<link rel="self" type="application/atom+xml" href="https://creation.trovster.com/news/2007/06/06/easy-money/atom/" />
+<link rel="alternate" type="text/html" href="/news/2007/06/06/easy-money/" />
+<link rel="self" type="application/atom+xml" href="/news/2007/06/06/easy-money/atom/" />
 <updated>2007-07-03T18:55:01+01:00</updated>
 <author>
 	<name>Creation</name>
 	<email>info@creation.uk.com</email>
-	<uri>https://creation.trovster.com/</uri>
+	<uri>/</uri>
 </author>
 <id>https://creation.trovster.com</id>
-<icon>https://creation.trovster.com/favicon.ico</icon>
+<icon>/favicon.ico</icon>
 	<entry>
 		<title type="text">Comment #24 on Easy Money? by Trevor Morris</title>
 		<html:title type="text">Easy Money?</html:title>
 		<content type="html"><![CDATA[<p>why&#8217;d this forget me?</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/news/2007/06/06/easy-money/#c_24" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/news/2007/06/06/easy-money/#c_24" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-07-03:/news/2007/06/06/easy-money/#c_24</id>
 		<updated>2007-07-03T18:55:01+01:00</updated>
 		<published>2007-07-03T18:55:01+01:00</published>
 		<html:abbr class="published updated" title="2007-07-03">Tue 3rd Jul 2007 at 18:55</html:abbr>
 		<author>
 			<name>Trevor Morris</name>
-			<html:img><![CDATA[<img src="https://creation.trovster.com/images/icons/trevor-morris.gif" height="48" width="48" alt="Gravatar for Trevor Morris" class="gravatar logo" />]]></html:img>
-			<uri>https://creation.trovster.com/company/trevor-morris/</uri>
+			<html:img><![CDATA[<img src="/images/icons/trevor-morris.gif" height="48" width="48" alt="Gravatar for Trevor Morris" class="gravatar logo" />]]></html:img>
+			<uri>/company/trevor-morris/</uri>
 		</author>
 	</entry>
 	<entry>
 		<title type="text">Comment #23 on Easy Money? by Trevor Morris</title>
 		<html:title type="text">Easy Money?</html:title>
 		<content type="html"><![CDATA[<p>ERememmbegrrs</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/news/2007/06/06/easy-money/#c_23" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/news/2007/06/06/easy-money/#c_23" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-07-03:/news/2007/06/06/easy-money/#c_23</id>
 		<updated>2007-07-03T18:54:35+01:00</updated>
 		<published>2007-07-03T18:54:35+01:00</published>
 		<html:abbr class="published updated" title="2007-07-03">Tue 3rd Jul 2007 at 18:54</html:abbr>
 		<author>
 			<name>Trevor Morris</name>
-			<html:img><![CDATA[<img src="https://creation.trovster.com/images/icons/trevor-morris.gif" height="48" width="48" alt="Gravatar for Trevor Morris" class="gravatar logo" />]]></html:img>
-			<uri>https://creation.trovster.com/company/trevor-morris/</uri>
+			<html:img><![CDATA[<img src="/images/icons/trevor-morris.gif" height="48" width="48" alt="Gravatar for Trevor Morris" class="gravatar logo" />]]></html:img>
+			<uri>/company/trevor-morris/</uri>
 		</author>
 	</entry>
 	<entry>
 		<title type="text">Comment #22 on Easy Money? by Trevor Morris</title>
 		<html:title type="text">Easy Money?</html:title>
 		<content type="html"><![CDATA[<p>OK another comment&#8230; maybe now.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/news/2007/06/06/easy-money/#c_22" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/news/2007/06/06/easy-money/#c_22" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-07-03:/news/2007/06/06/easy-money/#c_22</id>
 		<updated>2007-07-03T18:53:20+01:00</updated>
 		<published>2007-07-03T18:53:20+01:00</published>
 		<html:abbr class="published updated" title="2007-07-03">Tue 3rd Jul 2007 at 18:53</html:abbr>
 		<author>
 			<name>Trevor Morris</name>
-			<html:img><![CDATA[<img src="https://creation.trovster.com/images/icons/trevor-morris.gif" height="48" width="48" alt="Gravatar for Trevor Morris" class="gravatar logo" />]]></html:img>
-			<uri>https://creation.trovster.com/company/trevor-morris/</uri>
+			<html:img><![CDATA[<img src="/images/icons/trevor-morris.gif" height="48" width="48" alt="Gravatar for Trevor Morris" class="gravatar logo" />]]></html:img>
+			<uri>/company/trevor-morris/</uri>
 		</author>
 	</entry>
 	<entry>
 		<title type="text">Comment #21 on Easy Money? by Trevor Morris</title>
 		<html:title type="text">Easy Money?</html:title>
 		<content type="html"><![CDATA[<p>OK this is just another test comment, to see whether MY comments feed is updated&#8230; x-fingers.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/news/2007/06/06/easy-money/#c_21" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/news/2007/06/06/easy-money/#c_21" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-07-03:/news/2007/06/06/easy-money/#c_21</id>
 		<updated>2007-07-03T18:44:05+01:00</updated>
 		<published>2007-07-03T18:44:05+01:00</published>
 		<html:abbr class="published updated" title="2007-07-03">Tue 3rd Jul 2007 at 18:44</html:abbr>
 		<author>
 			<name>Trevor Morris</name>
-			<html:img><![CDATA[<img src="https://creation.trovster.com/images/icons/trevor-morris.gif" height="48" width="48" alt="Gravatar for Trevor Morris" class="gravatar logo" />]]></html:img>
-			<uri>https://creation.trovster.com/company/trevor-morris/</uri>
+			<html:img><![CDATA[<img src="/images/icons/trevor-morris.gif" height="48" width="48" alt="Gravatar for Trevor Morris" class="gravatar logo" />]]></html:img>
+			<uri>/company/trevor-morris/</uri>
 		</author>
 	</entry>
 	<entry>
 		<title type="text">Comment #20 on Easy Money? by trovster</title>
 		<html:title type="text">Easy Money?</html:title>
 		<content type="html"><![CDATA[<p>unchecked, try now&#8230;</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/news/2007/06/06/easy-money/#c_20" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/news/2007/06/06/easy-money/#c_20" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-06-13:/news/2007/06/06/easy-money/#c_20</id>
 		<updated>2007-06-13T17:22:16+01:00</updated>
 		<published>2007-06-13T17:22:16+01:00</published>
 		<html:abbr class="published updated" title="2007-06-13">Wed 13th Jun 2007 at 17:22</html:abbr>
 		<author>
 			<name>trovster</name>
-			<html:img><![CDATA[<img src="https://creation.trovster.com/images/gravatars/cache/creation/a489725ad8451b6e87fcb9ed4f189cf9" height="48" width="48" alt="Gravatar for trovster" class="gravatar" />]]></html:img>
+			<html:img><![CDATA[<img src="/images/gravatars/cache/creation/a489725ad8451b6e87fcb9ed4f189cf9" height="48" width="48" alt="Gravatar for trovster" class="gravatar" />]]></html:img>
 		</author>
 	</entry>
 	<entry>
 		<title type="text">Comment #19 on Easy Money? by another</title>
 		<html:title type="text">Easy Money?</html:title>
 		<content type="html"><![CDATA[<p>I&#8217;ve removed the details, so shouldn&#8217;t be filled in when I come back. mmmkay?</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/news/2007/06/06/easy-money/#c_19" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/news/2007/06/06/easy-money/#c_19" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-06-13:/news/2007/06/06/easy-money/#c_19</id>
 		<updated>2007-06-13T17:21:00+01:00</updated>
 		<published>2007-06-13T17:21:00+01:00</published>
 		<html:abbr class="published updated" title="2007-06-13">Wed 13th Jun 2007 at 17:21</html:abbr>
 		<author>
 			<name>another</name>
-			<html:img><![CDATA[<img src="https://creation.trovster.com/images/gravatars/cache/creation/6529ba32f59bcc1bb7f784c55d2ea6be" height="48" width="48" alt="Gravatar for another" class="gravatar" />]]></html:img>
+			<html:img><![CDATA[<img src="/images/gravatars/cache/creation/6529ba32f59bcc1bb7f784c55d2ea6be" height="48" width="48" alt="Gravatar for another" class="gravatar" />]]></html:img>
 			<uri>http://testicle.com</uri>
 		</author>
 	</entry>
@@ -104,14 +104,14 @@
 		<title type="text">Comment #18 on Easy Money? by trovster</title>
 		<html:title type="text">Easy Money?</html:title>
 		<content type="html"><![CDATA[<p>This is my comment in here&#8230; cookie should have been set, and when I come back, this form should be filled in.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/news/2007/06/06/easy-money/#c_18" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/news/2007/06/06/easy-money/#c_18" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-06-13:/news/2007/06/06/easy-money/#c_18</id>
 		<updated>2007-06-13T17:05:55+01:00</updated>
 		<published>2007-06-13T17:05:55+01:00</published>
 		<html:abbr class="published updated" title="2007-06-13">Wed 13th Jun 2007 at 17:05</html:abbr>
 		<author>
 			<name>trovster</name>
-			<html:img><![CDATA[<img src="https://creation.trovster.com/images/gravatars/cache/creation/a489725ad8451b6e87fcb9ed4f189cf9" height="48" width="48" alt="Gravatar for trovster" class="gravatar" />]]></html:img>
+			<html:img><![CDATA[<img src="/images/gravatars/cache/creation/a489725ad8451b6e87fcb9ed4f189cf9" height="48" width="48" alt="Gravatar for trovster" class="gravatar" />]]></html:img>
 			<uri>https://creation.trovster.com</uri>
 		</author>
 	</entry>
@@ -129,15 +129,15 @@ sports day - win or lose I just don&#8217;t care.</p>
 
 <p>I still think that we haven&#8217;t seen the full story yet. I like the logo because it is unconventional. I like Britain
 when it&#8217;s unconventional. I like free thinkers.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/news/2007/06/06/easy-money/#c_9" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/news/2007/06/06/easy-money/#c_9" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-06-12:/news/2007/06/06/easy-money/#c_9</id>
 		<updated>2007-06-12T12:13:21+01:00</updated>
 		<published>2007-06-12T12:13:21+01:00</published>
 		<html:abbr class="published updated" title="2007-06-12">Tue 12th Jun 2007 at 12:13</html:abbr>
 		<author>
 			<name>Tim Webley</name>
-			<html:img><![CDATA[<img src="https://creation.trovster.com/images/icons/tim-webley.gif" height="48" width="48" alt="Gravatar for Tim Webley" class="gravatar logo" />]]></html:img>
-			<uri>https://creation.trovster.com/company/tim-webley/</uri>
+			<html:img><![CDATA[<img src="/images/icons/tim-webley.gif" height="48" width="48" alt="Gravatar for Tim Webley" class="gravatar logo" />]]></html:img>
+			<uri>/company/tim-webley/</uri>
 		</author>
 	</entry>
 	<entry>
@@ -152,7 +152,7 @@ the jagged design didn&#8217;t fit in to the perceived &#8216;Olympic logo&#8217
 <p>however, after reading a few design-related articles and talking with other designers on the subject, I started to
 re-think initial gut reaction. The logo is completely different to anything previously considered as an Olympic logo � and I
 think that is a Good Thing�. If you look at some of the <a
-href="https://creation.trovster.com/news/2007/06/06/easy-money/four-previous-olympic-logos/">previous Olympic logo designs</a>
+href="/news/2007/06/06/easy-money/four-previous-olympic-logos/">previous Olympic logo designs</a>
 you&#8217;ll notice they&#8217;re all very similar � a sports-related stylistic flame, with the country and year in a script
 font underneath, followed by the Olympic rings in their original colours.</p>
 
@@ -162,7 +162,7 @@ run-up to the Games.</p>
 </blockquote>
 
 <p>Many people think saying the logo will evolve is a &#8216;get-out clause&#8217;, but if you see the <a
-href="https://creation.trovster.com/news/2007/06/06/easy-money/london-2012-olympic-logo-in-context/">logo in context</a> it
+href="/news/2007/06/06/easy-money/london-2012-olympic-logo-in-context/">logo in context</a> it
 looks a lot less confrontational. You have to remember that this brand has to last the next five years, we have only seen
 the tip of the potential of this brand. Already the team at <a href="http://www.wolffolins.com">Wolff Olins</a> have
 released plans for the next stage branding, specifically with the controversial logo - sponsors and sports clubs can use
@@ -172,15 +172,15 @@ imagery within the logo, while only maintaining the shape, rings and the word &#
 the London 2012 Olympic logo, and this can only be a good thing for the Games. Wait a couple of months, and people will have
 forgotten about the initial outrage and will accept the marketing complain. Trust professionals, they can see the complete
 vision.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/news/2007/06/06/easy-money/#c_8" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/news/2007/06/06/easy-money/#c_8" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-06-12:/news/2007/06/06/easy-money/#c_8</id>
 		<updated>2007-06-12T12:12:12+01:00</updated>
 		<published>2007-06-12T12:12:12+01:00</published>
 		<html:abbr class="published updated" title="2007-06-12">Tue 12th Jun 2007 at 12:12</html:abbr>
 		<author>
 			<name>Trevor Morris</name>
-			<html:img><![CDATA[<img src="https://creation.trovster.com/images/icons/trevor-morris.gif" height="48" width="48" alt="Gravatar for Trevor Morris" class="gravatar logo" />]]></html:img>
-			<uri>https://creation.trovster.com/company/trevor-morris/</uri>
+			<html:img><![CDATA[<img src="/images/icons/trevor-morris.gif" height="48" width="48" alt="Gravatar for Trevor Morris" class="gravatar logo" />]]></html:img>
+			<uri>/company/trevor-morris/</uri>
 		</author>
 	</entry>
 	<entry>
@@ -208,14 +208,14 @@ will be different in different host nations?</p>
 
 <p>I think this country is too caught up on excluding uniqueness because its seen as threatening community. What ought to be
 going on is the celebration of uniqueness within the context of community, not the exclusion of it to force community.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/news/2007/06/06/easy-money/#c_7" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/news/2007/06/06/easy-money/#c_7" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-06-11:/news/2007/06/06/easy-money/#c_7</id>
 		<updated>2007-06-11T13:01:46+01:00</updated>
 		<published>2007-06-11T13:01:46+01:00</published>
 		<html:abbr class="published updated" title="2007-06-11">Mon 11th Jun 2007 at 13:01</html:abbr>
 		<author>
 			<name>Matt Wilcox</name>
-			<html:img><![CDATA[<img src="https://creation.trovster.com/images/gravatars/cache/creation/b78446f857933a87776bffd44ec66f98" height="48" width="48" alt="Gravatar for Matt Wilcox" class="gravatar" />]]></html:img>
+			<html:img><![CDATA[<img src="/images/gravatars/cache/creation/b78446f857933a87776bffd44ec66f98" height="48" width="48" alt="Gravatar for Matt Wilcox" class="gravatar" />]]></html:img>
 			<uri>http://mattwilcox.net</uri>
 		</author>
 	</entry>
@@ -231,15 +231,15 @@ the pending Olympics has been raised. All good. </p>
 
 <p>I suggest everyone looks at this logo as a &#8216;Marmite&#8217; design. Some will love it some will hate it. As with
 anything creative, you will never please everybody all the time.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/news/2007/06/06/easy-money/#c_6" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/news/2007/06/06/easy-money/#c_6" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-06-11:/news/2007/06/06/easy-money/#c_6</id>
 		<updated>2007-06-11T11:25:21+01:00</updated>
 		<published>2007-06-11T11:25:21+01:00</published>
 		<html:abbr class="published updated" title="2007-06-11">Mon 11th Jun 2007 at 11:25</html:abbr>
 		<author>
 			<name>Leigh Scott</name>
-			<html:img><![CDATA[<img src="https://creation.trovster.com/images/icons/leigh-scott.gif" height="48" width="48" alt="Gravatar for Leigh Scott" class="gravatar logo" />]]></html:img>
-			<uri>https://creation.trovster.com/company/leigh-scott/</uri>
+			<html:img><![CDATA[<img src="/images/icons/leigh-scott.gif" height="48" width="48" alt="Gravatar for Leigh Scott" class="gravatar logo" />]]></html:img>
+			<uri>/company/leigh-scott/</uri>
 		</author>
 	</entry>
 	<entry>
@@ -262,15 +262,15 @@ responsible for Hear&#8217;Say, David Sneddon, Michelle Mcmanus and Jade Goode.<
 
 <p>P.S. Matt - your post was written like a true professional, thanks for taking the time to respond - I feel this
 discussion could run and run. Good to have you back, in mind if not in body.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/news/2007/06/06/easy-money/#c_5" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/news/2007/06/06/easy-money/#c_5" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-06-11:/news/2007/06/06/easy-money/#c_5</id>
 		<updated>2007-06-11T11:21:25+01:00</updated>
 		<published>2007-06-11T11:21:25+01:00</published>
 		<html:abbr class="published updated" title="2007-06-11">Mon 11th Jun 2007 at 11:21</html:abbr>
 		<author>
 			<name>Tim Webley</name>
-			<html:img><![CDATA[<img src="https://creation.trovster.com/images/icons/tim-webley.gif" height="48" width="48" alt="Gravatar for Tim Webley" class="gravatar logo" />]]></html:img>
-			<uri>https://creation.trovster.com/company/tim-webley/</uri>
+			<html:img><![CDATA[<img src="/images/icons/tim-webley.gif" height="48" width="48" alt="Gravatar for Tim Webley" class="gravatar logo" />]]></html:img>
+			<uri>/company/tim-webley/</uri>
 		</author>
 	</entry>
 	<entry>
@@ -286,14 +286,14 @@ understandings, and reactions, not the clients. The public don&#8217;t understan
 failure was at the goal setting stage - too many people involved aiming for their own ideas, and not that of the public.</p>
 
 <p>Also, congratulations on the new site guys, it&#8217;s spanking lovely!</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/news/2007/06/06/easy-money/#c_4" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/news/2007/06/06/easy-money/#c_4" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-06-10:/news/2007/06/06/easy-money/#c_4</id>
 		<updated>2007-06-10T17:52:06+01:00</updated>
 		<published>2007-06-10T17:52:06+01:00</published>
 		<html:abbr class="published updated" title="2007-06-10">Sun 10th Jun 2007 at 17:52</html:abbr>
 		<author>
 			<name>Matt Wilcox</name>
-			<html:img><![CDATA[<img src="https://creation.trovster.com/images/gravatars/cache/creation/b78446f857933a87776bffd44ec66f98" height="48" width="48" alt="Gravatar for Matt Wilcox" class="gravatar" />]]></html:img>
+			<html:img><![CDATA[<img src="/images/gravatars/cache/creation/b78446f857933a87776bffd44ec66f98" height="48" width="48" alt="Gravatar for Matt Wilcox" class="gravatar" />]]></html:img>
 			<uri>http://mattwilcox.net</uri>
 		</author>
 	</entry>
@@ -308,15 +308,15 @@ being guided, or that the initial reveal simply took them by surprise?</p>
 <p>I&#8217;m sure when the next Big Brother housemate gets evicted for being a bit naughty and everyone&#8217;s found
 something else to argue over, they&#8217;ll come back to the 2012 branding and it&#8217;ll feel just that little bit more
 familiar.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/news/2007/06/06/easy-money/#c_3" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/news/2007/06/06/easy-money/#c_3" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-06-08:/news/2007/06/06/easy-money/#c_3</id>
 		<updated>2007-06-08T17:15:57+01:00</updated>
 		<published>2007-06-08T17:15:57+01:00</published>
 		<html:abbr class="published updated" title="2007-06-08">Fri 8th Jun 2007 at 17:15</html:abbr>
 		<author>
 			<name>Rich Rees</name>
-			<html:img><![CDATA[<img src="https://creation.trovster.com/images/icons/rich-rees.gif" height="48" width="48" alt="Gravatar for Rich Rees" class="gravatar logo" />]]></html:img>
-			<uri>https://creation.trovster.com/company/rich-rees/</uri>
+			<html:img><![CDATA[<img src="/images/icons/rich-rees.gif" height="48" width="48" alt="Gravatar for Rich Rees" class="gravatar logo" />]]></html:img>
+			<uri>/company/rich-rees/</uri>
 		</author>
 	</entry>
 </feed>

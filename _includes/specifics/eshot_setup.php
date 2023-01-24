@@ -47,7 +47,7 @@ function eshot_setup($array) {
 
 	$return['stylesheet']['internal'] = '';
 	$return['stylesheet']['file'][] = array('file' => 'specifics/eshots/defaults.css', 'media' => 'screen');
-	$return['stylesheet']['file'][] = array('file' => 'specifics/eshots/['.$array['EShot_ID'].']_'.trim($array['EShot_Safe_URL'],'/').'.css', 'media' => 'screen');
+	$return['stylesheet']['file'][] = array('file' => 'specifics/eshots/'.$array['EShot_ID'].'_'.trim($array['EShot_Safe_URL'],'/').'.css', 'media' => 'screen');
 
 	$return['text'] = $return['title'];
 	$return['link'] = $return['permalink']['link'];

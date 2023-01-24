@@ -21,7 +21,7 @@ function image_show($array) {
 	if(empty($array) || !is_array($array) || empty($array['file'])) return false;
 	$longdesc = '';
 	if(!empty($array['longdesc'])) $longdesc = ' longdesc="'.$array['longdesc']['full-path'].'"';
-	
+
 	$link_start = ''; $link_end = '';
 	if(!empty($array['link'])) {
 		$link_start .= '<a href="'.$array['link'].'" class="image">';
@@ -42,7 +42,7 @@ function image_upload($array=array()) {
 	global $image_accept_array;
 	$return_array = array();
 	require_once($_SERVER['DOCUMENT_ROOT'].'/_includes/scripts/image-editor.class.php');
-	
+
 	$file_array = file_setup($array['id'],$array['name'],$array['extension'],$array['path'],true);
 
 	// original folder and image.
@@ -51,11 +51,11 @@ function image_upload($array=array()) {
 		mkdir($originals_folder);
 		chmod($originals_folder, 0777);
 	}
-	
+
 	move_uploaded_file($_FILES[$array['upload']]['tmp_name'],$originals_folder.$file_array['name']);
 	$image = new ImageEditor($file_array['name'],$originals_folder);
 	if(is_file($originals_folder.$file_array['name'])) chmod($originals_folder.$file_array['name'], 0755);
-	
+
 	if(in_array(strtolower($image->getImageType()),$image_accept_array) && !empty($file_array) && is_file($originals_folder.$file_array['name'])) {
 		list($width,$height) = getimagesize($_SERVER['DOCUMENT_ROOT'].$file_array['local'].'originals/'.$file_array['name']);
 		$width_o = $width;
@@ -67,9 +67,9 @@ function image_upload($array=array()) {
 			'description' => 'Your image has been successfully uploaded.',
 			'class' => array('image')
 		);
-		
+
 		if(!empty($array['size'])) {
-			
+
 			if(!empty($array['size']['method']) && strtolower($array['size']['method'])=='resize' && !empty($array['size']['height']) && !empty($array['size']['width'])) {
 				$height = $array['size']['height'];
 				$width = $array['size']['width'];
@@ -94,7 +94,7 @@ function image_upload($array=array()) {
 		}
 		if($image->error==FALSE) {
 			$local_folder = $_SERVER['DOCUMENT_ROOT'].$file_array['local'];
-			
+
 			if(!empty($array['size']['method']) && strtolower($array['size']['method'])=='resize'
 			&& !empty($array['size']['height']) && !empty($array['size']['width'])
 			&& $height_o==$array['size']['height'] && $width_o==$array['size']['width']) {
@@ -117,7 +117,7 @@ function image_upload($array=array()) {
 				}
 				$image->outputFile($file_array['name'],$local_folder,100);
 			}
-		
+
 			// thumbnail folder and image.
 			$thumbnails_folder = $_SERVER['DOCUMENT_ROOT'].$file_array['local'].'thumbnails/';
 			if(!is_dir($thumbnails_folder)) {
@@ -127,7 +127,7 @@ function image_upload($array=array()) {
 			$image->resize(100, 100);
 			$image->outputFile($file_array['name'],$thumbnails_folder);
 			if(is_file($thumbnails_folder.$file_array['name'])) chmod($thumbnails_folder.$file_array['name'], 0755);
-			
+
 			// crop folder and image.
 			$crop_folder = $_SERVER['DOCUMENT_ROOT'].$file_array['local'].'crop/';
 			if(!is_dir($crop_folder)) {
@@ -161,7 +161,7 @@ function image_upload($array=array()) {
 		foreach($image_accept_array as $image_accept) {
 			$return_array['description'] .= "\n".'* '.$image_accept;
 		}
-		
+
 	}
 	return $return_array;
 }

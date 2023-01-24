@@ -1,0 +1,97 @@
+#branding,
+#branding h1 {
+	position: absolute; top: 0; left: 0; z-index: 50;
+	width: 600px;
+	padding: 0;
+	background-image: none;
+}
+body.eshot #branding h1 a {
+	position: absolute; top: 60px; right: 49px; z-index: 50;
+	width: 139px; height: 37px;
+	background-image: url(/css/specifics/eshots/images/3_creation-logo.jpg);
+}
+#content {
+	position: relative;
+	padding-top: 30px;
+}
+#content h3.entry-title, #content h3.entry-title span.gl-ir {
+	position: absolute; top: 70px; left: 15px;
+	color: #fff;
+}
+#branding-strapline {
+	position: absolute; left: auto; right: 4px; top: 370px;
+	height: 114px; width: 114px;
+}
+#branding-strapline em {
+	display: none;
+}
+#branding-strapline {
+	background: url(/css/specifics/eshots/images/3_rosette.jpg) no-repeat 0 0;
+}
+#content .entry-content {
+	position: relative;
+	padding: 70px 20px 0;
+	width: 335px;
+}
+#footer-signature {
+	padding: 0 20px;
+}
+
+
+#content .entry-content h4,
+#content .entry-content a,
+#content #content-primary .entry-content strong,
+#content #content-primary .entry-content ul li a em {
+	color: #c06;
+}
+#content .entry-content a:hover,
+#content #content-primary .entry-content ul li a:hover {
+	border-bottom-color: #c06;
+}
+#content #content-primary .entry-content p {
+	position: relative; clear: left;
+}
+#content #content-primary .entry-content em {
+	color: #000; font-style: italic;
+}
+#content #content-primary .entry-content h4 strong {
+	color: #000;
+}
+#content #content-primary ul {
+	overflow: hidden;
+	width: 545px;
+	padding: 40px 0 0 10px; margin: 0 -20px -20px;
+	background: url(/css/specifics/eshots/images/3_option-margin.jpg) repeat-x 0 30px;
+}
+#content #content-primary ul li,
+#content #content-primary ul li img {
+	float: left; display: inline;
+	/*height: 271px; */width: 162px;
+	padding: 0; margin: 0;
+	background-image: none;
+}
+#content #content-primary ul li {
+	text-align: center;
+	padding-bottom: 75px; margin-right: 10px;
+}
+#content #content-primary ul li img {
+	display: block; height: 271px;
+	margin-bottom: -65px;
+}
+#content #content-primary .entry-content ul li em {
+	font-style: normal; zoom: 1.0;
+}
+#content #content-primary .entry-content ul li a {
+	border-bottom-color: #eee;
+}
+
+#content h3.entry-title {
+	top: 70px; left: 15px; line-height: 168px;
+}
+#content {
+	background: url(/css/specifics/eshots/images/3_visual-blue.jpg) no-repeat 0 30px;
+}
+#content h3.entry-title, body #content h3.entry-title span.gl-ir {
+	height: 168px; width: 296px;
+	background: url(/css/specifics/eshots/images/3_title.jpg) no-repeat 0 0;
+}

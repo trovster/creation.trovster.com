@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <title type="text">Creation: Latest Articles (Atom)</title>
-<link rel="alternate" type="text/html" href="https://creation.trovster.com/" />
-<link rel="self" type="application/atom+xml" href="https://creation.trovster.com/atom/" />
+<link rel="alternate" type="text/html" href="/" />
+<link rel="self" type="application/atom+xml" href="/atom/" />
 <updated>2007-11-01T14:48:01+00:00</updated>
 <author>
 	<name>Creation</name>
 	<email>info@creation.uk.com</email>
-	<uri>https://creation.trovster.com/</uri>
+	<uri>/</uri>
 </author>
-<id>https://creation.trovster.com/</id>
-<icon>https://creation.trovster.com/favicon.ico</icon>
+<id>/</id>
+<icon>/favicon.ico</icon>
 	<entry>
 		<title type="text">Our Web Packages &#38; SEO</title>
 		<content type="html"><![CDATA[<p>If you&#8217;re looking for a <a href="/services/websites/" title="Check out our Website Packages">new website</a> or
@@ -62,15 +62,15 @@ search engines can find your site the better! These two factors will have the bi
 ranking.</p>
 
 <p>If you wish to find out more, please <a href="/contact/">get in touch</a>.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/news/2007/10/25/our-web-packages-seo/" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/news/2007/10/25/our-web-packages-seo/" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-10-25:/news/2007/10/25/our-web-packages-seo/</id>
 		<updated>2007-10-25T09:58:41+01:00</updated>
 		<published>2007-10-25T09:45:53+01:00</published>
 		<html:abbr class="published updated" title="2007-10-25">Thu 25th Oct 2007 at 09:58</html:abbr>
 		<author>
 			<name>Trevor Morris</name>
-			<html:img><![CDATA[<img src="https://creation.trovster.com/images/icons/large/trevor-morris.gif" height="108" width="108" alt="Photo of Trevor Morris" class="photo" />]]></html:img>
-			<uri>https://creation.trovster.com/company/trevor-morris/</uri>
+			<html:img><![CDATA[<img src="/images/icons/large/trevor-morris.gif" height="108" width="108" alt="Photo of Trevor Morris" class="photo" />]]></html:img>
+			<uri>/company/trevor-morris/</uri>
 		</author>
 	</entry>
 	<entry>
@@ -149,15 +149,15 @@ same time attract interest away from the competition.</p>
 loyalty, the effectiveness in which you communicate to your market and how you compare to the competition are just a few of
 the factors that contribute to securing a sale. But I would always prefer to make a good impression when I take my brand to
 market, than hope no-one notices it.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/news/2007/10/18/reasons-to-rebrand/" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/news/2007/10/18/reasons-to-rebrand/" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-10-18:/news/2007/10/18/reasons-to-rebrand/</id>
 		<updated>2007-10-22T12:29:43+01:00</updated>
 		<published>2007-10-18T10:50:00+01:00</published>
 		<html:abbr class="published updated" title="2007-10-22">Mon 22nd Oct 2007 at 12:29</html:abbr>
 		<author>
 			<name>Tim Webley</name>
-			<html:img><![CDATA[<img src="https://creation.trovster.com/images/icons/large/tim-webley.gif" height="108" width="108" alt="Photo of Tim Webley" class="photo" />]]></html:img>
-			<uri>https://creation.trovster.com/company/tim-webley/</uri>
+			<html:img><![CDATA[<img src="/images/icons/large/tim-webley.gif" height="108" width="108" alt="Photo of Tim Webley" class="photo" />]]></html:img>
+			<uri>/company/tim-webley/</uri>
 		</author>
 	</entry>
 	<entry>
@@ -189,15 +189,15 @@ key.</p>
 
 <p>If you would like to find out more about how you can benefit from our education experience just drop me an email <a
 href="mailto:leigh@creation.uk.com">leigh@creation.uk.com</a>.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/news/2007/10/11/education-in-print/" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/news/2007/10/11/education-in-print/" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-10-11:/news/2007/10/11/education-in-print/</id>
 		<updated>2007-10-11T14:32:33+01:00</updated>
 		<published>2007-10-11T11:50:16+01:00</published>
 		<html:abbr class="published updated" title="2007-10-11">Thu 11th Oct 2007 at 14:32</html:abbr>
 		<author>
 			<name>Leigh Scott</name>
-			<html:img><![CDATA[<img src="https://creation.trovster.com/images/icons/large/leigh-scott.gif" height="108" width="108" alt="Photo of Leigh Scott" class="photo" />]]></html:img>
-			<uri>https://creation.trovster.com/company/leigh-scott/</uri>
+			<html:img><![CDATA[<img src="/images/icons/large/leigh-scott.gif" height="108" width="108" alt="Photo of Leigh Scott" class="photo" />]]></html:img>
+			<uri>/company/leigh-scott/</uri>
 		</author>
 	</entry>
 	<entry>
@@ -320,15 +320,15 @@ same way.</p>
 </blockquote>
 
 <p><strong>I did.</strong></p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/news/2007/09/18/dconstruct-2007/" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/news/2007/09/18/dconstruct-2007/" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-09-18:/news/2007/09/18/dconstruct-2007/</id>
 		<updated>2007-09-18T12:52:05+01:00</updated>
 		<published>2007-09-18T12:52:05+01:00</published>
 		<html:abbr class="published updated" title="2007-09-18">Tue 18th Sep 2007 at 12:52</html:abbr>
 		<author>
 			<name>Trevor Morris</name>
-			<html:img><![CDATA[<img src="https://creation.trovster.com/images/icons/large/trevor-morris.gif" height="108" width="108" alt="Photo of Trevor Morris" class="photo" />]]></html:img>
-			<uri>https://creation.trovster.com/company/trevor-morris/</uri>
+			<html:img><![CDATA[<img src="/images/icons/large/trevor-morris.gif" height="108" width="108" alt="Photo of Trevor Morris" class="photo" />]]></html:img>
+			<uri>/company/trevor-morris/</uri>
 		</author>
 	</entry>
 	<entry>
@@ -353,15 +353,15 @@ often. The truth is, however, that any design can carry a thoughtful typographic
 <p>I&#8217;m not saying Helvetica is the solution to every problem, but it&#8217;s difficult deny the font&#8217;s usability
 and longevity. I&#8217;ve grown to appreciate Helvetica the more I work with it, not only for it&#8217;s sheer range of
 usable weights but for it&#8217;s pure simplicity and clarity. I love it.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/news/2007/09/06/why-the-helvetica/" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/news/2007/09/06/why-the-helvetica/" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-09-06:/news/2007/09/06/why-the-helvetica/</id>
 		<updated>2007-09-06T14:53:06+01:00</updated>
 		<published>2007-09-06T14:53:06+01:00</published>
 		<html:abbr class="published updated" title="2007-09-06">Thu 6th Sep 2007 at 14:53</html:abbr>
 		<author>
 			<name>Rich Rees</name>
-			<html:img><![CDATA[<img src="https://creation.trovster.com/images/icons/large/rich-rees.gif" height="108" width="108" alt="Photo of Rich Rees" class="photo" />]]></html:img>
-			<uri>https://creation.trovster.com/company/rich-rees/</uri>
+			<html:img><![CDATA[<img src="/images/icons/large/rich-rees.gif" height="108" width="108" alt="Photo of Rich Rees" class="photo" />]]></html:img>
+			<uri>/company/rich-rees/</uri>
 		</author>
 	</entry>
 	<entry>
@@ -385,15 +385,15 @@ monitor your own campaigns.</p>
 
 <p>You can <a href="mailto:leigh@creation.uk.com">email</a> or call me on 01785 716136 if you would like to find out more
 about e-shots.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/news/2007/08/14/entry-to-e-marketing/" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/news/2007/08/14/entry-to-e-marketing/" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-08-14:/news/2007/08/14/entry-to-e-marketing/</id>
 		<updated>2007-08-14T10:39:53+01:00</updated>
 		<published>2007-08-14T10:39:53+01:00</published>
 		<html:abbr class="published updated" title="2007-08-14">Tue 14th Aug 2007 at 10:39</html:abbr>
 		<author>
 			<name>Leigh Scott</name>
-			<html:img><![CDATA[<img src="https://creation.trovster.com/images/icons/large/leigh-scott.gif" height="108" width="108" alt="Photo of Leigh Scott" class="photo" />]]></html:img>
-			<uri>https://creation.trovster.com/company/leigh-scott/</uri>
+			<html:img><![CDATA[<img src="/images/icons/large/leigh-scott.gif" height="108" width="108" alt="Photo of Leigh Scott" class="photo" />]]></html:img>
+			<uri>/company/leigh-scott/</uri>
 		</author>
 	</entry>
 	<entry>
@@ -433,15 +433,15 @@ recommend your site.</p>
 
 <p>If you have any other tips you wish to share with us, please place them in the <a href="#comments-form">comments</a>
 below.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/news/2007/07/17/web-usability-basics/" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/news/2007/07/17/web-usability-basics/" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-07-17:/news/2007/07/17/web-usability-basics/</id>
 		<updated>2007-07-17T13:07:19+01:00</updated>
 		<published>2007-07-17T13:07:19+01:00</published>
 		<html:abbr class="published updated" title="2007-07-17">Tue 17th Jul 2007 at 13:07</html:abbr>
 		<author>
 			<name>Trevor Morris</name>
-			<html:img><![CDATA[<img src="https://creation.trovster.com/images/icons/large/trevor-morris.gif" height="108" width="108" alt="Photo of Trevor Morris" class="photo" />]]></html:img>
-			<uri>https://creation.trovster.com/company/trevor-morris/</uri>
+			<html:img><![CDATA[<img src="/images/icons/large/trevor-morris.gif" height="108" width="108" alt="Photo of Trevor Morris" class="photo" />]]></html:img>
+			<uri>/company/trevor-morris/</uri>
 		</author>
 	</entry>
 	<entry>
@@ -463,15 +463,15 @@ Sometimes this can be up to 50% towards the cost of a new website, for example. 
 
 <p>Find your <a href="http://www.businesslink.gov.uk">local Business Link branch</a> and call them to see what&#8217;s
 available to you. If I can be of any help, just let me know and I will point you in the right direction.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/news/2007/06/29/a-useful-link/" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/news/2007/06/29/a-useful-link/" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-06-29:/news/2007/06/29/a-useful-link/</id>
 		<updated>2007-06-29T14:58:36+01:00</updated>
 		<published>2007-06-29T14:58:36+01:00</published>
 		<html:abbr class="published updated" title="2007-06-29">Fri 29th Jun 2007 at 14:58</html:abbr>
 		<author>
 			<name>Leigh Scott</name>
-			<html:img><![CDATA[<img src="https://creation.trovster.com/images/icons/large/leigh-scott.gif" height="108" width="108" alt="Photo of Leigh Scott" class="photo" />]]></html:img>
-			<uri>https://creation.trovster.com/company/leigh-scott/</uri>
+			<html:img><![CDATA[<img src="/images/icons/large/leigh-scott.gif" height="108" width="108" alt="Photo of Leigh Scott" class="photo" />]]></html:img>
+			<uri>/company/leigh-scott/</uri>
 		</author>
 	</entry>
 	<entry>
@@ -505,15 +505,15 @@ easy.</p>
 
 <p>No doubt that the <a href="http://www.london2012.com">2012 Olympics</a> will be an historic and spectacular event. As for
 the logo, it&#8217;s appeal will grow - trust me.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/news/2007/06/06/easy-money/" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/news/2007/06/06/easy-money/" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-06-06:/news/2007/06/06/easy-money/</id>
 		<updated>2007-06-06T15:21:22+01:00</updated>
 		<published>2007-06-06T15:21:22+01:00</published>
 		<html:abbr class="published updated" title="2007-06-06">Wed 6th Jun 2007 at 15:21</html:abbr>
 		<author>
 			<name>Tim Webley</name>
-			<html:img><![CDATA[<img src="https://creation.trovster.com/images/icons/large/tim-webley.gif" height="108" width="108" alt="Photo of Tim Webley" class="photo" />]]></html:img>
-			<uri>https://creation.trovster.com/company/tim-webley/</uri>
+			<html:img><![CDATA[<img src="/images/icons/large/tim-webley.gif" height="108" width="108" alt="Photo of Tim Webley" class="photo" />]]></html:img>
+			<uri>/company/tim-webley/</uri>
 		</author>
 	</entry>
 	<entry>
@@ -549,15 +549,15 @@ punctures</strong> which I found out on my first sixteen-mile return trip to wor
 to replace your worn-out ten-year-old bike, definitely persuade your employer to sign on to the <a
 href="http://www.cyclescheme.co.uk">Cycle Scheme</a> which means you will save yourself some money and get a fresh new bike
 � just in time for a glorious summer.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/news/2007/06/05/cycle-scheme/" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/news/2007/06/05/cycle-scheme/" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-06-05:/news/2007/06/05/cycle-scheme/</id>
 		<updated>2007-06-05T10:34:14+01:00</updated>
 		<published>2007-06-05T10:34:14+01:00</published>
 		<html:abbr class="published updated" title="2007-06-05">Tue 5th Jun 2007 at 10:34</html:abbr>
 		<author>
 			<name>Trevor Morris</name>
-			<html:img><![CDATA[<img src="https://creation.trovster.com/images/icons/large/trevor-morris.gif" height="108" width="108" alt="Photo of Trevor Morris" class="photo" />]]></html:img>
-			<uri>https://creation.trovster.com/company/trevor-morris/</uri>
+			<html:img><![CDATA[<img src="/images/icons/large/trevor-morris.gif" height="108" width="108" alt="Photo of Trevor Morris" class="photo" />]]></html:img>
+			<uri>/company/trevor-morris/</uri>
 		</author>
 	</entry>
 </feed>

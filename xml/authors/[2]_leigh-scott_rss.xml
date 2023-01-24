@@ -4,13 +4,13 @@
 <title>Creation: Latest Articles by Leigh Scott (RSS)</title>
 <link>https://creation.trovster.com</link>
 <description>Creation: Latest Articles by Leigh Scott (RSS)</description>
-<link rel="alternate" type="text/html" href="https://creation.trovster.com/" />
-<link rel="self" type="application/rss+xml" href="https://creation.trovster.com/company/leigh-scott/rss/" />
+<link rel="alternate" type="text/html" href="/" />
+<link rel="self" type="application/rss+xml" href="/company/leigh-scott/rss/" />
 <language>en</language>
 <ttl>300</ttl>
 	<item>
 		<title>A Useful Link</title>
-		<link>https://creation.trovster.com/news/2007/06/27/a-useful-link/</link>
+		<link>/news/2007/06/27/a-useful-link/</link>
 		<description><![CDATA[<p>Whilst looking through the <a href="http://www.businesslink.gov.uk">Business Link West Midlands website</a> I wondered how
 many of you have spoken to Business Link and taken advantage of what they have to offer. </p>
 
@@ -30,12 +30,12 @@ Sometimes this can be up to 50% towards the cost of a new website, for example. 
 available to you. If I can be of any help, just let me know and I will point you in the right direction.</p>
 ]]></description>
 		<pubDate>Wed, 27 Jun 2007 13:46:51 +0100</pubDate>
-		<guid isPermaLink="true">https://creation.trovster.com/news/2007/06/27/a-useful-link/</guid>
+		<guid isPermaLink="true">/news/2007/06/27/a-useful-link/</guid>
 		<dc:creator>Leigh Scott</dc:creator>
 	</item>
 	<item>
 		<title>In Partnership with Xerox Global Services</title>
-		<link>https://creation.trovster.com/news/2007/05/28/in-partnership-with-xerox-global-services/</link>
+		<link>/news/2007/05/28/in-partnership-with-xerox-global-services/</link>
 		<description><![CDATA[<p>Last year we were chosen as a new design partner for Xerox Global Services, the division of Xerox responsible for offering
 on-site services for a large number of big companies and organisations nationwide.</p>
 
@@ -52,12 +52,12 @@ for print and web.</p>
 href="mailto:leigh@creation.uk.com">leigh@creation.uk.com</a>, your print room manager or Xerox representative.</p>
 ]]></description>
 		<pubDate>Mon, 28 May 2007 15:40:09 +0100</pubDate>
-		<guid isPermaLink="true">https://creation.trovster.com/news/2007/05/28/in-partnership-with-xerox-global-services/</guid>
+		<guid isPermaLink="true">/news/2007/05/28/in-partnership-with-xerox-global-services/</guid>
 		<dc:creator>Leigh Scott</dc:creator>
 	</item>
 	<item>
 		<title>Donate Unwanted PCs</title>
-		<link>https://creation.trovster.com/news/2007/05/20/donate-unwanted-pcs/</link>
+		<link>/news/2007/05/20/donate-unwanted-pcs/</link>
 		<description><![CDATA[<p>Help students in The Gambia with your unwanted PCs. Following a visit to the region by our good friends at <a
 href="http://www.tlc.ac.uk">Tamworth &amp; Lichfield College</a>, John Fontaine and Belinda Ball, we are trying to help them
 collect computer equipment for students to use in Gambia.</p>
@@ -77,12 +77,12 @@ waste. Find out more about the WEEE Directive and <a href="http://weeenetwork.co
 affected by the regulations.</p>
 ]]></description>
 		<pubDate>Sun, 20 May 2007 16:50:26 +0100</pubDate>
-		<guid isPermaLink="true">https://creation.trovster.com/news/2007/05/20/donate-unwanted-pcs/</guid>
+		<guid isPermaLink="true">/news/2007/05/20/donate-unwanted-pcs/</guid>
 		<dc:creator>Leigh Scott</dc:creator>
 	</item>
 	<item>
 		<title>Running for Charity</title>
-		<link>https://creation.trovster.com/news/2007/05/08/running-for-charity/</link>
+		<link>/news/2007/05/08/running-for-charity/</link>
 		<description><![CDATA[<p>The <a href="http://www.greatrun.org">2007 BUPA Great North Run</a> will take place on Sunday 30th September 2007,
 it&#8217;s 27th anniversary, and promises to be a day to remember! It&#8217;s the world&#8217;s biggest half marathon, a
 point-to-point 13.1 mile course starting in Newcastle and finishing in South Shields. Over 50,000 runners lined up at the
@@ -106,7 +106,7 @@ weekend activities.</p>
 at the office on 01785 716136. Thanks Leigh.</p>
 ]]></description>
 		<pubDate>Tue,  8 May 2007 11:35:07 +0100</pubDate>
-		<guid isPermaLink="true">https://creation.trovster.com/news/2007/05/08/running-for-charity/</guid>
+		<guid isPermaLink="true">/news/2007/05/08/running-for-charity/</guid>
 		<dc:creator>Leigh Scott</dc:creator>
 	</item>
 </channel>

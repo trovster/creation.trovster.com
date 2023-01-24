@@ -4,13 +4,13 @@
 <title>Creation: Latest Articles with the Tag "Xerox" (RSS)</title>
 <link>https://creation.trovster.com</link>
 <description>Creation: Latest Articles with the Tag "Xerox" (RSS)</description>
-<link rel="alternate" type="text/html" href="https://creation.trovster.com/" />
-<link rel="self" type="application/rss+xml" href="https://creation.trovster.com/archives/xerox/rss/" />
+<link rel="alternate" type="text/html" href="/" />
+<link rel="self" type="application/rss+xml" href="/archives/xerox/rss/" />
 <language>en</language>
 <ttl>300</ttl>
 	<item>
 		<title>In Partnership with Xerox Global Services</title>
-		<link>https://creation.trovster.com/news/2007/05/28/in-partnership-with-xerox-global-services/</link>
+		<link>/news/2007/05/28/in-partnership-with-xerox-global-services/</link>
 		<description><![CDATA[<p>Last year we were chosen as a new design partner for Xerox Global Services, the division of Xerox responsible for offering
 on-site services for a large number of big companies and organisations nationwide.</p>
 
@@ -27,7 +27,7 @@ for print and web.</p>
 href="mailto:leigh@creation.uk.com">leigh@creation.uk.com</a>, your print room manager or Xerox representative.</p>
 ]]></description>
 		<pubDate>Mon, 28 May 2007 15:40:09 +0100</pubDate>
-		<guid isPermaLink="true">https://creation.trovster.com/news/2007/05/28/in-partnership-with-xerox-global-services/</guid>
+		<guid isPermaLink="true">/news/2007/05/28/in-partnership-with-xerox-global-services/</guid>
 		<dc:creator>Leigh Scott</dc:creator>
 	</item>
 </channel>

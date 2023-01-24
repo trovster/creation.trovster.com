@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <title type="text">Creation: Latest Hot Topics by Trevor Morris (Atom)</title>
-<link rel="alternate" type="text/html" href="https://creation.trovster.com/" />
-<link rel="self" type="application/atom+xml" href="https://creation.trovster.com/company/trevor-morris/atom/hot-topics/" />
+<link rel="alternate" type="text/html" href="/" />
+<link rel="self" type="application/atom+xml" href="/company/trevor-morris/atom/hot-topics/" />
 <updated>2007-11-01T14:49:57+00:00</updated>
 <author>
 	<name>Creation</name>
 	<email>info@creation.uk.com</email>
-	<uri>https://creation.trovster.com/</uri>
+	<uri>/</uri>
 </author>
 <id>https://creation.trovster.com</id>
-<icon>https://creation.trovster.com/favicon.ico</icon>
+<icon>/favicon.ico</icon>
 	<entry>
 		<title type="text">After Dark Film Festival</title>
 		<content type="html"><![CDATA[<p><a href="http://www.torontoafterdark.com">Toronto After Dark Film Festival</a> showcases thrilling international cinema,
@@ -23,14 +23,14 @@ genre of horror, sci-fi, and fantasy.</p>
 good as well. If you&#8217;re a horror fan you should definitely pick them up on DVD when they&#8217;re released.</p>
 
 <p>Unfortunately I do not live anywhere near Toronto else I would have definitely attended.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/company/trevor-morris/2007/10/24/after-dark-film-festival/" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/company/trevor-morris/2007/10/24/after-dark-film-festival/" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-10-24:/company/trevor-morris/2007/10/24/after-dark-film-festival/</id>
 		<updated>2007-11-01T14:49:57+00:00</updated>
 		<published>2007-10-24T11:32:23+01:00</published>
 		<html:abbr class="published updated" title="2007-11-01">Thu 1st Nov 2007 at 14:49</html:abbr>
 		<author>
 			<name>Trevor Morris</name>
-			<uri>https://creation.trovster.com/company/trevor-morris/</uri>
+			<uri>/company/trevor-morris/</uri>
 		</author>
 	</entry>
 	<entry>
@@ -53,14 +53,14 @@ photos</a> for some <a href="http://www.flickr.com/photos/tags/spectacular/inter
 tagged with &quot;spectacular&quot;">spectacular</a> shots</p>
 
 <p><a href="http://www.flickr.com/signup/">Sign up</a> and try, because best of all it&#8217;s free!</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/company/trevor-morris/2007/10/22/flickr/" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/company/trevor-morris/2007/10/22/flickr/" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-10-22:/company/trevor-morris/2007/10/22/flickr/</id>
 		<updated>2007-10-22T12:14:25+01:00</updated>
 		<published>2007-10-22T11:47:24+01:00</published>
 		<html:abbr class="published updated" title="2007-10-22">Mon 22nd Oct 2007 at 12:14</html:abbr>
 		<author>
 			<name>Trevor Morris</name>
-			<uri>https://creation.trovster.com/company/trevor-morris/</uri>
+			<uri>/company/trevor-morris/</uri>
 		</author>
 	</entry>
 	<entry>
@@ -80,14 +80,14 @@ computer or iPod and Last.fm will save your playlists. Every song you listen to 
 idea of the website is to record your listening habits, but there is also a nice social aspect to the website. You can
 engage with users who listen to similar music and browse for new music based on your taste and listening habits of
 others.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/company/trevor-morris/2007/10/15/lastfm/" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/company/trevor-morris/2007/10/15/lastfm/" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-10-15:/company/trevor-morris/2007/10/15/lastfm/</id>
 		<updated>2007-10-15T12:31:00+01:00</updated>
 		<published>2007-10-15T11:01:18+01:00</published>
 		<html:abbr class="published updated" title="2007-10-15">Mon 15th Oct 2007 at 12:31</html:abbr>
 		<author>
 			<name>Trevor Morris</name>
-			<uri>https://creation.trovster.com/company/trevor-morris/</uri>
+			<uri>/company/trevor-morris/</uri>
 		</author>
 	</entry>
 	<entry>
@@ -100,14 +100,14 @@ earth.</p>
 car, the Stig racing around the track and no doubt plenty of non-PC jokes, especially about the Germans.</p>
 
 <p>Tune in at <strong>8pm on Sundays</strong> or catch the repeats on Wednesdays at 7pm.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/company/trevor-morris/2007/10/04/top-gear-is-back/" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/company/trevor-morris/2007/10/04/top-gear-is-back/" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-10-04:/company/trevor-morris/2007/10/04/top-gear-is-back/</id>
 		<updated>2007-10-04T15:00:55+01:00</updated>
 		<published>2007-10-04T11:48:10+01:00</published>
 		<html:abbr class="published updated" title="2007-10-04">Thu 4th Oct 2007 at 15:00</html:abbr>
 		<author>
 			<name>Trevor Morris</name>
-			<uri>https://creation.trovster.com/company/trevor-morris/</uri>
+			<uri>/company/trevor-morris/</uri>
 		</author>
 	</entry>
 	<entry>
@@ -121,14 +121,14 @@ direct their own film.</p>
 
 <p>The festival is on in London until the 7th of October, so if you&#8217;re interested in film and in the area I recommend
 checking it out.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/company/trevor-morris/2007/09/25/raindance-film-festival/" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/company/trevor-morris/2007/09/25/raindance-film-festival/" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-09-25:/company/trevor-morris/2007/09/25/raindance-film-festival/</id>
 		<updated>2007-09-25T10:42:39+01:00</updated>
 		<published>2007-09-25T10:42:39+01:00</published>
 		<html:abbr class="published updated" title="2007-09-25">Tue 25th Sep 2007 at 10:42</html:abbr>
 		<author>
 			<name>Trevor Morris</name>
-			<uri>https://creation.trovster.com/company/trevor-morris/</uri>
+			<uri>/company/trevor-morris/</uri>
 		</author>
 	</entry>
 	<entry>
@@ -141,14 +141,14 @@ never had one break (yet).</p>
 
 <p>It has an amazing amount of features including Wi-Fi, a five mega-pixel camera and GPS. I&#8217;m really looking forward
 to using all the data and creating a web interface to browse the information. Stay tuned�</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/company/trevor-morris/2007/09/21/nokia-n95/" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/company/trevor-morris/2007/09/21/nokia-n95/" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-09-21:/company/trevor-morris/2007/09/21/nokia-n95/</id>
 		<updated>2007-09-24T14:00:26+01:00</updated>
 		<published>2007-09-21T17:14:48+01:00</published>
 		<html:abbr class="published updated" title="2007-09-24">Mon 24th Sep 2007 at 14:00</html:abbr>
 		<author>
 			<name>Trevor Morris</name>
-			<uri>https://creation.trovster.com/company/trevor-morris/</uri>
+			<uri>/company/trevor-morris/</uri>
 		</author>
 	</entry>
 	<entry>
@@ -163,14 +163,14 @@ life.</p>
 the overlooked heist-gone-wrong comedy of confusion and betrayal, Big Nothing. I highly recommend both <a
 href="http://www.bignothing.co.uk">Big Nothing</a> and Run, Fatboy, Run if you&#8217;re a fan of British humour and
 sarcasm.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/company/trevor-morris/2007/09/13/run-fatboy-run/" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/company/trevor-morris/2007/09/13/run-fatboy-run/" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-09-13:/company/trevor-morris/2007/09/13/run-fatboy-run/</id>
 		<updated>2007-09-13T19:36:06+01:00</updated>
 		<published>2007-09-13T19:36:06+01:00</published>
 		<html:abbr class="published updated" title="2007-09-13">Thu 13th Sep 2007 at 19:36</html:abbr>
 		<author>
 			<name>Trevor Morris</name>
-			<uri>https://creation.trovster.com/company/trevor-morris/</uri>
+			<uri>/company/trevor-morris/</uri>
 		</author>
 	</entry>
 	<entry>
@@ -179,14 +179,14 @@ sarcasm.</p>]]></content>
 sister to Paul Brewer. This time it was to celebrate the naming of their first son; James Christopher Brewer.</p>
 
 <p>A good time was had by many and we all wish �Digger� all the best.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/company/trevor-morris/2007/09/10/naming-ceremony/" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/company/trevor-morris/2007/09/10/naming-ceremony/" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-09-10:/company/trevor-morris/2007/09/10/naming-ceremony/</id>
 		<updated>2007-09-21T21:17:10+01:00</updated>
 		<published>2007-09-10T20:51:40+01:00</published>
 		<html:abbr class="published updated" title="2007-09-21">Fri 21st Sep 2007 at 21:17</html:abbr>
 		<author>
 			<name>Trevor Morris</name>
-			<uri>https://creation.trovster.com/company/trevor-morris/</uri>
+			<uri>/company/trevor-morris/</uri>
 		</author>
 	</entry>
 	<entry>
@@ -209,14 +209,14 @@ Eleven</li>
 
 <p>You can find other videos I&#8217;ve bookmarked on my <a
 href="http://youtube.com/view_play_list?p=901D6D71A639DA3B">Typography video playlist</a> on YouTube.</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/company/trevor-morris/2007/08/28/do-you-speak-in-typography/" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/company/trevor-morris/2007/08/28/do-you-speak-in-typography/" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-08-28:/company/trevor-morris/2007/08/28/do-you-speak-in-typography/</id>
 		<updated>2007-08-28T21:01:07+01:00</updated>
 		<published>2007-08-28T21:01:07+01:00</published>
 		<html:abbr class="published updated" title="2007-08-28">Tue 28th Aug 2007 at 21:01</html:abbr>
 		<author>
 			<name>Trevor Morris</name>
-			<uri>https://creation.trovster.com/company/trevor-morris/</uri>
+			<uri>/company/trevor-morris/</uri>
 		</author>
 	</entry>
 	<entry>
@@ -238,14 +238,14 @@ weekend</a></p>
 
 <p>Finally, I would like to thank Steve for providing us with the passes for the weekend and for lending us an umbrella
 which kept us from getting soaked!</p>]]></content>
-		<link rel="alternate" href="https://creation.trovster.com/company/trevor-morris/2007/07/16/btcc-at-donington/" type="text/html" hreflang="en" />
+		<link rel="alternate" href="/company/trevor-morris/2007/07/16/btcc-at-donington/" type="text/html" hreflang="en" />
 		<id>tag:creation.uk.com,2007-07-16:/company/trevor-morris/2007/07/16/btcc-at-donington/</id>
 		<updated>2007-07-16T15:37:07+01:00</updated>
 		<published>2007-07-16T15:37:07+01:00</published>
 		<html:abbr class="published updated" title="2007-07-16">Mon 16th Jul 2007 at 15:37</html:abbr>
 		<author>
 			<name>Trevor Morris</name>
-			<uri>https://creation.trovster.com/company/trevor-morris/</uri>
+			<uri>/company/trevor-morris/</uri>
 		</author>
 	</entry>
 </feed>

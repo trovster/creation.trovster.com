@@ -4,13 +4,13 @@
 <title>Creation: Latest Articles with the Tag "Legislation" (RSS)</title>
 <link>https://creation.trovster.com</link>
 <description>Creation: Latest Articles with the Tag "Legislation" (RSS)</description>
-<link rel="alternate" type="text/html" href="https://creation.trovster.com/" />
-<link rel="self" type="application/rss+xml" href="https://creation.trovster.com/archives/legislation/rss/" />
+<link rel="alternate" type="text/html" href="/" />
+<link rel="self" type="application/rss+xml" href="/archives/legislation/rss/" />
 <language>en</language>
 <ttl>300</ttl>
 	<item>
 		<title>New Rules for Websites</title>
-		<link>https://creation.trovster.com/news/2007/04/28/new-rules-for-websites/</link>
+		<link>/news/2007/04/28/new-rules-for-websites/</link>
 		<description><![CDATA[<p>An update to the Companies Act legislation of 1985 has now come into force. To avoid breaching the <a
 href="http://www.dti.gov.uk/bbf/co-act-2006/index.html">Companies Act 2006</a>, from the 1st January 2007, all UK Limited
 companies must include certain information on their websites, email footers, order forms and electronic documentation. The
@@ -24,7 +24,7 @@ good practice, be included on all your company documentation.</p>
 href="mailto:info@creation.uk.com">email us</a> and we will offer our advice.</p>
 ]]></description>
 		<pubDate>Sat, 28 Apr 2007 16:35:07 +0100</pubDate>
-		<guid isPermaLink="true">https://creation.trovster.com/news/2007/04/28/new-rules-for-websites/</guid>
+		<guid isPermaLink="true">/news/2007/04/28/new-rules-for-websites/</guid>
 		<dc:creator>Trevor Morris</dc:creator>
 	</item>
 </channel>

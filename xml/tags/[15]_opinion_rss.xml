@@ -4,13 +4,13 @@
 <title>Creation: Latest Articles with the Tag "Opinion" (RSS)</title>
 <link>https://creation.trovster.com</link>
 <description>Creation: Latest Articles with the Tag "Opinion" (RSS)</description>
-<link rel="alternate" type="text/html" href="https://creation.trovster.com/" />
-<link rel="self" type="application/rss+xml" href="https://creation.trovster.com/archives/opinion/rss/" />
+<link rel="alternate" type="text/html" href="/" />
+<link rel="self" type="application/rss+xml" href="/archives/opinion/rss/" />
 <language>en</language>
 <ttl>300</ttl>
 	<item>
 		<title>Easy Money?</title>
-		<link>https://creation.trovster.com/news/2007/06/06/easy-money/</link>
+		<link>/news/2007/06/06/easy-money/</link>
 		<description><![CDATA[<p>Ok. I&#8217;ll keep this short because it&#8217;s day two and I&#8217;m sure you are already tired of the new <a
 href="http://www.london2012.com">London 2012</a> Olympic logo scandal.</p>
 
@@ -42,7 +42,7 @@ easy.</p>
 the logo, it&#8217;s appeal will grow - trust me.</p>
 ]]></description>
 		<pubDate>Wed,  6 Jun 2007 16:21:22 +0100</pubDate>
-		<guid isPermaLink="true">https://creation.trovster.com/news/2007/06/06/easy-money/</guid>
+		<guid isPermaLink="true">/news/2007/06/06/easy-money/</guid>
 		<dc:creator>Tim Webley</dc:creator>
 	</item>
 </channel>

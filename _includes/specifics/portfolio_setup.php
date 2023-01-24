@@ -129,7 +129,7 @@ function portfolio_setup_images($array) {
 	$query = mysqli_query($connect_admin, $sql);
 	$return = array(); $i=0;
 	while($image_array = mysqli_fetch_array($query)) {
-		$image_name = '['.$array['id'].']-'.trim($image_array['Image_Safe_URL']);
+		$image_name = $array['id'].'-'.trim($image_array['Image_Safe_URL']);
 		$j = $i+1;
 		$alt_text = $array['company']['title'].' '.$array['title'].' '.$image_array['Image_Alt_Text'];
 		if(image_setup($image_array['Image_ID'],$image_name,$image_array['Image_Extension'],$image_path)) {

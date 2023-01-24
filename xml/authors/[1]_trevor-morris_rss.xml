@@ -4,13 +4,13 @@
 <title>Creation: Latest Articles by Trevor Morris (RSS)</title>
 <link>https://creation.trovster.com</link>
 <description>Creation: Latest Articles by Trevor Morris (RSS)</description>
-<link rel="alternate" type="text/html" href="https://creation.trovster.com/" />
-<link rel="self" type="application/rss+xml" href="https://creation.trovster.com/company/trevor-morris/rss/" />
+<link rel="alternate" type="text/html" href="/" />
+<link rel="self" type="application/rss+xml" href="/company/trevor-morris/rss/" />
 <language>en</language>
 <ttl>300</ttl>
 	<item>
 		<title>Our Web Packages &#38; SEO</title>
-		<link>https://creation.trovster.com/news/2007/10/25/our-web-packages-seo/</link>
+		<link>/news/2007/10/25/our-web-packages-seo/</link>
 		<description><![CDATA[<p>If you&#8217;re looking for a <a href="/services/websites/" title="Check out our Website Packages">new website</a> or
 already have one, getting visitors to your website is a primary goal. SEO or <a
 href="http://en.wikipedia.org/wiki/Search_engine_optimization">Search Engine Optimisation</a> is the set of techniques which
@@ -62,12 +62,12 @@ ranking.</p>
 <p>If you wish to find out more, please <a href="/contact/">get in touch</a>.</p>
 ]]></description>
 		<pubDate>Thu, 25 Oct 2007 09:45:53 +0100</pubDate>
-		<guid isPermaLink="true">https://creation.trovster.com/news/2007/10/25/our-web-packages-seo/</guid>
+		<guid isPermaLink="true">/news/2007/10/25/our-web-packages-seo/</guid>
 		<dc:creator>Trevor Morris</dc:creator>
 	</item>
 	<item>
 		<title>dConstruct 2007</title>
-		<link>https://creation.trovster.com/news/2007/09/18/dconstruct-2007/</link>
+		<link>/news/2007/09/18/dconstruct-2007/</link>
 		<description><![CDATA[<p>Last week I had the pleasure of visiting Brighton to attend the <a href="http://2007.dconstruct.org" title="User
 Experience Design Conference">2007 dConstruct conference</a>. This is a small grass roots conference by <a
 href="http://clearleft.com" title="Web Design and Accessibility Consultants">Clearleft</a> which is billed as &#8216;an
@@ -188,12 +188,12 @@ same way.</p>
 <p><strong>I did.</strong></p>
 ]]></description>
 		<pubDate>Tue, 18 Sep 2007 12:52:05 +0100</pubDate>
-		<guid isPermaLink="true">https://creation.trovster.com/news/2007/09/18/dconstruct-2007/</guid>
+		<guid isPermaLink="true">/news/2007/09/18/dconstruct-2007/</guid>
 		<dc:creator>Trevor Morris</dc:creator>
 	</item>
 	<item>
 		<title>Web Usability Basics</title>
-		<link>https://creation.trovster.com/news/2007/07/17/web-usability-basics/</link>
+		<link>/news/2007/07/17/web-usability-basics/</link>
 		<description><![CDATA[<p>In a recent usability study we carried out on behalf of Kingston College we noticed a few common issues which a lot of
 websites have. There are a few basic issues which are often overlooked, but can be resolved relatively easily. Web usability
 should be an important focus when commissioning a new website as it can add significant value to your online presence.</p>
@@ -231,12 +231,12 @@ recommend your site.</p>
 below.</p>
 ]]></description>
 		<pubDate>Tue, 17 Jul 2007 13:07:19 +0100</pubDate>
-		<guid isPermaLink="true">https://creation.trovster.com/news/2007/07/17/web-usability-basics/</guid>
+		<guid isPermaLink="true">/news/2007/07/17/web-usability-basics/</guid>
 		<dc:creator>Trevor Morris</dc:creator>
 	</item>
 	<item>
 		<title>Cycle Scheme</title>
-		<link>https://creation.trovster.com/news/2007/06/05/cycle-scheme/</link>
+		<link>/news/2007/06/05/cycle-scheme/</link>
 		<description><![CDATA[<p>Recently I had a fantastically silly idea � I&#8217;ll start cycling to work. After looking around on a few websites I
 found a bike I was happy with, a Specialized Hardrock. However, I then found out about a government funded <a
 href="http://www.cyclescheme.co.uk">Cycle Scheme</a> which allows you to get a bike tax free.</p>
@@ -270,12 +270,12 @@ href="http://www.cyclescheme.co.uk">Cycle Scheme</a> which means you will save y
 � just in time for a glorious summer.</p>
 ]]></description>
 		<pubDate>Tue,  5 Jun 2007 10:34:14 +0100</pubDate>
-		<guid isPermaLink="true">https://creation.trovster.com/news/2007/06/05/cycle-scheme/</guid>
+		<guid isPermaLink="true">/news/2007/06/05/cycle-scheme/</guid>
 		<dc:creator>Trevor Morris</dc:creator>
 	</item>
 	<item>
 		<title>New Rules for Websites</title>
-		<link>https://creation.trovster.com/news/2007/04/28/new-rules-for-websites/</link>
+		<link>/news/2007/04/28/new-rules-for-websites/</link>
 		<description><![CDATA[<p>An update to the Companies Act legislation of 1985 has now come into force. To avoid breaching the <a
 href="http://www.dti.gov.uk/bbf/co-act-2006/index.html">Companies Act 2006</a>, from the 1st January 2007, all UK Limited
 companies must include certain information on their websites, email footers, order forms and electronic documentation. The
@@ -289,7 +289,7 @@ good practice, be included on all your company documentation.</p>
 href="mailto:info@creation.uk.com">email us</a> and we will offer our advice.</p>
 ]]></description>
 		<pubDate>Sat, 28 Apr 2007 15:35:07 +0100</pubDate>
-		<guid isPermaLink="true">https://creation.trovster.com/news/2007/04/28/new-rules-for-websites/</guid>
+		<guid isPermaLink="true">/news/2007/04/28/new-rules-for-websites/</guid>
 		<dc:creator>Trevor Morris</dc:creator>
 	</item>
 </channel>

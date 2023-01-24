@@ -4,13 +4,13 @@
 <title>Creation: Latest Articles with the Tag "Scheme" (RSS)</title>
 <link>https://creation.trovster.com</link>
 <description>Creation: Latest Articles with the Tag "Scheme" (RSS)</description>
-<link rel="alternate" type="text/html" href="https://creation.trovster.com/" />
-<link rel="self" type="application/rss+xml" href="https://creation.trovster.com/archives/scheme/rss/" />
+<link rel="alternate" type="text/html" href="/" />
+<link rel="self" type="application/rss+xml" href="/archives/scheme/rss/" />
 <language>en</language>
 <ttl>300</ttl>
 	<item>
 		<title>Cycle Scheme</title>
-		<link>https://creation.trovster.com/news/2007/06/05/cycle-scheme/</link>
+		<link>/news/2007/06/05/cycle-scheme/</link>
 		<description><![CDATA[<p>Recently I had a fantastically silly idea � I&#8217;ll start cycling to work. After looking around on a few websites I
 found a bike I was happy with, a Specialized Hardrock. However, I then found out about a government funded <a
 href="http://www.cyclescheme.co.uk">Cycle Scheme</a> which allows you to get a bike tax free.</p>
@@ -44,12 +44,12 @@ href="http://www.cyclescheme.co.uk">Cycle Scheme</a> which means you will save y
 � just in time for a glorious summer.</p>
 ]]></description>
 		<pubDate>Tue,  5 Jun 2007 11:34:14 +0100</pubDate>
-		<guid isPermaLink="true">https://creation.trovster.com/news/2007/06/05/cycle-scheme/</guid>
+		<guid isPermaLink="true">/news/2007/06/05/cycle-scheme/</guid>
 		<dc:creator>Trevor Morris</dc:creator>
 	</item>
 	<item>
 		<title>Donate Unwanted PCs</title>
-		<link>https://creation.trovster.com/news/2007/05/20/donate-unwanted-pcs/</link>
+		<link>/news/2007/05/20/donate-unwanted-pcs/</link>
 		<description><![CDATA[<p>Help students in The Gambia with your unwanted PCs. Following a visit to the region by our good friends at <a
 href="http://www.tlc.ac.uk">Tamworth &amp; Lichfield College</a>, John Fontaine and Belinda Ball, we are trying to help them
 collect computer equipment for students to use in Gambia.</p>
@@ -69,7 +69,7 @@ waste. Find out more about the WEEE Directive and <a href="http://weeenetwork.co
 affected by the regulations.</p>
 ]]></description>
 		<pubDate>Sun, 20 May 2007 16:50:26 +0100</pubDate>
-		<guid isPermaLink="true">https://creation.trovster.com/news/2007/05/20/donate-unwanted-pcs/</guid>
+		<guid isPermaLink="true">/news/2007/05/20/donate-unwanted-pcs/</guid>
 		<dc:creator>Leigh Scott</dc:creator>
 	</item>
 </channel>

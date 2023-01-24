@@ -14,18 +14,18 @@ else {
 	}
 }
 
-function file_setup($id,$name,$ext,$path='/',$check=false,$root='') {	
+function file_setup($id,$name,$ext,$path='/',$check=false,$root='') {
 	if(!isset($id) || !is_numeric($id) || empty($name) || empty($ext)) return NULL;
 	if($root=='') $root = $_SERVER['DOCUMENT_ROOT'];
-	if($id!=0) $file_name = '['.$id.']_'.$name.'.'.$ext;
+	if($id!=0) $file_name = $id.'_'.$name.'.'.$ext;
 	else $file_name = url_encode($name).'.'.$ext;
-	
+
 	//if($path=='/images/portfolio/advertising/') $path = '/images/portfolio/promotion/';
 	//if($path=='/images/services/advertising/') $path = '/images/services/promotion/';
 	$path = str_replace('/advertising/','/promotion/',$path);
-	
+
 	$path_local = $path;
-	
+
 	if($path=='/') {
 		$file_name = trim(strrchr($name,'/'),'/');
 		$path = substr($name,0,strlen($name)-strlen($file_name));
@@ -40,10 +40,10 @@ function file_setup($id,$name,$ext,$path='/',$check=false,$root='') {
 }
 function create_file($id,$name,$path,$upload) {
 	if(empty($id) || !is_numeric($id) || empty($name) || empty($upload)) return array('text' => ' There has been an unexpected error during this upload');
-	
+
 	$file_info_array = pathinfo($_FILES[$upload]['name']);
 	$ext = $file_info_array['extension'];
-	$file_name = '['.$id.']_'.url_encode($name).'.'.$ext;
+	$file_name = $id.'_'.url_encode($name).'.'.$ext;
 
 	move_uploaded_file($_FILES[$upload]['tmp_name'],$_SERVER['DOCUMENT_ROOT'].$path.$file_name);
 	chmod($_SERVER['DOCUMENT_ROOT'].$path.$file_name,0777);
@@ -53,7 +53,7 @@ function get_file($id,$path,$type=false,$root='') {
 	if($root=='') $root = $_SERVER['DOCUMENT_ROOT'];
 	if($handle = @opendir($root.$path)) {
 		while(false !== ($file = readdir($handle))) {
-			if($file != '.' && $file != '..' && preg_match('/\['.$id.'\]/',$file)) {
+			if($file != '.' && $file != '..' && preg_match('/'.$id.'/',$file)) {
 				if(($type==false && preg_match('/_small\./',$file)==0) || ($type=='small' && preg_match('/_small\./',$file))) {
 					$local = $root.$path.$file;
 					$file_info_array = pathinfo_filename($local);

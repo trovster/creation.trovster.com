@@ -84,10 +84,10 @@ function news_xml_setup($array,$type='comments') {
 
 	$return = array();
 	$return['path'] = '/xml/'.strtolower($type).'/';
-	$return['file'] = '['.$array['id'].']_'.trim($array['safe'],'/');
+	$return['file'] = $array['id'].'_'.trim($array['safe'],'/');
 
 	if(strtolower($type)=='hot-topics') {
-		$return['file'] = '['.$array['author']['id'].']_'.url_encode($array['author']['full-name']);
+		$return['file'] = $array['author']['id'].'_'.url_encode($array['author']['full-name']);
 	}
 
 	$return['rss']['class'] = array('rss','feed');
