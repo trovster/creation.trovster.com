@@ -4,3 +4,4 @@ node_modules
 _cache
 www
 .DS_Store
+.db
