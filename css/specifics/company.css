@@ -1,0 +1,96 @@
+/*
+* Author: 		Trevor Morris, Creation Design & Marketing
+* Contact:		trevor@creation.uk.com, leigh@creation.uk.com
+* Version:		1.0
+* Created:		24/04/2007
+* Updated:		01/05/2007
+* Notes:		Company section specific styles.
+*
+* CONTENTS
+* -------------------------
+* =nav - Section Navigation
+* =pro - Profile Information
+*
+*/
+
+/* =nav - Section Navigation
+--------------------------------------------------------------------------------------------------*/
+#content-navigation li.company a,
+#content-navigation li.company a span.gl-ir {
+	background-image: url(../images/profiles/company-profile.gif);
+}
+#content-navigation li.leigh-scott a,
+#content-navigation li.leigh-scott a span.gl-ir {
+	background-image: url(../images/profiles/leigh-scott.gif);
+}
+#content-navigation li.tim-webley a,
+#content-navigation li.tim-webley a span.gl-ir {
+	background-image: url(../images/profiles/tim-webley.gif);
+}
+#content-navigation li.trevor-morris a,
+#content-navigation li.trev-morris a,
+#content-navigation li.trevor-morris a span.gl-ir,
+#content-navigation li.trev-morris a span.gl-ir {
+	background-image: url(../images/profiles/trevor-morris.gif);
+}
+#content-navigation li.rich-rees a,
+#content-navigation li.richard-rees a,
+#content-navigation li.rich-rees a span.gl-ir,
+#content-navigation li.richard-rees a span.gl-ir {
+	background-image: url(../images/profiles/richard-rees.gif);
+}
+#content-navigation li.louise-scott a,
+#content-navigation li.louise-scott a span.gl-ir {
+	background-image: url(../images/profiles/louise-scott.gif);
+}
+
+
+/* =pro - Profile Information
+--------------------------------------------------------------------------------------------------*/
+.my-profile {
+	position: relative;
+	min-height: 500px;
+}
+.my-profile .logo {
+	position: absolute; top: 0; right: 0;
+	text-align: right;
+}
+.my-profile .professional {
+	position: relative;
+	height: 108px;
+	margin: 0 108px 16px 0;
+}
+.my-profile .professional dl {
+	position: absolute; bottom: -1px;
+	margin: 0;
+}
+.my-profile .professional dt.vcard_role,
+.my-profile .professional dt.lli {
+	display: none;
+}
+.my-profile .professional .age {
+	display: inline;
+}
+.my-profile .professional .age strong {
+	font-weight: normal;
+}
+.my-profile .description {
+	clear: both;
+}
+.my-profile .personal {
+	margin-top: 3em;
+}
+
+
+#vision,
+#vision span.gl-ir {
+	height: 356px; width: 352px;
+	background-image: url(../images/profile-vision.gif);
+}
+
+.testimonial {
+	margin: 2em 0;
+}
+.testimonial p {
+	margin-bottom: 0;
+}

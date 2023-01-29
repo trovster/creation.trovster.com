@@ -1,0 +1,330 @@
+/*
+* Author: 		Trevor Morris, Creation Design & Marketing
+* Contact:		trevor@creation.uk.com, leigh@creation.uk.com
+* Version:		1.1
+* Created:		24/04/2007
+* Updated:		05/06/2007
+* Notes:		Styles relating to font usage and colours.
+*
+* CONTENTS
+* -------------------------
+* =gen - General
+* =head - Headings
+* =link - Links
+*
+* Colours
+* -------------------------
+* body 				- #333
+* heading/accent	- #900
+* heading level 2	- #999
+*
+*/
+
+/* =gen - General
+--------------------------------------------------------------------------------------------------*/
+body {
+	font: normal normal 62.5%/1.5 Helvetica, Arial, sans-serif; /* 62.5% means a default font-size of 10px based upon 16px base-font */
+	line-height: 1.5; /* YEH, this is for Safari - http://www.quirksmode.org/bugreports/archives/2006/09/Line_height_declaration_in_short_hand_form.html */
+}
+#container {
+	font-size: 1.1em; /* sets the page size to 11px based on 16px base-font - EM Calculator from now on - http://riddle.pl/emcalc/ */
+}
+p, ul, ol, dl, blockquote, form, pre, table {
+	margin: 0 0 1em;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+ol {
+	margin-left: 16px;
+	list-style-type: decimal;
+}
+ul li,
+#services-listing dl dt {
+	background: url(/css/images/general/list-bullet.gif) no-repeat 0 0.6em;
+	padding-left: 10px;
+}
+blockquote {
+	font-style: italic;
+	font-size: 1.09em; /* 12px */ line-height: 1.35;
+}
+.hentry .entry-content blockquote {
+	font-size: 1em;
+}
+p.price,
+#services-listing dl dt,
+#related-portfolio a:link, #related-portfolio a:visited, #related-portfolio a:hover, #related-portfolio a:active, #related-portfolio a:focus {
+	font-weight: bold;
+}
+#content p.price {
+	text-transform: none;
+	margin-bottom: 1.5em;
+}
+
+
+
+/* =col - Colours
+--------------------------------------------------------------------------------------------------*/
+body,
+p.comments a:link, p.comments a:visited, p.comments a:hover, p.comments a:active,
+#comments-view p.fn a:link, #comments-view p.fn a:visited, #comments-view p.fn a:hover,
+#comments-view p.fn a:active, #comments-view p.fn a:focus,
+.selection dt a:link, .selection dt.next_to_hover a:link, .selection dd.next_to_hover a:link,
+.selection dt a:visited, .selection dt.next_to_hover a:visited, .selection dd.next_to_hover a:visited,
+.selection dt a:hover, .selection dt.next_to_hover a:hover, .selection dd.next_to_hover a:hover,
+.selection dt a:active, .selection dt.next_to_hover a:active, .selection dd.next_to_hover a:active,
+.selection dt a:focus, .selection dt.next_to_hover a:focus, .selection dd.next_to_hover a:focus,
+.vcard h4.org,
+h4.subtitle,
+p.timestamp,
+#content-primary .vcard a.email:link, #content-primary .vcard a.email:visited, #content-primary .vcard a.email:hover,
+#content-primary .vcard a.email:active, #content-primary .vcard a.email:focus,
+#comments-view h3.section-title em,
+#hot-topic .hentry h3,
+#comments-view .hentry h3 em,
+.project p.link a:link, .project p.link a:visited, .project p.link a:hover, .project p.link a:active, .project p.link a:focus,
+#related-portfolio a:link, #related-portfolio a:visited, #related-portfolio a:hover, #related-portfolio a:active, #related-portfolio a:focus,
+#entry-meta-extra-explain li a:link, #entry-meta-extra-explain li a:visited,
+#entry-meta-extra-explain li a:hover, #entry-meta-extra-explain li a:active, #entry-meta-extra-explain li a:focus,
+#entry-meta-related-tags li a:link, #entry-meta-related-tags li a:visited,
+#entry-meta-related-tags li a:hover, #entry-meta-related-tags li a:active, #entry-meta-related-tags li a:focus,
+p.price,
+#services-listing dl dt,
+body.feedback .introduction h4 {
+	color: #333;
+}
+a:link, a:visited, a:hover, a:active,
+h3, h4, h5,
+.my-profile dd.role,
+h3.entry-title a:link, h3.entry-title a:visited, h3.entry-title a:hover, h3.entry-title a:active, h3.entry-title a:focus,
+.my-profile .description a:link, .my-profile .description a:visited, .my-profile .description a:hover,
+.my-profile .description a:active, .my-profile .description a:focus {
+	color: #900;
+}
+h3 em,
+.my-profile .age,
+.vcard dd.tel .type,
+p.author,
+p.author a:link, p.author a:visited, p.author a:hover, p.author a:active,
+#comments-view .hentry .timestamp a:link, #comments-view .hentry .timestamp a:visited,
+#comments-view .hentry .timestamp a:hover, #comments-view .hentry .timestamp a:active,
+#entry-meta-author-posts h3.section-title a:link, #entry-meta-author-posts h3.section-title a:visited,
+#entry-meta-author-posts h3.section-title a:active, #entry-meta-author-posts h3.section-title a:focus,
+body.eshot div.entry-content h3 a:link, body.eshot div.entry-content h3 a:visited,
+body.eshot div.entry-content h3 a:active, body.eshot div.entry-content h3 a:focus,
+body.feedback .introduction h4 em {
+	color: #999;
+}
+blockquote {
+	color: #777;
+}
+
+
+
+/* =head - Headings
+--------------------------------------------------------------------------------------------------*/
+h3,
+.my-profile dd.role,
+.my-profile .age,
+h4.subtitle,
+p.entry-timestamp,
+p.author,
+p.price,
+body.feedback .introduction h4 {
+	text-transform: uppercase; line-height: 1.15; font-size: 1.36em; /* 15px */
+}
+h3,
+h4.subtitle {
+	margin-bottom: 0.666em;
+}
+h4,
+p.link a,
+p.comments a,
+#comments-view p.fn a,
+.vcard a.email,
+#hot-topic .hentry h3,
+.selection dt,
+#comments-view .hentry h3 em {
+	font-weight: bold;
+}
+h3 em,
+body.feedback .introduction h4 em {
+	display: block;
+	font-style: normal;
+}
+h4.subtitle,
+p.timestamp,
+body.feedback .introduction h4 {
+	margin: 0.333em 0 1em;
+	font-weight: normal;
+}
+.my-profile .professional h3.fn,
+#about-testimonials h3,
+#service h3,
+#contact h3,
+h3.entry-title, h3.feedback-title,
+#comments-view h3.section-title em {
+	margin-bottom: 0;
+	text-transform: none; font-size: 2.73em; /* 30px */ letter-spacing: -0.015em;
+}
+#service h3,
+#contact h3,
+h3.entry-title {
+	margin-top: 20px;
+}
+#comments-view h3.section-title em {
+	font-size: 2em; /* 30px */
+}
+#hot-topic .hentry h3 {
+	font-size: 1em; /*11px*/ line-height: 1.5; letter-spacing: 0;
+}
+#hot-topic .hentry h3,
+#hot-topic .hentry p.timestamp {
+	margin-top: 0;
+}
+
+
+/* =link - Links
+--------------------------------------------------------------------------------------------------*/
+a:link, a:visited, a:hover, a:active,
+#hot-topic .hentry h3 {
+	text-decoration: none;
+	border-bottom: 1px solid #fff;
+}
+.selection dt:hover a,
+.selection dt a:hover, .selection dt a:focus,
+.selection dt.next_to_hover a,
+.selection dd.next_to_hover a,
+.project p.link a:focus, .project p.link a:hover, .project p.link a:active,
+p.comments a:focus, p.comments a:hover, p.comments a:active,
+p.author a:focus, p.author a:hover, p.author a:active,
+#comments-view p.fn a:focus, #comments-view p.fn a:hover, #comments-view p.fn a:active,
+#content-primary .vcard a.email:hover, #content-primary .vcard a.email:active, #content-primary .vcard a.email:focus,
+#entry-meta-author-posts h3.section-title a:hover, #entry-meta-author-posts h3.section-title a:active, #entry-meta-author-posts h3.section-title a:focus,
+#related-portfolio a:hover, #related-portfolio a:active, #related-portfolio a:focus,
+#entry-meta-extra-explain li a:hover, #entry-meta-extra-explain li a:active, #entry-meta-extra-explain li a:focus,
+#entry-meta-related-tags li a:hover, #entry-meta-related-tags li a:active, #entry-meta-related-tags li a:focus,
+body.eshot div.entry-content h3 a:hover, body.eshot div.entry-content h3 a:active, body.eshot div.entry-content h3 a:focus {
+	border-bottom-color: #777;
+}
+#comments-view div.hentry p.timestamp a:hover,
+#comments-view div.hentry p.timestamp a:active,
+#comments-view div.hentry p.timestamp a:focus {
+	border-bottom-color: #999;
+}
+a:hover, a:active, a:focus, 
+h3.entry-title a:hover, h3.entry-title a:focus,
+.my-profile .description a:hover, .my-profile .description a:active, .my-profile .description a:focus  {
+	border-bottom-color: #900;
+}
+#footer-copyright p.top a,
+#footer-copyright p.top a span.gl-ir {
+	height: 12px; width: 76px;
+	margin: 0;
+	line-height: 1em;
+	background: url(/css/images/footer/footer_link_top_black.gif) no-repeat 0 0;
+	border: 0; 
+}
+#footer-copyright p.top a:hover,
+#footer-copyright p.top a:hover span.gl-ir {
+	background-position: 0 -18px;
+}
+#content-primary #image-navigation a {
+	border: 0;
+}
+
+
+.pdf a,
+.external,
+#comments-view .hentry .author p .external {
+	padding-right: 11px;
+	background: url(/css/images/icons/macro-link-external.gif) no-repeat 100% 50%;
+}
+.feed a,
+a.feed {
+	padding-right: 13px;
+	background: url(/css/images/icons/macro-link-feed.jpg) no-repeat 100% 2px;
+}
+a[href^='mailto:'] {}
+.pdf a {
+	background-image: url(/css/images/icons/macro-link-pdf.gif);
+}
+a.image, a.image:hover, a.image:focus {
+	border: 0;
+}
+
+
+
+table {
+	width: 100%;
+}
+table th {
+	font-weight: normal;
+}
+table thead tr {
+	border-bottom: 1px solid #ccc;
+}
+table tbody tr.odd,
+body.sitemap table tbody tr {
+	background-color: #fff;
+}
+table tbody tr,
+body.sitemap table tbody tr.even {
+	background-color: #efefef;
+}
+table tr td.highlight {
+	background-color: #ddd;
+}
+table tr.even td.highlight {
+	background-color: #bbb;
+}
+table tr.even a:link, table tr.even a:visited {
+	border-bottom-color: #efefef;
+}
+table tr td.highlight a:link, table tr td.highlight a:visited {
+	border-bottom-color: #ddd;
+}
+table tr.even td.highlight a:link, table tr.even td.highlight a:visited {
+	border-bottom-color: #bbb;
+}
+table tr.even a:hover, table tr.even a:active, table tr.even a:focus,
+table tr td.highlight a:hover, table tr td.highlight a:active, table tr td.highlight a:focus,
+table tr.even td.highlight a:hover, table tr.even td.highlight a:active, table tr.even td.highlight a:focus {
+	border-bottom-color: #900;
+}
+
+
+.telephone #content-primary {
+	position: relative;
+}
+#search-telephone {
+	position: absolute; top: -25px;
+	overflow: hidden;
+}
+#telephone-numbers td {
+	padding: 2px 3px;
+}
+#telephone-numbers thead #contact,
+#telephone-numbers tbody td[headers=contact] {
+	width: 300px;
+	padding-right: 15px;
+}
+#telephone-numbers tbody td[headers=internal] {
+	font-weight: bold;
+}
+#search-telephone label, 
+#search-telephone input {
+	float: left;
+}
+#search-telephone input {
+	width: 247px;
+	margin: 0 5px;
+	border: 1px solid #ddd;
+}
+form.quicksearch #loader {
+	height: 16px; width: 16px;
+	background-image: url(images/icons/loader.gif)
+}

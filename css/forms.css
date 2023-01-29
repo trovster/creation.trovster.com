@@ -1,0 +1,265 @@
+/*
+* Author: 		Trevor Morris, Creation Design & Marketing
+* Contact:		trevor@creation.uk.com, leigh@creation.uk.com
+* Version:		1.0
+* Created:		24/04/2007
+* Updated:		06/06/2007
+* Notes:		
+*
+* CONTENTS
+* -------------------------
+* =gen  General
+* =err  Error Feedback/Styles
+* =sub  Submit Button Styles
+* =comm - Comments Form
+*
+*/
+
+/* =gen  General
+--------------------------------------------------------------------------------------------------*/
+form {
+	position: relative;
+}
+form fieldset dl dt {
+	margin-bottom: 5px;
+}
+form fieldset dl dd {
+	margin-bottom: 15px;
+}
+form fieldset dl .hidden {
+	display: none;
+}
+form fieldset dl input.text,
+form fieldset dl input.password,
+form fieldset dl input.file,
+form fieldset dl textarea {
+	width: 95%;
+	padding: 2px;
+	background-color: #fff !important;
+	font-family: Helvetica, Arial, sans-serif;
+	border: 1px solid #fff; border-top-color: #999; border-left-color: #b6a7a7;
+}
+form fieldset dl input.text:focus,
+form fieldset dl input.password:focus,
+form fieldset dl input.file:focus,
+form fieldset dl textarea:focus {
+	border: 1px solid #ccc;
+}
+form fieldset dl .text input,
+form fieldset dl .password input {
+	height: 1.5em; vertical-align: middle;
+}
+form fieldset dl .checkbox input,
+form fieldset dl .radio input {
+	margin-right: 10px;
+	background-color: transparent !important;
+}
+
+form fieldset dd.auto input {
+	color: #aaa;
+}
+
+form fieldset dd ul {
+	margin-bottom: 0;
+}
+form fieldset dd ul li {
+	padding: 0;
+	background-image: none;
+}
+form fieldset dd ul li label {
+	vertical-align: top;
+}
+form fieldset dl .password input {}
+form fieldset dl textarea {
+	height: 190px;
+}
+form a.expand-link {
+	float: left; display: inline;
+}
+form fieldset dl input.openid {
+	background: url(/css/images/icons/openid.gif) no-repeat 2px 2px;
+	padding-left: 20px;
+	width: 316px;
+}
+
+
+
+/* =err  Error Feedback/Styles
+--------------------------------------------------------------------------------------------------*/
+
+
+/* =sub  Submit Button Styles
+--------------------------------------------------------------------------------------------------*/
+form fieldset.submit-fieldset {
+	clear: left;
+}
+form fieldset.submit-fieldset ul li {
+	padding: 0;
+	background-image: none;
+}
+form fieldset.submit-fieldset input.replaced {
+	height: 29px; width: 174px;
+	background-image: url(/css/images/forms/buttons.gif); /* all buttons in one image */
+	border: 0;
+	cursor: pointer;
+}
+form fieldset.submit-fieldset input.comment:hover,
+form fieldset.submit-fieldset input.comment:focus,
+form fieldset.submit-fieldset .hover input.comment {
+	background-position: 0 -29px; /* hover position of background image */
+}
+form fieldset.submit-fieldset input.comment:active {
+	background-position: 0 -58px;
+}
+
+form fieldset.submit-fieldset input.feedback {
+	background-position: -174px 0;
+}
+form fieldset.submit-fieldset input.feedback:hover,
+form fieldset.submit-fieldset input.feedback:focus,
+form fieldset.submit-fieldset .hover input.feedback {
+	background-position: -174px -29px;
+}
+form fieldset.submit-fieldset input.feedback:active {
+	background-position: -174px -58px;
+}
+
+
+
+/* =comm - Comments Form
+--------------------------------------------------------------------------------------------------*/
+#comments-form form {
+	position: relative;
+	margin: 0 0 -20px; padding: 20px 20px 10px;
+	background: #900 url(/css/images/forms/comments_fade.gif) no-repeat 443px 0;
+}
+#comments-form form fieldset.column {
+	padding-top: 40px;
+}
+#comments-form-your-details-fieldset {
+	background: transparent url(/css/images/forms/comments_title_your_details.gif) no-repeat 0 0;
+}
+#comments-form-your-comment-fieldset {
+	background: transparent url(/css/images/forms/comments_title_thoughts.gif) no-repeat 0 0;
+}
+#comments-form form dt,
+#comments-form form label,
+#comments-form form dd p {
+	color: #fff;
+}
+#comments-form form .text input,
+#comments-form form textarea {
+	background-color: #f5e6e6 !important;
+}
+
+#comments-form form textarea {
+	padding: 5px;
+	background: url(/css/images/forms/comments_fade_input.jpg) no-repeat 2px 0;
+}
+#comments-form form a {
+	color: #fff;
+	border-bottom-color: #900;
+}
+#comments-form form a:hover,
+#comments-form form a:focus {
+	border-bottom-color: #fff;
+}
+#comments-form form fieldset.submit-fieldset {
+	width: 720px;
+	padding-bottom: 10px;
+}
+#comments-form form fieldset.submit-fieldset input.submit {
+	float: right;
+}
+#comments-form form fieldset#comments-form-your-details-openid-fieldset {
+	display: none;
+	position: absolute; top: 20px;
+}
+
+
+
+
+
+/* =cont - Contact Form
+--------------------------------------------------------------------------------------------------*/
+#contact-feedback form dl input,
+#contact-feedback form dl textarea {
+	background-color: #efefef !important;
+}
+#contact-feedback form dl dt {
+	margin-bottom: 2px;
+}
+#contact-feedback form dl dd {
+	margin-bottom: 10px;
+}
+#contact-feedback form dl textarea {
+	height: 120px;
+}
+#contact-feedback form fieldset.submit-fieldset {
+	margin: 3px 0 0 -5px;
+}
+#container #content form fieldset dl input.safari {
+	background-color: #fff !important;
+}
+
+
+
+/* =feed - Feedback & Admin
+--------------------------------------------------------------------------------------------------*/
+body.admin form fieldset dl textarea,
+body.admin form fieldset dl input,
+#feedback dl textarea,
+#feedback dl input {
+	border: 1px solid #ccc;
+}
+body.admin form fieldset dl textarea:focus,
+body.admin form fieldset dl input:focus,
+#feedback dl textarea:focus,
+#feedback dl input:focus {
+	border-color: #aaa;
+}
+
+
+
+/* =admin - Admin
+--------------------------------------------------------------------------------------------------*/
+body.admin form fieldset.submit-fieldset ul input {}
+body.admin form dl dt.error em.error {
+	color: #f00; font-style: normal;
+}
+body.admin form fieldset select {
+	width: 150px;
+}
+body.admin form fieldset textarea.small {
+	height: 100px;
+}
+body.admin form fieldset textarea.tiny {
+	height: 40px;
+}
+body.admin form fieldset.main-details {
+	margin-bottom: 20px;
+}
+body.admin form fieldset.images {
+	padding: 10px 15px 0; margin-bottom: 2em;
+	border: 1px solid #ccc;
+}
+body.admin form fieldset.images legend {
+	position: relative; top: 0; left: 0;
+	display: block;
+	height: auto; width: auto; padding: 0;
+	background-color: #fff; font-size: 1em;
+}
+
+body.admin form#news-article-update fieldset textarea#text-required {
+	height: 550px;
+}
+body.admin form#news-article-update fieldset .status {}
+
+
+
+
+/* =admin - Admin Fronted
+--------------------------------------------------------------------------------------------------*/
+form.editable-area textarea {
+	border: 1px solid #ccc;
+}
