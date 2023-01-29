@@ -1,0 +1,81 @@
+/* =!! IE6 Stylesheet
+-------------------------------------------------------------------------------------------------- 
+* General fixes for bugs in Internet Explorer 6 and below. 
+* Note: There is a separate stylesheet for IE5.* to fix it's issue with the box model.
+*/
+
+/* == METHODS - Easy Clearing
+http://www.positioniseverything.net/easyclearing.html
+-------------------------------------------------------------------------------------------------- */
+.clearfix,
+#content,
+#content-primary,
+form,
+#footer-extra,
+#content-navigation,
+#content-primary .permalink,
+#comments-view,
+#feedback dd.rating,
+#feedback dl dt {
+	/* Hides from IE-mac \*/
+	height: 1%;
+	/* End hide from IE-mac */
+}
+
+/* min-height fixes */
+#image-navigation,
+body.error #content-primary {
+	height: 372px;
+}
+#content, body.portfolio .project {
+	height: 500px;
+}
+body.eshot-permalink #content {
+	height: auto;
+}
+body.news #content-navigation,
+body.news #image-navigation {
+	height: 372px;
+}
+#comments-view,
+#comments-form,
+ul li,
+#services-listing dl dt {
+	display: inline-block; /* have you got layout? */
+}
+#comments-view {
+	width: 720px;
+}
+
+form fieldset.submit-fieldset input.comment,
+form fieldset.submit-fieldset input.feedback {
+	width: 173px; width: 170px;
+	margin-left: 3px;
+}
+
+
+#content-navigation {
+	margin-bottom: 0;
+}
+#footer-copyright {
+	display: inline-block;
+	padding-bottom: 20px;
+}
+
+#content #content-primary div.jcarousel-scope a,
+#content #content-primary div.image a {
+	height: 356px;
+}
+#content #content-primary div.image ol#position-navigation li a {
+	height: 4px;
+}
+
+
+ /* yeh, nice one IE - something to do with italic font */
+#content-primary .tagline {
+	width: 166px;
+}
+body.permalink div.permalink .entry-content blockquote,
+#comments-view .hentry blockquote {
+	width: 95%;
+}

@@ -1,0 +1,92 @@
+/*
+* Author: 		Trevor Morris, Creation Design & Marketing
+* Contact:		trevor@creation.uk.com, leigh@creation.uk.com
+* Version:		1.0
+* Created:		24/04/2007
+* Updated:		15/05/2007
+* Notes:		For jCarousel-enabled pages, including:
+				Portfolio, News
+*
+*/
+#content-primary div.image ul.pagination {
+	position: absolute; top: 0; left: 0;
+	height: 100%; width: 100%;
+	margin: 0;
+}
+#content-primary div.image ul.pagination li a,
+#content-primary div.image a {
+	position: absolute; top: 0; z-index: 5;
+	width: 49.5%; height: 100%;
+}
+#content-primary div.image ul.pagination li.next a,
+#content-primary div.image a.jcarousel-next {
+	right: 0;
+}
+#content-primary div.image ul.pagination li.prev a,
+#content-primary div.image a.jcarousel-prev {
+	left: 0;
+}
+#content-primary div.image ul.pagination li.next a:hover,
+#content-primary div.image a.pulsate-next,
+#content-primary div.image a.jcarousel-next:hover {
+	background: url(../images/arrow_next.gif) no-repeat 100% 50%;
+	cursor: pointer;
+}
+#content-primary div.image ul.pagination li.prev a:hover,
+#content-primary div.image a.pulsate-prev,
+#content-primary div.image a.jcarousel-prev:hover {
+	background: url(../images/arrow_prev.gif) no-repeat 0 50%;
+	cursor: pointer;
+}
+#content-primary div.image a.fast-forward:hover {
+	background-image: url(../images/arrow_fastforward.gif);
+}
+#content-primary div.image a.rewind:hover {
+	background-image: url(../images/arrow_rewind.gif);
+}
+#content-primary div.image,
+#content-primary .jcarousel-scope {
+    position: relative;
+    width: 352px;
+    background: #fff;
+}
+#content-primary .jcarousel-list {
+    overflow: hidden;
+    margin: 0; padding: 0;
+}
+#content-primary .jcarousel-list li {
+    float: left;
+	padding: 0;
+    list-style: none;
+	background-image: none;
+}
+#content-primary ul.pagination li.first a,
+#content-primary ul.pagination li.last a,
+#content-primary div.image a.jcarousel-next-disabled,
+#content-primary div.image a.jcarousel-prev-disabled {
+    display: none !important;
+}
+
+
+div.image ol#position-navigation {
+	position: absolute; top: -11px; right: 0;
+	overflow: hidden;
+}
+div.image ol#position-navigation li {
+	float: left; list-style: none;
+	margin: 0 2px 0 0; padding: 0;
+	background-image: none;
+}
+div.image ol#position-navigation li.lli {
+	margin-right: 0;
+}
+div.image ol#position-navigation li a {
+	position: static;
+	width: 4px; height: 4px;
+	background-color: #fff;
+	border: 1px solid #aaa;
+}
+div.image ol#position-navigation li.active a {
+	background-color: #aaa;
+	border: 1px solid #aaa;
+}

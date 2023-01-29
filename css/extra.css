@@ -1,0 +1,98 @@
+/*
+* Author: 		Trevor Morris, Creation Design & Marketing
+* Contact:		trevor@creation.uk.com, leigh@creation.uk.com
+* Version:		1.0
+* Created:		24/04/2007
+* Updated:		07/06/2007
+* Notes:		
+*
+* CONTENTS
+* -------------------------
+* =gen  - General styles
+* =wide - Wide layout - 1024+
+*
+*/
+
+/* =gen - General styles
+-------------------------------------------------------------------------------------------------- */
+#extra {
+	clear: left; overflow: hidden;
+	margin: 0 -20px; padding: 20px 20px 16px;
+	border-top: 1px solid #ccc;
+	background: #ededed url(/css/images/general/divider_repeat.gif) repeat-x 0 0;
+}
+#extra #extra-title {}
+#extra .column {}
+#extra .column h3 {
+	font-size: 1em; margin: 0;
+}
+#extra .column a {
+	border-bottom-color: #eee;
+}
+#extra .column h3,
+#extra .column h3 a {
+	text-transform: uppercase; color: #333; font-weight: bold; line-height: 1.5;
+	border-bottom-color: #eee;
+}
+#extra .column a:hover {
+	border-bottom-color: #900;
+}
+#extra .column h3 a:hover {
+	border-bottom-color: #333;
+}
+#extra p.more {
+	margin-top: -1em;
+	text-transform: uppercase;
+}
+#extra img.news-extra-image {
+	float: right;
+}
+
+
+/* =wide - Wide layout - 1024+
+-------------------------------------------------------------------------------------------------- 
+body.wide #container {
+	width: 940px;
+	background: #fff url(images/content-wide-repeat.gif) repeat-y 760px 0;
+}
+body.wide #content {
+	float: left;
+	width: 720px;
+}
+body.wide #branding,
+body.wide #comments-view {
+	overflow: hidden;
+	width: 940px;
+	background-color: #fff;
+}
+
+body.wide #extra {
+	clear: none; float: left;
+	display: block;
+	width: 168px;
+	padding: 16px 16px 0; margin: 0 0 0 20px;
+	border-top: 0;
+	background-image: none;
+}
+body.wide #extra .column {
+	margin-bottom: 1em;
+	border-bottom: 1px solid #ccc;
+}
+body.wide #extra .column .second .column {
+	padding-top: 1em;
+	border-top: 1px solid #ccc;
+}
+body.wide #extra .column .column,
+body.wide #extra .last {
+	border: 0; margin-bottom: 0;
+}
+body.wide #comments-form {
+	width: 980px;
+}
+body.wide #comments-form form fieldset.submit-fieldset {
+	width: 940px;
+}
+body.wide #comments-form #comments-form-your-comment-fieldset textarea {
+	width: 550px;
+}
+*/

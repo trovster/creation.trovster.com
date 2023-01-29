@@ -1,0 +1,58 @@
+/*
+* Author: 		Trevor Morris, Creation Design & Marketing
+* Contact:		trevor@creation.uk.com, leigh@creation.uk.com
+* Version:		1.0
+* Created:		24/04/2007
+* Updated:		16/05/2007
+* Notes:		Services section specific styles.
+*
+* CONTENTS
+* -------------------------
+* =nav - Section Navigation
+* =oth - Other
+*/
+
+/* =nav - Section Navigation
+--------------------------------------------------------------------------------------------------*/
+#content-navigation li.advertising a,
+#content-navigation li.advertising a span.gl-ir {
+	background-image: url(../images/services/nav-promotion.jpg);
+}
+#content-navigation li.branding a,
+#content-navigation li.branding a span.gl-ir {
+	background-image: url(../images/services/nav-branding.jpg);
+}
+#content-navigation li.print a,
+#content-navigation li.print a span.gl-ir {
+	background-image: url(../images/services/nav-print.jpg);
+}
+#content-navigation li.display a,
+#content-navigation li.display a span.gl-ir {
+	background-image: url(../images/services/nav-display.jpg);
+}
+#content-navigation li.websites a,
+#content-navigation li.websites a span.gl-ir {
+	background-image: url(../images/services/nav-websites.jpg);
+}
+#content-navigation li.consultancy a,
+#content-navigation li.consultancy a span.gl-ir {
+	background-image: url(../images/services/nav-consultancy.jpg);
+}
+
+
+/* =oth - Other
+--------------------------------------------------------------------------------------------------*/
+#services-listing dl {
+	/*font-size: 0.91em  10px */
+}
+#services-listing dl dt.hovered,
+#services-listing dl dt.selected {
+	cursor: pointer;
+	color: #900;
+}
+#services-listing dl dd {
+	padding-left: 10px;
+}
+p.price em {
+	font-style: normal; font-weight: bold;
+}

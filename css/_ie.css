@@ -1,0 +1,51 @@
+/* =!! IE Stylesheet
+-------------------------------------------------------------------------------------------------- 
+* General fixes for bugs in Internet Explorer
+* Note: There are separate stylesheets for IE6 and below and IE5.* and below.
+*/
+
+/* == METHODS - Easy Clearing
+http://www.positioniseverything.net/easyclearing.html
+http://www.456bereastreet.com/archive/200603/new_clearing_method_needed_for_ie7/
+-------------------------------------------------------------------------------------------------- */
+.clearfix,
+#content,
+#content-primary,
+form,
+#footer-extra,
+#content-navigation,
+#content-primary .permalink,
+#comments-view,
+#feedback dd.rating,
+#feedback dl dt {
+	display: inline-block;
+}
+a {
+	cursor: pointer;
+}
+ol {
+	margin-left: 25px;
+}
+
+#content-navigation {
+	margin-bottom: 15px;
+}
+#comments-form form fieldset.submit-fieldset {
+	margin-top: -15px;
+}
+body.permalink .entry-content ol {
+	margin-left: 25px;
+}
+
+#content-primary div.image ul.pagination li a,
+#content-primary div.image a {
+	background: url(/css/images/arrow_rewind.gif) no-repeat -2000px -2000px; /* triggers the active link, and the background-image */
+}
+form fieldset dd ul li label {
+	vertical-align: baseline;
+}
+.external,
+#comments-view .hentry .author p .external {
+	padding-right: 0;
+	background-image: none;
+}
