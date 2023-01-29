@@ -2,6 +2,7 @@ error_log
 node_modules
 .env
 _cache
+cache
 www
 .DS_Store
 .db
