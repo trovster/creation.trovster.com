@@ -18,7 +18,7 @@ $(document).ready(
 
 		if(!$.browser.safari) {
 		$.ajax({
-			type: 'POST',
+			type: 'GET',
 			url: '/_compile/a_portfolio_images/',
 			data: 'id='+portfolio_id+'&category='+category+'&company='+company+'&detail='+detail+'&image='+current_image,
 			dataType: 'xml',
