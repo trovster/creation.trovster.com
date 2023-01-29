@@ -2,26 +2,25 @@ $(document).ready(
 	function() {
 		var news_id = $('#content-primary > .permalink.hentry').attr('id');
 		var total_images = $('#position-navigation li a').size();
-		
+
 		if($('#'+news_id+' div.image img').size()==0 || total_images==0) return false;
-		
+
 		$next = $('#'+news_id+' div.image ul.pagination li.next a');
 		$prev = $('#'+news_id+' div.image ul.pagination li.prev a');
 		$next_accesskey = $next.size() ? $next.attr('accesskey') : 'x';
 		$prev_accesskey = $prev.size() ? $prev.attr('accesskey') : 'z';
-		
-		
+
+
 		var current_image = $('#'+news_id+' div.image img').attr('title'); // current image
 		var current_image_pos = parseInt($('#'+news_id+' div.image img').attr('id').match(/\d+$/)); // current image position 1+
-		
+
 		if(!$.browser.safari) {
 		$.ajax({
 			type: 'POST',
-			url: '/_compile/a_news_images.php',
+			url: '/_compile/a_news_images/',
 			data: 'id='+news_id+'&image='+current_image,
 			dataType: 'xml',
 			success: function(xml) {
-				
 				var ul = $('<ul>');
 				$('img', xml).each(
 					function() {
@@ -37,7 +36,7 @@ $(document).ready(
 					}
 				);
 				$('#'+news_id+' div.image > img').remove();
-				
+
 				function itemFirstInHandler(carousel, li, idx, state) {
 					if(state!='init') return;
 					$('#'+news_id+' #image-navigation a').click(function() {
@@ -53,7 +52,7 @@ $(document).ready(
 						return false;
 					});
 				}
-			
+
 				$('#'+news_id+' div.image').jcarousel({
 					itemVisible: 1,
 					itemScroll: 1,
@@ -69,7 +68,7 @@ $(document).ready(
 							if(state!='init') return;
 							if(idx==current_image_pos) {
 								if(total_images==current_image_pos) {
-									// add pulsate to the previous	
+									// add pulsate to the previous
 									$(li).parents('div.image').find('a[@rel=prev]').addClass('pulsate-prev');
 								}
 								else {
@@ -88,7 +87,7 @@ $(document).ready(
 							});
 							$('#image-navigation img#s'+image_id).parents('li').addClass('active');
 							$('#position-navigation li#p'+image_id).addClass('active');
-							
+
 							if(idx==1) {
 								$(li).addClass('start').addClass('first');
 								$('#content-primary div.image a.jcarousel-prev').addClass('start').addClass('fast-forward');
@@ -108,7 +107,7 @@ $(document).ready(
 					},
 					itemFirstInHandler: itemFirstInHandler
 				});
-				
+
 				function mycarousel_initCallback(carousel) {
 					// Pause autoscrolling if the user moves with the cursor over the clip.
 					carousel.clip.hover(function() {

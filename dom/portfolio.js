@@ -8,22 +8,21 @@ $(document).ready(
 
 		// only remove the elements IF the ajax was successful...
 		$('#content-primary .project .image ul.pagination').remove();
-				
+
 		var category = $('#content-navigation li.active a').text().replace(/ /g,'-').toLowerCase(); //section
 		var company = $('#content-primary .project h3 em.org').attr('id').replace(/^company-/g,'').replace(/ /g,'-').toLowerCase(); //company
 		var detail	= $('div.selection dt.active a').text().replace(/ /g,'-').toLowerCase(); //detail
 		var current_image = $('#content-primary .project div.image img').attr('title'); // current image
 		var current_image_pos = parseInt($('#content-primary .project div.image img').attr('id').match(/\d+$/)); // current image position 1+
 		var total_images = $('#position-navigation li a').size();
-		
+
 		if(!$.browser.safari) {
 		$.ajax({
 			type: 'POST',
-			url: '/_compile/a_portfolio_images.php',
+			url: '/_compile/a_portfolio_images/',
 			data: 'id='+portfolio_id+'&category='+category+'&company='+company+'&detail='+detail+'&image='+current_image,
 			dataType: 'xml',
 			success: function(xml) {
-				
 				var ul = $('<ul>');
 				$('img', xml).each(
 					function() {
@@ -40,7 +39,7 @@ $(document).ready(
 				);
 				$('div#content-primary .project div.image > img').remove();
 				var total_images = $('div#content-primary .project div.image ul li img').size();
-				
+
 				function itemFirstInHandler(carousel, li, idx, state) {
 					if(state!='init') return;
 					$('#position-navigation a').click(function() {
@@ -50,7 +49,7 @@ $(document).ready(
 						return false;
 					});
 				}
-				
+
 				$('#content-primary .project div.image').jcarousel({
 					itemVisible: 1,
 					itemScroll: 1,
@@ -66,7 +65,7 @@ $(document).ready(
 							if(state!='init') return;
 							if(idx==current_image_pos) {
 								if(total_images==current_image_pos) {
-									// add pulsate to the previous	
+									// add pulsate to the previous
 									$(li).parents('div.image').find('a[@rel=prev]').addClass('pulsate-prev');
 								}
 								else {
@@ -81,7 +80,7 @@ $(document).ready(
 						onAfterAnimation: function(carousel,li,idx,state) {
 							image_id = parseInt($(li).find('img').attr('id').match(/\d+$/));
 							$('#position-navigation li').removeClass('active').filter('#p'+image_id).addClass('active');
-							
+
 							if(idx==1) {
 								$(li).addClass('start').addClass('first');
 								$('#content-primary div.image a.jcarousel-prev').addClass('start').addClass('fast-forward');
