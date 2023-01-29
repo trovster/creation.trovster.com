@@ -6,8 +6,8 @@ echo '<content>';
 
 /* database setup
 ============================================================================================================= */
-if(!empty($_POST['id'])) {
-	$array['id'] = ltrim($_POST['id'],'e_');
+if(!empty($_GET['id'])) {
+	$array['id'] = ltrim($_GET['id'],'e_');
 	$images = news_setup_images($array);
 
 /* file output

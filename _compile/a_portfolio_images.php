@@ -7,8 +7,8 @@ echo '<content>';
 /* database setup
 ============================================================================================================= */
 //
-if(!empty($_POST['category']) && !empty($_POST['company']) && !empty($_POST['detail']) && !empty($_POST['id'])) {
-	$array['id'] = ltrim($_POST['id'],'e_');
+if(!empty($_GET['category']) && !empty($_GET['company']) && !empty($_GET['detail']) && !empty($_GET['id'])) {
+	$array['id'] = ltrim($_GET['id'],'e_');
 	$query = portfolio_sql($array['id']);
 	while($array_setup = mysqli_fetch_array($query)) {
 		$array = portfolio_setup($array_setup);

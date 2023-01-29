@@ -16,7 +16,7 @@ $(document).ready(
 
 		if(!$.browser.safari) {
 		$.ajax({
-			type: 'POST',
+			type: 'GET',
 			url: '/_compile/a_news_images/',
 			data: 'id='+news_id+'&image='+current_image,
 			dataType: 'xml',
